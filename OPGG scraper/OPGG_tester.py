@@ -75,8 +75,10 @@ def main():
      
      opgg_object = OPGG()
 
-     summoner = opgg_object.search("Fraggetti#EUW", region='EUW')
+     summoner = opgg_object.search("killer#XUG2", region='EUW')
+     #summoner_games = opgg_object.get_recent_games(summoner)
      print(summoner)
+     #print(summoner_games)
         
 
 if __name__ == "__main__":
