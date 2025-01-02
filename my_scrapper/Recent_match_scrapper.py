@@ -1,128 +1,215 @@
-import time
+import time, os
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import pandas as pd
+from urllib.parse import unquote
+from webdriver_manager.chrome import ChromeDriverManager
+from helper import convert_to_minutes, convert_percentage_to_decimal, convert_tier_to_number, convert_result_to_binary
 
-# Setup Chrome options
-chrome_options = Options()
-chrome_options.add_argument("--headless")
-chrome_options.add_argument("--no-sandbox")
-chrome_options.add_argument("--disable-dev-shm-usage")
-chrome_options.add_argument(
-    "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-)
+def setup_driver():
+    options = Options()
+    prefs = {
+        'profile.default_content_setting_values': {'notifications': 2},
+        'profile.managed_default_content_settings': {'images': 2}
+    }
+    options.add_experimental_option('prefs', prefs)
+    options.add_experimental_option('excludeSwitches', ['enable-logging'])
+    for arg in ['--headless', '--no-sandbox', '--disable-dev-shm-usage', 
+                '--disable-gpu', '--window-size=1920,1080']:
+        options.add_argument(arg)
+    options.add_argument('user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) Chrome/91.0.4472.124')
+    return webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)
 
-# Setup WebDriver
-service = Service(ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service, options=chrome_options)
-
-# Define the URL
-player_url = "https://www.op.gg/summoners/kr/%EB%AF%BC%EC%B2%A0%EC%9D%B4%EC%97%AC%EC%B9%9C%EA%B5%AC%ED%95%A8-0415?queue_type=SOLORANKED"
-
-# Open the page
-driver.get(player_url)
-
-def get_recent_match():
-    # Wait until the main container is visible
-    main_container = WebDriverWait(driver, 20).until(
-        EC.presence_of_element_located((By.CSS_SELECTOR, "#content-container"))
-    )
-   
-    # Inside the main container, navigate to the stats box
-    recent_match_box = main_container.find_element(By.CSS_SELECTOR, "div.css-fkbae7.er95z9k0 > div.css-1jxewmm.ek41ybw0")
-
+def get_tooltip_date(driver, element):
     try:
-        # Inside the recent match box, wait until the match results are available
-        recent_matches = []
-
-        # Process each child under div.css-1jxewmm.ek41ybw0
-        match_elements = recent_match_box.find_elements(By.CSS_SELECTOR, "div.css-j7qwjs.ery81n90")
-        for match in match_elements:
-            game_type = match.find_element(By.CSS_SELECTOR, "div.game-type").text
-            time_stamp = match.find_element(By.CSS_SELECTOR, "div.time-stamp").text
-            result = match.find_element(By.CSS_SELECTOR, "div.result").text
-            length = match.find_element(By.CSS_SELECTOR, "div.length").text
-            kda = match.find_element(By.CSS_SELECTOR, "div.kda").text
-            kda_ratio = match.find_element(By.CSS_SELECTOR, "div.kda-ratio").text
-            cs = match.find_element(By.CSS_SELECTOR, "div.cs").text
-            avg_tier = match.find_element(By.CSS_SELECTOR, "div.avg-tier").text
-            laning = match.find_element(By.CSS_SELECTOR, "div.laning").text.replace('\n', '') # show lane performance first 14 mins
-            kill_participation = match.find_element(By.CSS_SELECTOR, "div.p-kill").text
-
-            champion_img = match.find_element(By.CSS_SELECTOR, "div.info a.champion img")
-            champion_name = champion_img.get_attribute("alt")
-            champion_level = match.find_element(By.CSS_SELECTOR, "div.info a.champion span.champion-level").text
-
-            game_tags_container = match.find_element(By.CSS_SELECTOR, "div.game-tags__scroll-container div.game-tags")
-        
-             # Extract the game tags from div elements
-            tag_elements = game_tags_container.find_elements(By.CSS_SELECTOR, "div.tag")
-            tags = [tag.text for tag in tag_elements]
-            
-            # Extract the game tags from button elements
-            badge_elements = game_tags_container.find_elements(By.CSS_SELECTOR, "button.OPScoreBadge div.badge")
-            badges = [badge.text for badge in badge_elements]
-            
-            # Check if there is a kill-tag
-            tags += badges
-
-            player_elements = recent_match_box.find_elements(By.CSS_SELECTOR, "div.css-86ve5u.e1xevas20 > div.css-pp7uqb.e1xevas21")
-        
-            # Extract information for up to 10 players
-            players_info = []
-            for player in player_elements[:10]:
-                champion_img = player.find_element(By.CSS_SELECTOR, "div.icon img")
-                champion_name = champion_img.get_attribute("alt")  # Get the 'alt' attribute which contains the champion's name
-                
-                summoner_link = player.find_element(By.CSS_SELECTOR, "div.name a")
-                href = summoner_link.get_attribute("href")  # Get the 'href' attribute
-                region, name = href.split('/')[-2], href.split('/')[-1]  # Extract the region and name from the URL
-                
-                players_info.append({
-                    "champion": champion_name,
-                    "region": region,
-                    "name": name
-                })
-
-            recent_matches.append({
-                "game_type": game_type,
-                "time_stamp": time_stamp,
-                "result": result,
-                "length": length,
-                "champion": champion_name,
-                "level": champion_level,
-                "kda": kda,
-                "kda_ratio": kda_ratio,
-                "laning": laning,
-                "kill_participation": kill_participation,
-                "cs": cs,
-                "avg_tier": avg_tier,
-                "game_tags": tags,
-                "players": players_info
-            })
-        
-        return recent_matches
-
-    except Exception as e:
-        print(f"Error processing recent match data: {e}")
-        return []
-
-try:
-    # Extract recent match data
-    recent_game_results = get_recent_match()
-    first_game_result = recent_game_results[0]
-    for key, value in first_game_result.items():
-        print(f"{key}: {value}")
+        driver.execute_script("""
+            arguments[0].scrollIntoView({block: 'center'});
+            document.querySelectorAll('span.react-tooltip-lite').forEach(e => e.remove());
+            arguments[0].dispatchEvent(new MouseEvent('mouseover', {
+                view: window, bubbles: true, cancelable: true
+            }));
+        """, element)
+        time.sleep(0.3)
+        return driver.execute_script("""
+            return Array.from(document.querySelectorAll('span.react-tooltip-lite'))
+                .find(t => t.offsetParent !== null)?.textContent || null;
+        """)
+    except: return None
     
+def extract_match_data(match):
+    selectors = {
+        'time_stamp': "div.time-stamp > div",
+        'game_type': "div.game-type",
+        'result': "div.result",
+        'length': "div.length",
+        'kda': "div.kda",
+        'kda_ratio': "div.kda-ratio",
+        'cs': "div.cs",
+        'avg_tier': "div.avg-tier",
+        'laning': "div.laning",
+        'kill_participation': "div.p-kill",
+        'champion_img': "div.info a.champion img",
+        'champion_level': "div.info a.champion span.champion-level"
+    }
+    
+    data = {}
+    try:
+        for key, selector in selectors.items():
+            element = match.find_element(By.CSS_SELECTOR, selector)
+            if key == 'champion_img':
+                data[key] = element.get_attribute('alt')
+            elif key == 'laning':
+                data[key] = element.text.replace('\n', '')  # Remove newlines from laning data
+            else:
+                data[key] = element.text
+    except Exception as e:
+        print(f"Error extracting match data: {e}")
+    return data
 
-except Exception as e:
-    print(f"Error scraping stats data: {e}")
+def get_players_info(match):
+    try:
+        players = []
+        player_elements = match.find_elements(By.CSS_SELECTOR, "div.css-pp7uqb.e1xevas21")[:10]
+        for player in player_elements:
+            champion = player.find_element(By.CSS_SELECTOR, "div.icon img").get_attribute("alt")
+            href = player.find_element(By.CSS_SELECTOR, "div.name a").get_attribute("href")
+            region, name = href.split('/')[-2:]
+            players.append({"champion": champion, "region": region, "name": name})
+        return players
+    except: return []
 
-time.sleep(2)  # Add a delay to avoid rate-limiting
+def convert_laning_ratio(laning_str):
+    """Convert laning string (e.g., 'Laning 70:30') to decimal ratio"""
+    try:
+        # Extract the ratio part (e.g., '70:30' from 'Laning 70:30')
+        ratio_part = laning_str.split('Laning')[-1].strip()
+        
+        # Split by ':' and convert to numbers
+        first_num, second_num = map(int, ratio_part.split(':'))
+        
+        # Calculate ratio
+        if second_num != 0:  # Avoid division by zero
+            ratio = round(first_num / second_num, 2)
+            return ratio
+        return 0.0
+    except Exception as e:
+        print(f"Laning conversion error for '{laning_str}': {e}")
+        return 0.0
+    
+def extract_cs_number(cs_str):
+    """Extract pure CS number from string (e.g., 'CS 123 (7.9)' -> 123)"""
+    try:
+        # Extract first number from the string
+        cs_number = ''.join(filter(str.isdigit, cs_str.split('(')[0]))
+        return int(cs_number) if cs_number else 0
+    except:
+        return 0
+    
+def extract_cs_per_min(cs_str):
+    """Extract CS per minute from string (e.g., 'CS 123 (7.9)' -> 7.9)"""
+    try:
+        # Extract number between parentheses
+        cs_per_min = cs_str.split('(')[1].split(')')[0]
+        return float(cs_per_min)
+    except:
+        return 0.0
 
-# Quit the driver
-driver.quit()
+def process_match_data(match_data, username, players):
+    try:
+        player_index = next((i for i, p in enumerate(players) if unquote(p['name']) == username), -1)
+        team = "blue" if player_index < 5 else "red"
+        teammates = players[:5] if player_index < 5 else players[5:]
+        opponents = players[5:] if player_index < 5 else players[:5]
+        
+        kda_parts = match_data.get('kda', '0/0/0').strip().split('/')
+        kills, deaths, assists = [kda_parts[i] if i < len(kda_parts) else "0" for i in range(3)]
+        kda_ratio = match_data.get("kda_ratio", "0").strip().replace(":1 KDA", "")
+
+        kill_participation = convert_percentage_to_decimal(match_data.get("kill_participation", "0%"))
+
+        laning_ratio = convert_laning_ratio(match_data.get("laning", "0:0"))
+
+        cs = extract_cs_number(match_data.get("cs", "0"))
+        cpm = extract_cs_per_min(match_data.get("cs", "0"))
+
+        match_length_str = match_data.get("length", "0m 0s")
+        match_length_mins = convert_to_minutes(match_length_str)
+
+        # Convert tier to number
+        avg_tier_num = convert_tier_to_number(match_data.get("avg_tier", ""))
+
+        result_num = convert_result_to_binary(match_data.get("result", ""))
+        
+        match_row = {
+            "player_id": username,
+            "date": match_data.get("match_date", ""),
+            "champion": match_data.get("champion_img", ""),
+            "level": match_data.get("champion_level", ""),
+            "team": team,
+            "result": result_num,
+            "match_length_mins": match_length_mins, 
+            "kill": kills.strip(),  # Ensure no whitespace
+            "death": deaths.strip(),  # Ensure no whitespace
+            "assist": assists.strip(),  # Ensure no whitespace
+            "kda_ratio": kda_ratio,
+            "kill_participation": kill_participation,
+            "laning": laning_ratio,
+            "cs": cs,
+            "cs_per_min": cpm,
+            "avg_tier": avg_tier_num
+        }
+        
+        # Add teammates and opponents
+        for i, (team_list, prefix) in enumerate([(teammates, "team"), (opponents, "opp")]):
+            for j, player in enumerate(team_list[:5], 1):
+                match_row[f"{prefix}mates{j}"] = player["name"]
+                match_row[f"{prefix}_champ{j}"] = player["champion"]
+                
+        return match_row
+    except Exception as e:
+        print(f"Error processing match: {e}")
+        return None
+
+def get_matches_stats(region, username):
+    driver = None
+    try:
+        driver = setup_driver()
+        driver.get(f"https://www.op.gg/summoners/{region}/{username.replace(' ', '%20')}?queue_type=SOLORANKED")
+        
+        matches_container = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "div.css-1jxewmm.ek41ybw0"))
+        )
+        
+        matches_data = []
+        match_elements = matches_container.find_elements(By.CSS_SELECTOR, "div.css-j7qwjs.ery81n90")
+        
+        for match in match_elements:
+            match_data = extract_match_data(match)
+            players = get_players_info(match)
+            match_data['match_date'] = get_tooltip_date(driver, match.find_element(By.CSS_SELECTOR, "div.time-stamp > div"))
+            
+            processed_data = process_match_data(match_data, username, players)
+            if processed_data:
+                matches_data.append(processed_data)
+        
+        if matches_data:
+            df = pd.DataFrame(matches_data)
+            save_path = os.path.join("ID2223-Final-Project", "my_scrapper", "data", "recent_matches.csv")
+            os.makedirs(os.path.dirname(save_path), exist_ok=True)
+            df.to_csv(save_path, index=False)
+            return df
+            
+    except Exception as e:
+        print(f"Error: {e}")
+    finally:
+        if driver:
+            driver.quit()
+    return pd.DataFrame()
+
+#example
+matches = get_matches_stats("kr", "민철이여친구함-0415")
+print(matches)
