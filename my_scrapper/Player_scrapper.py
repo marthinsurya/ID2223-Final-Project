@@ -1,4 +1,5 @@
 import os
+import time
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -61,7 +62,7 @@ def get_recent_stats(stats_box):
         kda_ratio = float(recent_stats[3].replace(':1', ''))
         kill_participation = float(recent_stats[4].replace('P/Kill ', '').replace('%', '')) / 100
 
-        return {
+        recent_stats = {
             "total_games": total_games,
             "wins": wins,
             "losses": losses,
@@ -76,6 +77,8 @@ def get_recent_stats(stats_box):
     except Exception as e:
         print(f"Error extracting recent stats: {e}")
         return None
+    
+    return recent_stats
 
 def get_recent_champions(stats_box):
     champions = stats_box.find_element(By.CSS_SELECTOR, "div.champions")
@@ -106,7 +109,7 @@ def get_recent_champions(stats_box):
         recent_champ_stats[f"W_{i}"] = wins
         recent_champ_stats[f"L_{i}"] = losses
         recent_champ_stats[f"KDA_{i}"] = kda
-
+    
     return recent_champ_stats
 
 def get_preferred_role(stats_box):
@@ -155,7 +158,7 @@ def get_preferred_role(stats_box):
     if len(sorted_roles) > 1:
         preferred_roles['most_role_2'] = sorted_roles[1][0]
         preferred_roles['most_role_2_value'] = sorted_roles[1][1]
-
+    
     return preferred_roles
 
 def get_weekly_stats(ranked_7d_box):
@@ -210,7 +213,7 @@ def get_weekly_stats(ranked_7d_box):
             weekly_stats[f"7d_W_{i}"] = 0
             weekly_stats[f"7d_L_{i}"] = 0
             weekly_stats[f"7d_WR_{i}"] = 0.0
-
+    
     return weekly_stats
 
 def get_season_data(season_champ_box):   
@@ -222,9 +225,7 @@ def get_season_data(season_champ_box):
         "season_champ_4": None, "cs_4": "0", "cpm_4": "0", "kda_ratio_4": "0", "k_4": "0", "d_4": "0", "a_4": "0", "wr_4": 0.0, "games_4": "0",
         "season_champ_5": None, "cs_5": "0", "cpm_5": "0", "kda_ratio_5": "0", "k_5": "0", "d_5": "0", "a_5": "0", "wr_5": 0.0, "games_5": "0",
         "season_champ_6": None, "cs_6": "0", "cpm_6": "0", "kda_ratio_6": "0", "k_6": "0", "d_6": "0", "a_6": "0", "wr_6": 0.0, "games_6": "0",
-        "season_champ_7": None, "cs_7": "0", "cpm_7": "0", "kda_ratio_7": "0", "k_7": "0", "d_7": "0", "a_7": "0", "wr_7": 0.0, "games_7": "0",
-        "scrape_date": "2025-01-02 14:05:24",
-        "scraper_user": "marthinsurya"
+        "season_champ_7": None, "cs_7": "0", "cpm_7": "0", "kda_ratio_7": "0", "k_7": "0", "d_7": "0", "a_7": "0", "wr_7": 0.0, "games_7": "0"
     }
     
     try:
@@ -282,39 +283,34 @@ def get_season_data(season_champ_box):
     return season_data
 
 def get_mastery_data(driver):
-    # Initialize flat dictionary with defaults for 5 champions
-    mastery_data = {
-        "mastery_champ_1": None, "m_lv_1": "0",
-        "mastery_champ_2": None, "m_lv_2": "0",
-        "mastery_champ_3": None,  "m_lv_3": "0",
-        "mastery_champ_4": None, "m_lv_4": "0",
-        "mastery_champ_5": None,"m_lv_5": "0"
-    }
+    # Initialize dictionary with metadata
+    mastery_data = { }
     
     try:
-        # Locate the mastery container
-        mastery_container = WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "#content-container > div.box--desktop.dashboard--loading.css-7ruavw.erdn3wx2 > div > div"))
+        # Wait for container to load
+        WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, "div.css-zefc5s.e1poynyt0"))
         )
-
-        # Find all champions and take first 5
-        champions = mastery_container.find_elements(By.CSS_SELECTOR, "div.css-8fea4f.e1poynyt1")[:5]
-
-        for i, champion in enumerate(champions, 1):
+        
+        # Get all champion boxes (limiting to first 16)
+        champion_boxes = driver.find_elements(By.CSS_SELECTOR, "div.css-8fea4f.e1poynyt1")[:16]
+        
+        # Process each champion
+        for i, champion in enumerate(champion_boxes, 1):
             try:
-                # Extract champion data
                 name = champion.find_element(By.CSS_SELECTOR, "strong.champion-name").text.strip()
-                #points = champion.find_element(By.CSS_SELECTOR, "div.champion-point span").text.strip()
-                level = champion.find_element(By.CSS_SELECTOR, "div.champion-level__text span").text.strip()
-
-                # Update flat dictionary
+                level = champion.find_element(By.CSS_SELECTOR, "div.champion-level__text > span").text.strip()
+                #points = champion.find_element(By.CSS_SELECTOR, "div.champion-point > span").text.strip()
+                
                 mastery_data[f"mastery_champ_{i}"] = name
-                #mastery_data[f"mastery_points_{i}"] = points
                 mastery_data[f"m_lv_{i}"] = level
+                #mastery_data[f"m_points_{i}"] = points.replace(",", "")
                 
             except Exception as e:
                 print(f"Error processing champion {i}: {e}")
-                # Default values already set in initialization
+                mastery_data[f"mastery_champ_{i}"] = None
+                mastery_data[f"m_lv_{i}"] = "0"
+                #mastery_data[f"m_points_{i}"] = "0"
 
     except Exception as e:
         print(f"Error scraping mastery data: {e}")
@@ -394,13 +390,13 @@ def get_player_stats(region, username):
                 merged_df = pd.merge(merged_df, df_to_merge, on=['player_id', 'region'], how='outer')
 
         # Save merged DataFrame
-        save_dir = "ID2223-Final-Project/my_scrapper/data"
+        save_dir = "my_scrapper/data"
         os.makedirs(save_dir, exist_ok=True)
         
         if merged_df is not None and not merged_df.empty:
             filepath = os.path.join(save_dir, f"player_stats.csv")
             merged_df.to_csv(filepath, index=False)
-            #print(f"Saved merged player stats to {filepath}")
+            print(f"Saved merged player stats to {filepath}")
 
             # Also save individual tables
             # for name, df in dfs.items():

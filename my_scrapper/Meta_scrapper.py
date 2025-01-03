@@ -1,8 +1,6 @@
-import time
 import re
 import os
 import pandas as pd
-from datetime import datetime
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
@@ -131,11 +129,11 @@ def get_meta_stats():
         df = pd.DataFrame(all_roles_data)
         
         # Save data
-        save_dir = os.path.join("ID2223-Final-Project", "my_scrapper", "data")
+        save_dir = os.path.join("my_scrapper", "data")
         os.makedirs(save_dir, exist_ok=True)
         filepath = os.path.join(save_dir, "meta_stats.csv")
         df.to_csv(filepath, index=False)
-
+        print(f"Saved meta stats to {filepath}")
         return df
 
     except Exception as e:
@@ -146,6 +144,4 @@ def get_meta_stats():
         if driver:
             driver.quit()
 
-# example
-df = get_meta_stats()
     
