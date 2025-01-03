@@ -414,23 +414,3 @@ def get_player_stats(region, username):
     finally:
         if driver:
             driver.quit()
-
-# Example usage
-if __name__ == "__main__":
-    # Example usage
-    region = "kr"
-    username = "민철이여친구함-0415"
-    
-    merged_stats, individual_stats = get_player_stats(region, username)
-    
-    if merged_stats is not None:
-        print("\nMerged Player Stats:")
-        print(merged_stats.head())
-        
-        # print("\nIndividual Stats Tables:")
-        # for key, df in individual_stats.items():
-        #     if not df.empty:
-        #         print(f"\n{key.upper()} Data:")
-        #         print(df.head())
-    else:
-        print("Failed to collect player stats")

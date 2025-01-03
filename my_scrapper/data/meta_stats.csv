@@ -1,59 +1,59 @@
 rank,champion,tier,role,win_rate,pick_rate,ban_rate,counter1,counter2,counter3
-1,Irelia,1,top,0.5186999999999999,0.057800000000000004,0.0908,Warwick,Volibear,Zac
-2,Maokai,1,top,0.5165,0.062,0.0322,Heimerdinger,Olaf,Mordekaiser
-3,Warwick,1,top,0.5257000000000001,0.0315,0.0858,Cassiopeia,Teemo,Heimerdinger
-4,Aatrox,1,top,0.5025999999999999,0.0855,0.10210000000000001,Cassiopeia,Irelia,Warwick
+1,Irelia,1,top,0.5186,0.057800000000000004,0.0908,Warwick,Volibear,Zac
+2,Maokai,1,top,0.5166,0.062,0.0322,Heimerdinger,Olaf,Tahm Kench
+3,Warwick,1,top,0.5257000000000001,0.0315,0.0857,Cassiopeia,Teemo,Heimerdinger
+4,Aatrox,1,top,0.5025999999999999,0.08539999999999999,0.10210000000000001,Cassiopeia,Irelia,Warwick
 5,Riven,1,top,0.5134000000000001,0.0525,0.0268,Quinn,Maokai,Urgot
-6,Gragas,1,top,0.5121,0.049400000000000006,0.023,Cho'Gath,Maokai,Teemo
-7,Darius,1,top,0.5055,0.0623,0.1326,Cassiopeia,Teemo,Wukong
-8,Malphite,1,top,0.5135000000000001,0.0441,0.061799999999999994,Maokai,Dr. Mundo,Tahm Kench
+6,Gragas,1,top,0.5121,0.049400000000000006,0.023,Cho'Gath,Warwick,Maokai
+7,Darius,1,top,0.5055,0.062400000000000004,0.13269999999999998,Cassiopeia,Wukong,Teemo
+8,Malphite,1,top,0.5135000000000001,0.0441,0.061900000000000004,Maokai,Dr. Mundo,Tahm Kench
 9,Volibear,1,top,0.5094,0.0493,0.0335,Quinn,Teemo,Kennen
-10,Mordekaiser,2,top,0.5065999999999999,0.048,0.0571,Heimerdinger,Cassiopeia,Riven
-11,Ornn,2,top,0.5118,0.038599999999999995,0.0055000000000000005,Warwick,Tryndamere,Olaf
-12,Cho'Gath,2,top,0.519,0.0277,0.0043,Olaf,Ornn,Gwen
-13,Camille,2,top,0.5102,0.0405,0.0189,Zac,Teemo,Quinn
-14,Renekton,2,top,0.5006,0.059000000000000004,0.0489,Cassiopeia,Warwick,Cho'Gath
-15,Tahm Kench,2,top,0.5114,0.0333,0.039900000000000005,Wukong,Heimerdinger,Singed
-16,Sett,2,top,0.5036,0.0443,0.0088,Cassiopeia,Zac,Volibear
-17,Dr. Mundo,2,top,0.5073,0.0369,0.019299999999999998,Riven,Aatrox,Gwen
-18,Teemo,2,top,0.5147999999999999,0.0254,0.033,Ryze,Olaf,Sion
+10,Mordekaiser,2,top,0.5064,0.048,0.0571,Heimerdinger,Cassiopeia,Riven
+11,Cho'Gath,2,top,0.5193,0.0277,0.0043,Olaf,Ornn,Dr. Mundo
+12,Ornn,2,top,0.5118,0.038599999999999995,0.0055000000000000005,Warwick,Tryndamere,Olaf
+13,Camille,2,top,0.5101,0.0405,0.0189,Zac,Teemo,Quinn
+14,Renekton,2,top,0.5006,0.059000000000000004,0.0489,Cassiopeia,Warwick,Dr. Mundo
+15,Tahm Kench,2,top,0.5113,0.0333,0.04,Wukong,Heimerdinger,Singed
+16,Sett,2,top,0.5035000000000001,0.0443,0.0088,Cassiopeia,Zac,Volibear
+17,Teemo,2,top,0.5147999999999999,0.0254,0.0331,Ryze,Olaf,Sion
+18,Dr. Mundo,2,top,0.5072,0.0369,0.019299999999999998,Riven,Aatrox,Udyr
 19,Shen,2,top,0.5101,0.030699999999999998,0.0038,Cassiopeia,Tryndamere,Teemo
-20,K'Sante,2,top,0.4886,0.071,0.0765,Singed,Kayle,Kennen
-21,Fiora,2,top,0.5042,0.0365,0.0579,Ryze,Quinn,Warwick
-22,Gnar,2,top,0.4989,0.0461,0.0195,Quinn,Teemo,Vladimir
-23,Ambessa,2,top,0.48590000000000005,0.056299999999999996,0.308,Warwick,Camille,Wukong
-24,Kayle,2,top,0.5146000000000001,0.0215,0.0063,Cassiopeia,Malphite,Viktor
-25,Poppy,3,top,0.5151,0.0179,0.0282,Warwick,Olaf,Swain
-26,Viktor,3,top,0.49829999999999997,0.018799999999999997,0.0355,Tryndamere,Zac,Irelia
-27,Gwen,3,top,0.506,0.0285,0.0241,Warwick,Singed,Riven
-28,Trundle,3,top,0.5162,0.0183,0.0040999999999999995,Zac,Heimerdinger,Urgot
-29,Sion,3,top,0.49939999999999996,0.037200000000000004,0.0046,Gwen,Dr. Mundo,Riven
-30,Urgot,3,top,0.511,0.0215,0.0034999999999999996,Cassiopeia,Kayle,Olaf
-31,Vladimir,3,top,0.5091,0.0222,0.0179,Nasus,Trundle,Cassiopeia
-32,Garen,3,top,0.49420000000000003,0.0436,0.021099999999999997,Camille,Maokai,Warwick
-33,Jax,3,top,0.48960000000000004,0.0506,0.07200000000000001,Cassiopeia,Dr. Mundo,Singed
-34,Singed,3,top,0.5142,0.0176,0.0025,Urgot,Vayne,Trundle
-35,Olaf,3,top,0.5169,0.0152,0.009399999999999999,Vayne,Kayle,Fiora
-36,Tryndamere,3,top,0.5063,0.023,0.0134,Warwick,Quinn,Volibear
-37,Cassiopeia,3,top,0.529,0.0076,0.0046,Quinn,Kled,Garen
-38,Yorick,3,top,0.5014,0.0255,0.0259,Warwick,Tryndamere,Irelia
-39,Nasus,3,top,0.4991,0.0271,0.0321,Ryze,Heimerdinger,Zac
-40,Gangplank,3,top,0.49560000000000004,0.0321,0.011899999999999999,Zac,Tahm Kench,Kled
-41,Kennen,3,top,0.512,0.0154,0.0088,Udyr,Galio,Dr. Mundo
-42,Zac,3,top,0.517,0.011699999999999999,0.0069,Galio,Heimerdinger,Vladimir
-43,Jayce,3,top,0.4833,0.0513,0.015700000000000002,Quinn,Yorick,Irelia
-44,Wukong,3,top,0.5142,0.0118,0.004699999999999999,Cassiopeia,Singed,Malphite
-45,Ryze,3,top,0.5169,0.0108,0.0013,Zac,Irelia,Pantheon
-46,Pantheon,3,top,0.5011,0.0207,0.0048,Heimerdinger,Singed,Swain
-47,Yone,3,top,0.4754,0.0556,0.0434,Irelia,Riven,Wukong
-48,Kled,3,top,0.5085000000000001,0.0143,0.005,Camille,Singed,Zac
-49,Illaoi,4,top,0.4943,0.0235,0.0507,Heimerdinger,Kayle,Ryze
-50,Aurora,4,top,0.4935,0.0195,0.04190000000000001,Singed,Irelia,Quinn
-51,Yasuo,4,top,0.485,0.0239,0.0387,Singed,Cassiopeia,Riven
-52,Heimerdinger,4,top,0.5108,0.0092,0.0043,Galio,Ryze,Cassiopeia
-53,Akali,4,top,0.4915,0.0158,0.019299999999999998,Galio,Gangplank,Quinn
-54,Quinn,4,top,0.5101,0.0074,0.0024,Singed,Olaf,Malphite
-55,Sylas,4,top,0.4875,0.016,0.0154,Kled,Poppy,Urgot
+20,Fiora,2,top,0.5043,0.0365,0.057999999999999996,Ryze,Quinn,Warwick
+21,K'Sante,2,top,0.48869999999999997,0.0709,0.0765,Singed,Kayle,Kennen
+22,Gnar,2,top,0.4989,0.0461,0.0194,Quinn,Teemo,Vladimir
+23,Ambessa,2,top,0.486,0.056299999999999996,0.30760000000000004,Warwick,Camille,Wukong
+24,Kayle,2,top,0.5146999999999999,0.0215,0.0063,Cassiopeia,Malphite,Viktor
+25,Poppy,3,top,0.515,0.0179,0.0282,Warwick,Olaf,Swain
+26,Viktor,3,top,0.4985,0.0187,0.0355,Tryndamere,Zac,Irelia
+27,Gwen,3,top,0.5061,0.0285,0.0242,Warwick,Singed,Riven
+28,Trundle,3,top,0.516,0.0183,0.0040999999999999995,Zac,Heimerdinger,Urgot
+29,Sion,3,top,0.49920000000000003,0.037200000000000004,0.0046,Dr. Mundo,Gwen,Riven
+30,Urgot,3,top,0.5113,0.0216,0.0034999999999999996,Cassiopeia,Olaf,Kayle
+31,Vladimir,3,top,0.5093,0.0222,0.0179,Nasus,Trundle,Cassiopeia
+32,Garen,3,top,0.4943,0.0436,0.021099999999999997,Camille,Maokai,Kayle
+33,Jax,3,top,0.48960000000000004,0.050499999999999996,0.0721,Cassiopeia,Dr. Mundo,Vladimir
+34,Singed,3,top,0.514,0.0176,0.0025,Urgot,Trundle,Vayne
+35,Olaf,3,top,0.5168,0.0152,0.009399999999999999,Vayne,Fiora,Kayle
+36,Tryndamere,3,top,0.5062,0.023,0.0134,Warwick,Volibear,Poppy
+37,Cassiopeia,3,top,0.5289,0.0076,0.0046,Quinn,Kled,Garen
+38,Yorick,3,top,0.5012,0.0255,0.0259,Warwick,Tryndamere,Kayle
+39,Kennen,3,top,0.5122,0.0154,0.0088,Udyr,Galio,Nasus
+40,Nasus,3,top,0.499,0.0271,0.0321,Ryze,Heimerdinger,Zac
+41,Gangplank,3,top,0.4954,0.0321,0.011899999999999999,Zac,Tahm Kench,Kled
+42,Zac,3,top,0.517,0.011699999999999999,0.006999999999999999,Galio,Heimerdinger,Vladimir
+43,Jayce,3,top,0.48310000000000003,0.0513,0.015700000000000002,Quinn,Yorick,Irelia
+44,Wukong,3,top,0.514,0.0118,0.004699999999999999,Cassiopeia,Singed,Maokai
+45,Ryze,3,top,0.5167,0.0108,0.0013,Zac,Irelia,Pantheon
+46,Pantheon,3,top,0.5011,0.0207,0.0048,Heimerdinger,Singed,Maokai
+47,Yone,3,top,0.4754,0.0555,0.0434,Irelia,Riven,Wukong
+48,Kled,3,top,0.5088,0.0143,0.005,Camille,Zac,Singed
+49,Illaoi,4,top,0.49439999999999995,0.0235,0.0508,Heimerdinger,Ryze,Kayle
+50,Aurora,4,top,0.49329999999999996,0.0195,0.04190000000000001,Singed,Irelia,Quinn
+51,Yasuo,4,top,0.4849,0.0239,0.0387,Singed,Cassiopeia,Galio
+52,Heimerdinger,4,top,0.511,0.0092,0.0043,Galio,Ryze,Cassiopeia
+53,Akali,4,top,0.4917,0.0158,0.019299999999999998,Galio,Gangplank,Quinn
+54,Quinn,4,top,0.5106,0.0074,0.0024,Singed,Olaf,Malphite
+55,Sylas,4,top,0.48729999999999996,0.016,0.015300000000000001,Kled,Poppy,Urgot
 1,Warwick,1,jungle,0.5166,0.0582,0.1586,Ivern,Karthus,Nunu & Willump
 2,Wukong,1,jungle,0.5131,0.0636,0.0255,Zyra,Taliyah,Karthus
 3,Nocturne,1,jungle,0.5133,0.0574,0.0783,Dr. Mundo,Wukong,Udyr
@@ -190,49 +190,49 @@ rank,champion,tier,role,win_rate,pick_rate,ban_rate,counter1,counter2,counter3
 31,Samira,5,adc,0.4924,0.034300000000000004,0.052300000000000006,Viktor,Nilah,Veigar
 32,Aphelios,5,adc,0.4851,0.0451,0.006999999999999999,Brand,Nilah,Viktor
 33,Kalista,5,adc,0.4824,0.021,0.0053,Kog'Maw,Brand,Nilah
-1,Lulu,1,support,0.5168,0.14800000000000002,0.1739,Elise,Fiddlesticks,Tahm Kench
-2,Nami,1,support,0.5139,0.1023,0.0101,Elise,Fiddlesticks,Galio
-3,Janna,2,support,0.5172,0.060700000000000004,0.0207,Elise,Zoe,Sona
-4,Tahm Kench,2,support,0.5172,0.0513,0.061,Elise,Janna,Rell
-5,Thresh,2,support,0.5042,0.1297,0.0546,Elise,Taric,Brand
-6,Poppy,2,support,0.5201,0.0347,0.0542,Elise,Sona,Taric
-7,Braum,2,support,0.5114,0.0625,0.0538,Senna,Taric,Vel'Koz
-8,Pyke,2,support,0.503,0.0816,0.306,Elise,Maokai,Sona
+1,Lulu,1,support,0.5167,0.1481,0.1741,Elise,Fiddlesticks,Tahm Kench
+2,Nami,1,support,0.5139,0.1024,0.0101,Elise,Fiddlesticks,Galio
+3,Janna,2,support,0.5172,0.0608,0.0207,Elise,Zoe,Sona
+4,Tahm Kench,2,support,0.5174,0.0513,0.0611,Elise,Janna,Rell
+5,Thresh,2,support,0.5043,0.12960000000000002,0.0546,Elise,Taric,Brand
+6,Poppy,2,support,0.5201,0.0347,0.0541,Elise,Sona,Taric
+7,Braum,2,support,0.5115,0.062400000000000004,0.0538,Senna,Taric,Neeko
+8,Pyke,2,support,0.5031,0.0816,0.3059,Elise,Maokai,Sona
 9,Senna,2,support,0.5105,0.059000000000000004,0.0171,Vel'Koz,Elise,Pyke
-10,Soraka,2,support,0.5127,0.0489,0.0184,Sylas,Elise,Galio
-11,Taric,2,support,0.5268,0.0174,0.0037,Fiddlesticks,Elise,Janna
-12,Rell,2,support,0.5131,0.0458,0.0233,Vel'Koz,Elise,Poppy
-13,Karma,2,support,0.502,0.0966,0.0395,Fiddlesticks,Pyke,Maokai
-14,Sona,2,support,0.5197999999999999,0.0259,0.0011,Fiddlesticks,Camille,Elise
-15,Milio,2,support,0.505,0.059000000000000004,0.032400000000000005,Maokai,Tahm Kench,Taric
-16,Bard,2,support,0.5092,0.044199999999999996,0.006,Elise,Tahm Kench,Fiddlesticks
-17,Elise,2,support,0.5356000000000001,0.0055000000000000005,0.0063,Galio,Shen,Zyra
-18,Vel'Koz,2,support,0.5128,0.030699999999999998,0.0064,Camille,Elise,LeBlanc
-19,Maokai,2,support,0.5129,0.028300000000000002,0.0146,Taric,Galio,Soraka
+10,Soraka,2,support,0.5126,0.0489,0.018500000000000003,Sylas,Elise,Galio
+11,Taric,2,support,0.5268999999999999,0.0174,0.0037,Fiddlesticks,Elise,Janna
+12,Karma,2,support,0.502,0.0966,0.0394,Fiddlesticks,Pyke,Maokai
+13,Rell,2,support,0.5128,0.0458,0.0233,Vel'Koz,Taric,Poppy
+14,Sona,2,support,0.5196999999999999,0.026000000000000002,0.0011,Fiddlesticks,Camille,Elise
+15,Milio,2,support,0.5052,0.0591,0.0325,Maokai,Tahm Kench,Taric
+16,Bard,2,support,0.5091,0.044199999999999996,0.006,Elise,Tahm Kench,Fiddlesticks
+17,Vel'Koz,2,support,0.5129,0.030699999999999998,0.0064,Camille,Elise,LeBlanc
+18,Maokai,2,support,0.5129,0.028300000000000002,0.014499999999999999,Taric,Galio,Soraka
+19,Elise,2,support,0.5351,0.005600000000000001,0.0064,Galio,Shen,Zyra
 20,Leona,3,support,0.49829999999999997,0.056900000000000006,0.049800000000000004,Galio,Janna,Taric
-21,Blitzcrank,3,support,0.49579999999999996,0.0611,0.1739,Elise,Taric,Rakan
-22,Zilean,3,support,0.5073,0.0287,0.0078000000000000005,LeBlanc,Galio,Sona
+21,Blitzcrank,3,support,0.4959,0.061,0.17370000000000002,Elise,Taric,Rakan
+22,Zilean,3,support,0.5072,0.0287,0.0079,LeBlanc,Galio,Sona
 23,Lux,3,support,0.49329999999999996,0.0707,0.0276,LeBlanc,Shen,Poppy
 24,Zyra,3,support,0.5052,0.030699999999999998,0.0181,Taric,Tahm Kench,Pyke
-25,Xerath,3,support,0.5009,0.0394,0.030899999999999997,Shen,Elise,Sylas
-26,Rakan,3,support,0.4987,0.0473,0.0063,Sona,Rell,Morgana
-27,Morgana,3,support,0.5006,0.0356,0.1149,Shaco,Elise,Sona
-28,Nautilus,3,support,0.4875,0.0818,0.12380000000000001,Taric,Galio,Renata Glasc
-29,Seraphine,3,support,0.499,0.037000000000000005,0.008100000000000001,Elise,Poppy,Hwei
-30,Yuumi,4,support,0.4885,0.0583,0.0712,Rell,Taric,Braum
-31,Neeko,4,support,0.5043,0.019799999999999998,0.0063,Fiddlesticks,Camille,Sylas
-32,Renata Glasc,4,support,0.49979999999999997,0.0217,0.0038,Xerath,Hwei,Vel'Koz
-33,Alistar,4,support,0.4921,0.036699999999999997,0.0124,Morgana,Soraka,Janna
-34,Pantheon,4,support,0.5008,0.0192,0.0044,Taric,LeBlanc,Janna
-35,LeBlanc,4,support,0.5073,0.0095,0.0341,Taric,Fiddlesticks,Elise
-36,Brand,4,support,0.4982,0.0194,0.0102,Camille,Pantheon,Shaco
-37,Sylas,5,support,0.49729999999999996,0.0143,0.013500000000000002,Taric,Poppy,Renata Glasc
+25,Xerath,3,support,0.5009,0.0393,0.0308,Shen,Elise,Sylas
+26,Rakan,3,support,0.4987,0.0473,0.0063,Sona,Morgana,Rell
+27,Morgana,3,support,0.5006,0.0356,0.115,Elise,Shaco,Sona
+28,Nautilus,3,support,0.4875,0.0817,0.12380000000000001,Taric,Renata Glasc,Galio
+29,Seraphine,3,support,0.499,0.0371,0.008100000000000001,Elise,Poppy,Hwei
+30,Neeko,4,support,0.5045000000000001,0.019799999999999998,0.0063,Fiddlesticks,Camille,Sylas
+31,Yuumi,4,support,0.48810000000000003,0.0583,0.0711,Taric,Rell,Braum
+32,Alistar,4,support,0.49200000000000005,0.036699999999999997,0.0124,Morgana,Soraka,Janna
+33,Pantheon,4,support,0.5009,0.0192,0.0044,Taric,LeBlanc,Braum
+34,Renata Glasc,4,support,0.49950000000000006,0.0217,0.0038,Xerath,Hwei,Vel'Koz
+35,LeBlanc,4,support,0.5074000000000001,0.0095,0.034,Taric,Elise,Fiddlesticks
+36,Brand,4,support,0.49829999999999997,0.0194,0.0102,Camille,Pantheon,Galio
+37,Sylas,5,support,0.4974,0.0143,0.013500000000000002,Taric,Poppy,Renata Glasc
 38,Shaco,5,support,0.49729999999999996,0.014199999999999999,0.0388,Hwei,Zoe,Lulu
-39,Galio,5,support,0.5046,0.0083,0.005699999999999999,Zac,Janna,Vel'Koz
-40,Zoe,5,support,0.49950000000000006,0.0101,0.0042,Elise,Taric,Poppy
-41,Fiddlesticks,5,support,0.5067,0.0051,0.0028000000000000004,Poppy,Maokai,Renata Glasc
-42,Camille,5,support,0.4993,0.0059,0.0027,LeBlanc,Galio,Shaco
-43,Shen,5,support,0.4979,0.0058,0.0007000000000000001,Galio,Fiddlesticks,Brand
-44,Hwei,5,support,0.4885,0.0088,0.008199999999999999,LeBlanc,Zoe,Taric
-45,Swain,5,support,0.4746,0.023399999999999997,0.013999999999999999,Fiddlesticks,Elise,Vel'Koz
-46,Zac,5,support,0.4817,0.0054,0.0032,Taric,Elise,LeBlanc
+39,Galio,5,support,0.5047,0.0083,0.005699999999999999,Zac,Janna,Vel'Koz
+40,Zoe,5,support,0.4999,0.0101,0.0042,Elise,Taric,Poppy
+41,Fiddlesticks,5,support,0.5064,0.0051,0.0028000000000000004,Poppy,Maokai,Renata Glasc
+42,Camille,5,support,0.4989,0.0059,0.0027,LeBlanc,Galio,Shaco
+43,Shen,5,support,0.498,0.0058,0.0007000000000000001,Galio,Fiddlesticks,Brand
+44,Hwei,5,support,0.4886,0.0088,0.008199999999999999,LeBlanc,Zoe,Taric
+45,Swain,5,support,0.47479999999999994,0.023399999999999997,0.013999999999999999,Fiddlesticks,Vel'Koz,LeBlanc
+46,Zac,5,support,0.4815,0.0054,0.0032,Taric,Elise,LeBlanc

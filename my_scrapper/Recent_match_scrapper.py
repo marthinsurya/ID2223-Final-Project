@@ -210,7 +210,3 @@ def get_matches_stats(region, username):
         if driver:
             driver.quit()
     return pd.DataFrame()
-
-#example
-matches = get_matches_stats("kr", "민철이여친구함-0415")
-print(matches)
