@@ -1,134 +1,135 @@
+# feature_engineering.py
 import pandas as pd
+import numpy as np
 import os
-from Recent_match_scrapper import get_matches_stats
-from helper import merge_stats, filter_leaderboard
-from Player_scrapper import get_player_stats
+from helper import (
+    ChampionConverter, 
+    convert_percentage_to_decimal,
+    convert_tier_to_number,
+    convert_result_to_binary
+)
 
-recent_stats = get_matches_stats("kr", "민철이여친구함-0415")
-player_stats = get_player_stats("kr", "민철이여친구함-0415")
-
-
-merged_stats = merge_stats(recent_stats, player_stats)
-
-def create_champion_features(df, timestamp="2025-01-03 04:28:18", scraper_user="marthinsurya"):
+def create_champion_features(df, timestamp="2025-01-03 05:08:12", scraper_user="marthinsurya"):
     """
-    Create champion-specific columns with weighted scores.
+    Create features for champion prediction using player data.
+    Champion names will be used as column headers.
+    Uses pd.concat to avoid DataFrame fragmentation.
+    """
+    # Initialize the champion converter
+    converter = ChampionConverter()
     
-    Args:
-        df (DataFrame): Input DataFrame
-        timestamp (str): Current timestamp
-        scraper_user (str): Current user's login
-        
-    Returns:
-        DataFrame: Processed DataFrame with champion-specific columns
-    """
-    # Define weights for temporal importance
+    # Define importance weights
     weights = {
-        'recent': 0.4,  # Last few games
-        'weekly': 0.3,  # Last 7 days
-        'season': 0.2,  # Current season
-        'mastery': 0.1  # All-time
+        'recent': 0.4,    # Last few games
+        'weekly': 0.3,    # Last 7 days
+        'season': 0.2,    # Current season
+        'mastery': 0.1    # All-time mastery
     }
     
-    # Initialize new DataFrame for champion features
-    champion_features = pd.DataFrame()
+    # Create dictionary to store all features
+    feature_dict = {
+        'player_id': df['player_id'],
+        'region': df['region'],
+        'timestamp': [timestamp] * len(df),
+        'scraper_user': [scraper_user] * len(df)
+    }
     
-    # Copy identification columns
-    champion_features['player_id'] = df['player_id']
-    champion_features['region'] = df['region']
-    champion_features['timestamp'] = timestamp
-    champion_features['scraper_user'] = scraper_user
-    
-    # Process each champion's data
-    def calculate_champion_score(row, champion):
-        score = 0
+    # Process each champion
+    for champion in converter.champions:
+        # Initialize scores for this champion
+        champion_scores = {
+            'recent_score': np.zeros(len(df)),
+            'weekly_score': np.zeros(len(df)),
+            'season_score': np.zeros(len(df)),
+            'mastery_score': np.zeros(len(df))
+        }
         
-        # Recent performance (from most_champ_1/2/3)
-        for i in range(1, 4):
-            if row[f'most_champ_{i}'] == champion:
-                score += weights['recent'] * (
-                    (float(row[f'WR_{i}']) if pd.notna(row[f'WR_{i}']) else 0) * 0.6 +
-                    (float(row[f'KDA_{i}']) if pd.notna(row[f'KDA_{i}']) else 0) * 0.4
-                )
-                
-        # Weekly performance (from 7d_champ_1/2/3)
-        for i in range(1, 4):
-            if row[f'7d_champ_{i}'] == champion:
-                score += weights['weekly'] * (
-                    (float(row[f'7d_WR_{i}']) if pd.notna(row[f'7d_WR_{i}']) else 0)
-                )
-                
-        # Season performance (from season_champ_1-7)
-        for i in range(1, 8):
-            if row[f'season_champ_{i}'] == champion:
-                wr = float(str(row[f'wr_{i}']).rstrip('%')) / 100 if pd.notna(row[f'wr_{i}']) else 0
-                games = float(row[f'games_{i}']) if pd.notna(row[f'games_{i}']) else 0
-                score += weights['season'] * (wr * games / 100)  # Normalize by games played
-                
-        # Mastery (from mastery_champ_1-16)
-        for i in range(1, 17):
-            if row[f'mastery_champ_{i}'] == champion:
-                mastery = float(row[f'm_lv_{i}']) if pd.notna(row[f'm_lv_{i}']) else 0
-                score += weights['mastery'] * (mastery / 7)  # Normalize by max mastery level
-                
-        return score
+        # Calculate scores for each player
+        for idx, row in df.iterrows():
+            # 1. Recent Performance
+            for i in range(1, 4):
+                if row.get(f'most_champ_{i}') == champion:
+                    wr = float(row[f'WR_{i}']) if pd.notna(row[f'WR_{i}']) else 0
+                    kda = float(row[f'KDA_{i}']) if pd.notna(row[f'KDA_{i}']) else 0
+                    champion_scores['recent_score'][idx] = (wr * 0.6 + kda * 0.4)
+            
+            # 2. Weekly Performance
+            for i in range(1, 4):
+                if row.get(f'7d_champ_{i}') == champion:
+                    wr = convert_percentage_to_decimal(str(row[f'7d_WR_{i}']))
+                    games = float(row[f'7d_total_{i}']) if pd.notna(row[f'7d_total_{i}']) else 0
+                    champion_scores['weekly_score'][idx] = wr * (games / 10)
+            
+            # 3. Season Performance
+            for i in range(1, 8):
+                if row.get(f'season_champ_{i}') == champion:
+                    wr = convert_percentage_to_decimal(str(row[f'wr_{i}']))
+                    games = float(row[f'games_{i}']) if pd.notna(row[f'games_{i}']) else 0
+                    kda = float(row[f'kda_ratio_{i}']) if pd.notna(row[f'kda_ratio_{i}']) else 0
+                    cs_per_min = float(row[f'cpm_{i}']) if pd.notna(row[f'cpm_{i}']) else 0
+                    
+                    champion_scores['season_score'][idx] = (
+                        wr * 0.4 +
+                        (kda / 10) * 0.3 +
+                        (cs_per_min / 10) * 0.3
+                    ) * (games / 100)
+            
+            # 4. Mastery Score
+            for i in range(1, 17):
+                if row.get(f'mastery_champ_{i}') == champion:
+                    mastery = float(row[f'm_lv_{i}']) if pd.notna(row[f'm_lv_{i}']) else 0
+                    champion_scores['mastery_score'][idx] = mastery / 7
+        
+        # Calculate final weighted score
+        feature_dict[champion] = (
+            champion_scores['recent_score'] * weights['recent'] +
+            champion_scores['weekly_score'] * weights['weekly'] +
+            champion_scores['season_score'] * weights['season'] +
+            champion_scores['mastery_score'] * weights['mastery']
+        )
     
-    # Get unique champions from all sources
-    all_champions = set()
-    
-    # From recent champions
-    for i in range(1, 4):
-        all_champions.update(df[f'most_champ_{i}'].dropna())
-    
-    # From season champions
-    for i in range(1, 8):
-        all_champions.update(df[f'season_champ_{i}'].dropna())
-    
-    # From weekly champions
-    for i in range(1, 4):
-        all_champions.update(df[f'7d_champ_{i}'].dropna())
-    
-    # From mastery
-    for i in range(1, 17):
-        all_champions.update(df[f'mastery_champ_{i}'].dropna())
-    
-    # Calculate scores for each champion
-    for champion in all_champions:
-        if pd.notna(champion):
-            champion_col = f'champion_score_{champion.replace(" ", "_").lower()}'
-            champion_features[champion_col] = df.apply(
-                lambda row: calculate_champion_score(row, champion), 
-                axis=1
-            )
-    
-    # Add role preferences (might influence champion selection)
+    # Add role preferences to feature dictionary
     role_cols = ['TOP', 'JUNGLE', 'MID', 'ADC', 'SUPPORT']
-    for col in role_cols:
-        champion_features[f'role_pref_{col.lower()}'] = df[col]
+    for role in role_cols:
+        feature_dict[f'role_pref_{role.lower()}'] = df[role]
+    
+    # Add role information to feature dictionary
+    feature_dict.update({
+        'primary_role': df['most_role_1'],
+        'primary_role_value': df['most_role_1_value'],
+        'secondary_role': df['most_role_2'],
+        'secondary_role_value': df['most_role_2_value']
+    })
+    
+    # Convert tier if available
+    if 'tier' in df.columns:
+        feature_dict['tier'] = df['tier'].apply(convert_tier_to_number)
+    
+    # Create DataFrame all at once using the feature dictionary
+    features = pd.DataFrame(feature_dict)
     
     # Save to CSV
     output_file = os.path.join("util", "data", "champion_features.csv")
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
-    champion_features.to_csv(output_file, index=False)
+    features.to_csv(output_file, index=False)
     
     # Print summary
-    print("\nChampion Features Summary:")
-    print(f"Number of unique champions: {len(all_champions)}")
-    print(f"Total features created: {len(champion_features.columns)}")
-    print("\nSample champion scores (first 5 rows, first 5 champions):")
-    champion_cols = [col for col in champion_features.columns if col.startswith('champion_score_')]
-    print(champion_features[champion_cols[:5]].head())
+    print("\nFeature Engineering Summary:")
+    print(f"Total champions processed: {len(converter.champions)}")
+    print(f"Total features created: {len(features.columns)}")
+    print(f"Total players processed: {len(features)}")
     
-    return champion_features
+    # Print sample of feature values
+    print("\nSample of champion scores (first 5 champions, first 3 players):")
+    champion_cols = converter.champions[:5]
+    print(features[['player_id'] + champion_cols].head(3))
+    
+    return features
 
-# Example usage:
 if __name__ == "__main__":
-    # Read your filtered leaderboard data
-    df = pd.read_csv("util/data/filtered_lb.csv")
+    # Read the input data
+    input_file = os.path.join("util", "data", "player_stats_merged.csv")
+    df = pd.read_csv(input_file)
     
-    # Create champion features
-    champion_features = create_champion_features(
-        df,
-        timestamp="2025-01-03 04:28:18",
-        scraper_user="marthinsurya"
-    )
+    # Create features
+    features = create_champion_features(df)
