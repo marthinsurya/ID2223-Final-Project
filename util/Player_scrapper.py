@@ -396,7 +396,7 @@ def get_player_stats(region, username):
             merged_df = merged_df[['player_id', 'region'] + other_cols]
 
         # Save merged DataFrame
-        save_dir = "my_scrapper/data"
+        save_dir = "util/data"
         os.makedirs(save_dir, exist_ok=True)
         
         if merged_df is not None and not merged_df.empty:

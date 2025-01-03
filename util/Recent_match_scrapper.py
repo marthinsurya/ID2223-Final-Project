@@ -198,7 +198,7 @@ def get_matches_stats(region, username):
         
         if matches_data:
             df = pd.DataFrame(matches_data)
-            save_path = os.path.join("my_scrapper", "data", "recent_matches.csv")
+            save_path = os.path.join("util", "data", "recent_matches.csv")
             os.makedirs(os.path.dirname(save_path), exist_ok=True)
             df.to_csv(save_path, index=False)
             print(f"Saved recent matches stats to {save_path}")

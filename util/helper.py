@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 class ChampionConverter:
     def __init__(self):
@@ -79,3 +80,66 @@ def convert_result_to_binary(result_str):
     Defeat -> 0
     """
     return 1 if result_str.lower().strip() == 'victory' else 0
+
+def merge_stats(recent_stats, player_stats):
+    """
+    Merge recent match stats with player profile stats and save to CSV.
+    
+    Args:
+        recent_stats (DataFrame/dict): Recent match statistics
+        player_stats (DataFrame/tuple): Player profile statistics
+        
+    Returns:
+        DataFrame: Combined statistics
+    """
+    try:
+        # Convert recent_stats to DataFrame if it's not already
+        if not isinstance(recent_stats, pd.DataFrame):
+            recent_df = pd.DataFrame(recent_stats)
+        else:
+            recent_df = recent_stats
+        
+        # Handle player_stats based on its type
+        if isinstance(player_stats, tuple):
+            # If it's a tuple (merged_df, dfs), use the merged_df
+            player_df = player_stats[0]
+        elif isinstance(player_stats, pd.DataFrame):
+            player_df = player_stats
+        else:
+            raise ValueError("Invalid player_stats format")
+
+        # Ensure player_id exists in both DataFrames
+        if 'player_id' not in recent_df.columns:
+            recent_df['player_id'] = player_df['player_id'].iloc[0]
+
+        # Merge DataFrames
+        merged_df = pd.merge(
+            recent_df,
+            player_df,
+            on='player_id',
+            how='left',
+            suffixes=('', '_profile')
+        )
+
+        # Reorder columns to ensure player_id and region are first
+        cols = merged_df.columns.tolist()
+        cols = ['player_id'] + [col for col in cols if col != 'player_id']
+        if 'region' in cols:
+            cols.remove('region')
+            cols.insert(1, 'region')
+        merged_df = merged_df[cols]
+
+        # Create directory if it doesn't exist
+        save_dir = "util/data"
+        os.makedirs(save_dir, exist_ok=True)
+
+        # Save to CSV
+        filepath = os.path.join(save_dir, "player_stats_merged.csv")
+        merged_df.to_csv(filepath, index=False)
+        print(f"Successfully saved merged stats to {filepath}")
+
+        return merged_df
+
+    except Exception as e:
+        print(f"Error in merge_stats: {e}")
+        return None

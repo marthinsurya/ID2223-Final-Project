@@ -129,7 +129,7 @@ def get_meta_stats():
         df = pd.DataFrame(all_roles_data)
         
         # Save data
-        save_dir = os.path.join("my_scrapper", "data")
+        save_dir = os.path.join("util", "data")
         os.makedirs(save_dir, exist_ok=True)
         filepath = os.path.join(save_dir, "meta_stats.csv")
         df.to_csv(filepath, index=False)
