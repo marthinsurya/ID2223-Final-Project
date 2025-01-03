@@ -2,17 +2,12 @@
 import pandas as pd
 import numpy as np
 import os
-from helper import (
-    ChampionConverter, 
-    convert_percentage_to_decimal,
-    convert_tier_to_number,
-    convert_result_to_binary
-)
+from helper import ChampionConverter, convert_percentage_to_decimal, convert_tier_to_number
 
 def create_champion_features(df, timestamp="2025-01-03 05:08:12", scraper_user="marthinsurya"):
     """
     Create features for champion prediction using player data.
-    Champion names will be used as column headers.
+    Champion names will be used as column headers
     Uses pd.concat to avoid DataFrame fragmentation.
     """
     # Initialize the champion converter
