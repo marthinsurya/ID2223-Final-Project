@@ -143,3 +143,67 @@ def merge_stats(recent_stats, player_stats):
     except Exception as e:
         print(f"Error in merge_stats: {e}")
         return None
+    
+
+def filter_leaderboard(df, tiers=None):
+    """
+    Filter leaderboard DataFrame to keep only specific tiers.
+    
+    Args:
+        df (pandas.DataFrame): Input leaderboard DataFrame
+        tiers (list): List of tiers to keep. Defaults to ["CHALLENGER", "GRANDMASTER"]
+        timestamp (str): Current timestamp in UTC
+        scraper_user (str): Current user's login
+    
+    Returns:
+        pandas.DataFrame: Filtered leaderboard data
+    """
+    try:
+        # Set default tiers if none provided
+        if tiers is None:
+            tiers = ["CHALLENGER", "GRANDMASTER"]
+        
+        # Convert tiers to uppercase for consistency
+        tiers = [tier.upper() for tier in tiers]
+        
+        # Validate input DataFrame
+        required_cols = ["tier", "summoner", "region"]
+        if not all(col in df.columns for col in required_cols):
+            raise ValueError(f"DataFrame must contain columns: {required_cols}")
+        
+        # Create copy to avoid modifying original DataFrame
+        filtered_df = df.copy()
+        
+        # Convert tier column to uppercase for consistent filtering
+        filtered_df['tier'] = filtered_df['tier'].str.upper()
+        
+        # Filter by specified tiers
+        filtered_df = filtered_df[filtered_df['tier'].isin(tiers)]
+        
+        
+        # Sort by region and tier
+        filtered_df = filtered_df.sort_values(['region', 'tier', 'rank'])
+        
+        # Reset index
+        filtered_df = filtered_df.reset_index(drop=True)
+        
+        # Save to CSV
+        output_file = os.path.join("util", "data", "lb_filtered.csv")
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        filtered_df.to_csv(output_file, index=False)
+        
+        print(f"\nFiltered leaderboard to {len(tiers)} tiers: {', '.join(tiers)}")
+        print(f"Remaining entries: {len(filtered_df)}")
+        print(f"Saved filtered leaderboard to {output_file}")
+        
+        # Print summary statistics
+        print("\nSummary by region and tier:")
+        summary = filtered_df.groupby(['region', 'tier']).size().unstack(fill_value=0)
+        print(summary)
+        
+        return filtered_df
+        
+    except Exception as e:
+        print(f"Error filtering leaderboard: {e}")
+        return None
+
