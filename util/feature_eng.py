@@ -4,7 +4,7 @@ import numpy as np
 import os
 from helper import ChampionConverter, convert_percentage_to_decimal, convert_tier_to_number
 
-def create_champion_features(df, timestamp="2025-01-03 05:08:12", scraper_user="marthinsurya"):
+def create_champion_features(df):
     """
     Create features for champion prediction using player data.
     Champion names will be used as column headers
@@ -24,9 +24,7 @@ def create_champion_features(df, timestamp="2025-01-03 05:08:12", scraper_user="
     # Create dictionary to store all features
     feature_dict = {
         'player_id': df['player_id'],
-        'region': df['region'],
-        'timestamp': [timestamp] * len(df),
-        'scraper_user': [scraper_user] * len(df)
+        'region': df['region']
     }
     
     # Process each champion
