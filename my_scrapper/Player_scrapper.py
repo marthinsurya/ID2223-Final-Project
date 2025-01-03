@@ -373,21 +373,27 @@ def get_player_stats(region, username):
 
         # Add player ID and region to each DataFrame
         for df in dfs.values():
-            df['player_id'] = username
-            df['region'] = region
+            df.insert(0, 'player_id', username)  # Insert player_id as first column
+            df.insert(1, 'region', region)      # Insert region as second column
 
         # Merge all DataFrames into one
         merged_df = None
         for name, df in dfs.items():
-            # Remove the common columns from subsequent DataFrames
             if merged_df is None:
                 merged_df = df
             else:
-                # Drop common columns except player_id, region, and timestamp
+                # Drop common columns except player_id and region
                 common_cols = df.columns.intersection(merged_df.columns)
                 cols_to_drop = [col for col in common_cols if col not in ['player_id', 'region']]
                 df_to_merge = df.drop(columns=cols_to_drop, errors='ignore')
                 merged_df = pd.merge(merged_df, df_to_merge, on=['player_id', 'region'], how='outer')
+
+        # Ensure player_id and region are the first columns in final order
+        if merged_df is not None and not merged_df.empty:
+            # Get all columns except player_id and region
+            other_cols = [col for col in merged_df.columns if col not in ['player_id', 'region']]
+            # Reorder columns with player_id and region first
+            merged_df = merged_df[['player_id', 'region'] + other_cols]
 
         # Save merged DataFrame
         save_dir = "my_scrapper/data"
