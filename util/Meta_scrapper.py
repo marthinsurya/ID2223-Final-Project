@@ -11,7 +11,8 @@ from selenium.webdriver.support import expected_conditions as EC
 
 # Constants
 ROLES = ["top", "jungle", "mid", "adc", "support"]
-BASE_URL = "https://www.op.gg/champions?position={role}"
+#BASE_URL = "https://www.op.gg/champions?position={role}"
+BASE_URL = "https://www.op.gg/champions?position=all"
 TIER_COLOR_MAPPING = {
     "#0093FF": 1,  # Blue
     "#00BBA3": 2,  # Teal

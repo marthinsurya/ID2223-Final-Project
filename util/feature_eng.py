@@ -208,15 +208,17 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, debug=No
                     base_score[idx] = 0
 
             final_score = base_score[idx]
+            final_score_actual = feature_dict[row['champion']][idx] if row['champion'] in feature_dict else final_score
             if debug == champion:
                 debug_data.append({
-                    'champion': champion,
-                    'recent_score': champion_scores['recent_score'][idx],
-                    'weekly_score': champion_scores['weekly_score'][idx],
-                    'season_score': champion_scores['season_score'][idx],
-                    'mastery_score': champion_scores['mastery_score'][idx],
+                    'champion': row['champion'],
+                    #'recent_score': champion_scores['recent_score'][idx],
+                    #'weekly_score': champion_scores['weekly_score'][idx],
+                    #'season_score': champion_scores['season_score'][idx],
+                    #'mastery_score': champion_scores['mastery_score'][idx],
                     'base_score': base_score[idx],
                     'final_score': final_score,
+                    'final_score_actual': final_score_actual,
                     'teammates_champ_list': teammates_champ_list,
                     'opponent_champ_list': opponent_champ_list
                 })
@@ -240,16 +242,16 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, debug=No
     os.makedirs(os.path.dirname(output_file), exist_ok=True)
     features.to_csv(output_file, index=False)
     
-    # Print summary
-    print("\nFeature Engineering Summary:")
-    print(f"Total champions processed: {len(converter.champions)}")
-    print(f"Total features created: {len(features.columns)}")
-    print(f"Total players processed: {len(features)}")
+    # # Print summary
+    # print("\nFeature Engineering Summary:")
+    # print(f"Total champions processed: {len(converter.champions)}")
+    # print(f"Total features created: {len(features.columns)}")
+    # print(f"Total players processed: {len(features)}")
     
-    # Print sample of feature values
-    print("\nSample of champion scores (first 5 champions, first 3 players):")
-    champion_cols = converter.champions[:5]
-    print(features[['player_id'] + champion_cols].head(3))
+    # # Print sample of feature values
+    # print("\nSample of champion scores (first 5 champions, first 3 players):")
+    # champion_cols = converter.champions[:5]
+    # print(features[['player_id'] + champion_cols].head(3))
     
     return features
 
