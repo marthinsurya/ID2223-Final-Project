@@ -219,13 +219,13 @@ def get_weekly_stats(ranked_7d_box):
 def get_season_data(season_champ_box):   
     # Initialize flat dictionary with defaults for 7 champions
     season_data = {
-        "season_champ_1": None, "cs_1": "0", "cpm_1": "0", "kda_ratio_1": "0", "k_1": "0", "d_1": "0", "a_1": "0", "wr_1": 0.0, "games_1": "0",
-        "season_champ_2": None, "cs_2": "0", "cpm_2": "0", "kda_ratio_2": "0", "k_2": "0", "d_2": "0", "a_2": "0", "wr_2": 0.0, "games_2": "0",
-        "season_champ_3": None, "cs_3": "0", "cpm_3": "0", "kda_ratio_3": "0", "k_3": "0", "d_3": "0", "a_3": "0", "wr_3": 0.0, "games_3": "0",
-        "season_champ_4": None, "cs_4": "0", "cpm_4": "0", "kda_ratio_4": "0", "k_4": "0", "d_4": "0", "a_4": "0", "wr_4": 0.0, "games_4": "0",
-        "season_champ_5": None, "cs_5": "0", "cpm_5": "0", "kda_ratio_5": "0", "k_5": "0", "d_5": "0", "a_5": "0", "wr_5": 0.0, "games_5": "0",
-        "season_champ_6": None, "cs_6": "0", "cpm_6": "0", "kda_ratio_6": "0", "k_6": "0", "d_6": "0", "a_6": "0", "wr_6": 0.0, "games_6": "0",
-        "season_champ_7": None, "cs_7": "0", "cpm_7": "0", "kda_ratio_7": "0", "k_7": "0", "d_7": "0", "a_7": "0", "wr_7": 0.0, "games_7": "0"
+        "season_champ_1": None, "cs_ssn_1": "0", "cpm_ssn_1": "0", "kda_ssn_1": "0", "k_ssn_1": "0", "d_ssn_1": "0", "a_ssn_1": "0", "wr_ssn_1": 0.0, "games_ssn_1": "0",
+        "season_champ_2": None, "cs_ssn_2": "0", "cpm_ssn_2": "0", "kda_ssn_2": "0", "k_ssn_2": "0", "d_ssn_2": "0", "a_ssn_2": "0", "wr_ssn_2": 0.0, "games_ssn_2": "0",
+        "season_champ_3": None, "cs_ssn_3": "0", "cpm_ssn_3": "0", "kda_ssn_3": "0", "k_ssn_3": "0", "d_ssn_3": "0", "a_ssn_3": "0", "wr_ssn_3": 0.0, "games_ssn_3": "0",
+        "season_champ_4": None, "cs_ssn_4": "0", "cpm_ssn_4": "0", "kda_ssn_4": "0", "k_ssn_4": "0", "d_ssn_4": "0", "a_ssn_4": "0", "wr_ssn_4": 0.0, "games_ssn_4": "0",
+        "season_champ_5": None, "cs_ssn_5": "0", "cpm_ssn_5": "0", "kda_ssn_5": "0", "k_ssn_5": "0", "d_ssn_5": "0", "a_ssn_5": "0", "wr_ssn_5": 0.0, "games_ssn_5": "0",
+        "season_champ_6": None, "cs_ssn_6": "0", "cpm_ssn_6": "0", "kda_ssn_6": "0", "k_ssn_6": "0", "d_ssn_6": "0", "a_ssn_6": "0", "wr_ssn_6": 0.0, "games_ssn_6": "0",
+        "season_champ_7": None, "cs_ssn_7": "0", "cpm_ssn_7": "0", "kda_ssn_7": "0", "k_ssn_7": "0", "d_ssn_7": "0", "a_ssn_7": "0", "wr_ssn_7": 0.0, "games_ssn_7": "0"
     }
     
     try:
@@ -263,14 +263,14 @@ def get_season_data(season_champ_box):
                 
                 # Update flat dictionary
                 season_data[f"season_champ_{i}"] = champ_name
-                season_data[f"cs_{i}"] = cs_stats
-                season_data[f"cpm_{i}"] = cpm
-                season_data[f"kda_ratio_{i}"] = kda_ratio
-                season_data[f"k_{i}"] = k
-                season_data[f"d_{i}"] = d
-                season_data[f"a_{i}"] = a
-                season_data[f"wr_{i}"] = win_rate
-                season_data[f"games_{i}"] = games_played
+                season_data[f"cs_ssn_{i}"] = cs_stats
+                season_data[f"cpm_ssn_{i}"] = cpm
+                season_data[f"kda_ssn_{i}"] = kda_ratio
+                season_data[f"k_ssn_{i}"] = k
+                season_data[f"d_ssn_{i}"] = d
+                season_data[f"a_ssn_{i}"] = a
+                season_data[f"wr_ssn_{i}"] = win_rate
+                season_data[f"games_ssn_{i}"] = games_played
 
             except Exception as e:
                 print(f"Error processing champion {i}: {str(e)}")

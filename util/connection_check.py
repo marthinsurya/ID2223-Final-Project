@@ -35,29 +35,29 @@ def check_connection(region, summoner):
         print(f"Error connecting to {url}: {e}")
         return False
 
-# Open the input CSV file
-with open(input_file, mode="r", encoding="utf-8") as infile:
-    csv_reader = csv.reader(infile)
-    header = next(csv_reader)  # Skip the header row
+# # Open the input CSV file
+# with open(input_file, mode="r", encoding="utf-8") as infile:
+#     csv_reader = csv.reader(infile)
+#     header = next(csv_reader)  # Skip the header row
     
-    # Process each row in the CSV file
-    for row in csv_reader:
-        region = row[1].strip()  # Get region from the first column
-        summoner = row[0].strip()  # Get summoner name from the second column
+#     # Process each row in the CSV file
+#     for row in csv_reader:
+#         region = row[1].strip()  # Get region from the first column
+#         summoner = row[0].strip()  # Get summoner name from the second column
         
-        # Check connection for the region and summoner
-        if not check_connection(region, summoner):
-            failed_summoners.append(summoner)
+#         # Check connection for the region and summoner
+#         if not check_connection(region, summoner):
+#             failed_summoners.append(summoner)
         
-        # Pause for a short time between requests to avoid overloading the server
-        time.sleep(2)
+#         # Pause for a short time between requests to avoid overloading the server
+#         time.sleep(2)
 
-# Print out failed summoner names if any
-if failed_summoners:
-    print("\nFailed to connect to the following summoners:")
-    for summoner in failed_summoners:
-        print(summoner)
-else:
-    print("\nAll connections were successful.")
+# # Print out failed summoner names if any
+# if failed_summoners:
+#     print("\nFailed to connect to the following summoners:")
+#     for summoner in failed_summoners:
+#         print(summoner)
+# else:
+#     print("\nAll connections were successful.")
 
-print("Connection check completed.")
+# print("Connection check completed.")
