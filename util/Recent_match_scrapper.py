@@ -122,7 +122,7 @@ def process_match_data(match_data, username, players):
     try:
         player_index = next((i for i, p in enumerate(players) if unquote(p['name']) == username), -1)
         team = "blue" if player_index < 5 else "red"
-        teammates = players[:5] if player_index < 5 else players[5:]
+        teammates = [p for i, p in enumerate(players[:5] if player_index < 5 else players[5:]) if i != player_index % 5]
         opponents = players[5:] if player_index < 5 else players[:5]
         
         kda_parts = match_data.get('kda', '0/0/0').strip().split('/')

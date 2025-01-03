@@ -1,24 +1,35 @@
-# feature_engineering.py
 import pandas as pd
 import numpy as np
 import os
-from helper import ChampionConverter, convert_percentage_to_decimal, convert_tier_to_number
+from helper import ChampionConverter
 
-def create_champion_features(df):
+def create_champion_features(merged_player_stats=None, meta_stats=None, debug=None):
     """
     Create features for champion prediction using player data.
-    Champion names will be used as column headers
+    Champion names will be used as column headers.
     Uses pd.concat to avoid DataFrame fragmentation.
+    Parameters:
+    - merged_player_stats: DataFrame containing player stats. If None, it will be loaded from the input file.
+    - meta_stats: DataFrame containing meta stats. If None, it will be loaded from the input file.
+    - debug: Optional parameter for champion name to print debug information.
     """
+    if merged_player_stats is None:
+        input_file = os.path.join("util", "data", "player_stats_merged.csv")
+        merged_player_stats = pd.read_csv(input_file)
+    
+    if meta_stats is None:
+        meta_file = os.path.join("util", "data", "meta_stats.csv")
+        meta_stats = pd.read_csv(meta_file)
+
     # Initialize the champion converter
     converter = ChampionConverter()
 
-    meta_df = pd.read_csv(os.path.join("util", "data", "meta_stats.csv"))
-
     # Get low tier champions and counter information
-    low_tier_champs = set(meta_df[meta_df['tier'].isin([3,4,5])]['champion'].unique())
+    tier_penalties = {3: 0.9, 4: 0.85, 5: 0.8}
+    tier_map = meta_stats.set_index('champion')['tier'].to_dict()
+
     counter_map = {}
-    for _, row in meta_df.iterrows():
+    for _, row in meta_stats.iterrows():
         if pd.notna(row['counter1']):
             champ = row['champion']
             counters = [row['counter1'], row['counter2'], row['counter3']]
@@ -26,30 +37,34 @@ def create_champion_features(df):
 
     # Define importance weights
     weights = {
-        'recent': 0.4,    # Last 20 games
-        'weekly': 0.5,    # Last 7 days
-        'season': 0.06,    # Current season
-        'mastery': 0.04    # All-time mastery
+        'recent': 0.3,    # Last 20 games
+        'weekly': 0.6,    # Last 7 days
+        'season': 0.06,   # Current season
+        'mastery': 0.04   # All-time mastery
     }
 
-    # Create dictionary to store all features
-    feature_dict = {
-        'player_id': df['player_id'],
-        'region': df['region']
-    }
+    # Move 'champion' column to the first position
+    cols = ['champion'] + [col for col in merged_player_stats if col != 'champion']
+    merged_player_stats = merged_player_stats[cols]
+
+    # Initialize feature dictionary with existing DataFrame
+    feature_dict = merged_player_stats.to_dict(orient='list')
     
-    # Process each champion
+    # For debug information
+    debug_data = []
+
+    # Process each champion to create new features
     for champion in converter.champions:
         # Initialize scores for this champion
         champion_scores = {
-            'recent_score': np.zeros(len(df)),
-            'weekly_score': np.zeros(len(df)),
-            'season_score': np.zeros(len(df)),
-            'mastery_score': np.zeros(len(df))
+            'recent_score': np.zeros(len(merged_player_stats)),
+            'weekly_score': np.zeros(len(merged_player_stats)),
+            'season_score': np.zeros(len(merged_player_stats)),
+            'mastery_score': np.zeros(len(merged_player_stats))
         }
         
         # Calculate scores for each player
-        for idx, row in df.iterrows():
+        for idx, row in merged_player_stats.iterrows():
             # 1. Recent Performance
             for i in range(1, 4):
                 if row.get(f'most_champ_{i}') == champion:
@@ -68,8 +83,7 @@ def create_champion_features(df):
                     )
                     
                     # Calculate games quantity factor
-                    # More games give more confidence, but bad performance with many games is worse
-                    games_factor = min(games/5, 1.0)  # 5 games cap
+                    games_factor = min(games / 5, 1.0)  # 5 games cap
                     games_ratio = games / total_games  # How much of total games on this champion
                     
                     # Adjust score based on performance trend
@@ -127,7 +141,7 @@ def create_champion_features(df):
                         # Calculate final weekly score
                         champion_scores['weekly_score'][idx] = weekly_performance * (
                             0.7 +  # Base weight
-                            (0.3 * min(weekly_games/5, 1.0))  # Games bonus (up to 30%)
+                            (0.3 * min(weekly_games / 5, 1.0))  # Games bonus (up to 30%)
                         )
             
             # 3. Season Performance
@@ -157,11 +171,12 @@ def create_champion_features(df):
         )
 
         # Apply tier penalties
-        if champion in low_tier_champs:
-            base_score *= 0.85  # 15% penalty for low tier champs
+        tier = tier_map.get(champion)
+        if tier in tier_penalties:
+            base_score *= tier_penalties[tier]  # Apply tier-specific penalty
             
         # Apply counter penalties - check all opponent champions
-        for idx, row in df.iterrows():
+        for idx, row in merged_player_stats.iterrows():
             counter_penalty = 0
             # Check all opponent champions (opp_champ1 to opp_champ5)
             for i in range(1, 6):
@@ -169,17 +184,56 @@ def create_champion_features(df):
                 if opp_col in row and pd.notna(row[opp_col]):
                     opp_champ = row[opp_col]
                     if opp_champ in counter_map and champion in counter_map[opp_champ]:
-                        counter_penalty += 0.2  # Stack small penalties for each counter
+                        counter_penalty += 0.1  # Stack small penalties for each counter
 
             if counter_penalty > 0:
-                base_score[idx] -= min(counter_penalty, 0.4)  # Cap total counter penalty at 40%
+                base_score[idx] -= min(counter_penalty, 0.3)  # Cap total counter penalty at 30%
+
+        # Check team champions and opponent champions
+        for idx, row in merged_player_stats.iterrows():
+            teammates_champ_list = []
+            opponent_champ_list = []
+            for i in range(1, 5):
+                team_col = f'team_champ{i}'
+                if team_col in row:
+                    teammates_champ_list.append(row[team_col])
+                if row[team_col] == champion:
+                    base_score[idx] = 0
+            
+            for i in range(1, 6):
+                opp_col = f'opp_champ{i}'
+                if opp_col in row:
+                    opponent_champ_list.append(row[opp_col])
+                if row[opp_col] == champion:
+                    base_score[idx] = 0
+
+            final_score = base_score[idx]
+            if debug == champion:
+                debug_data.append({
+                    'champion': champion,
+                    'recent_score': champion_scores['recent_score'][idx],
+                    'weekly_score': champion_scores['weekly_score'][idx],
+                    'season_score': champion_scores['season_score'][idx],
+                    'mastery_score': champion_scores['mastery_score'][idx],
+                    'base_score': base_score[idx],
+                    'final_score': final_score,
+                    'teammates_champ_list': teammates_champ_list,
+                    'opponent_champ_list': opponent_champ_list
+                })
 
         # Ensure no negative values
         feature_dict[champion] = np.maximum(base_score, 0.01)  # Small positive floor
     
-       
+    if debug:
+        debug_df = pd.DataFrame(debug_data)
+        print(debug_df)
+
     # Create DataFrame all at once using the feature dictionary
     features = pd.DataFrame(feature_dict)
+
+    # Move the champion column to be the first column
+    columns = ['champion'] + [col for col in features.columns if col != 'champion']
+    features = features[columns]
     
     # Save to CSV
     output_file = os.path.join("util", "data", "champion_features.csv")
@@ -200,9 +254,5 @@ def create_champion_features(df):
     return features
 
 if __name__ == "__main__":
-    # Read the input data
-    input_file = os.path.join("util", "data", "player_stats_merged.csv")
-    df = pd.read_csv(input_file)
-    
     # Create features
-    features = create_champion_features(df)
+    features = create_champion_features(debug='Viktor')
