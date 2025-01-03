@@ -4,7 +4,7 @@ import requests
 from urllib.parse import quote
 
 # Input file path
-input_file = "ID2223-Final-Project/my_scraper/lb_challenger_only.csv"
+input_file = "util/data/lb_filtered.csv"
 
 # List to store failed summoner names
 failed_summoners = []
