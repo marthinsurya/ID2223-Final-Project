@@ -1,4 +1,4 @@
-name: Daily Leaderboard Scraper
+name: Daily OPGG Scraper
 
 on:
   schedule:
