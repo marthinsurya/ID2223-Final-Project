@@ -1,5 +1,6 @@
 import pandas as pd
 import os
+from urllib.parse import quote
 
 class ChampionConverter:
     def __init__(self):
@@ -207,3 +208,56 @@ def filter_leaderboard(df, tiers=None):
         print(f"Error filtering leaderboard: {e}")
         return None
 
+def format_summoner_name(summoner):
+    """
+    Format summoner name for URL usage
+    
+    Parameters:
+    summoner: str - Original summoner name
+    
+    Returns:
+    str - Formatted summoner name
+    """
+    if not summoner:
+        raise ValueError("Summoner name cannot be empty")
+        
+    # Remove leading/trailing whitespace
+    summoner = summoner.strip()
+    
+    # Replace spaces and special characters
+    formatted_summoner = summoner.replace(" ", "-").replace("#", "-")
+    
+    # Handle other special characters through URL encoding
+    formatted_summoner = quote(formatted_summoner)
+    
+    return formatted_summoner
+
+
+def get_player_list(leaderboard=None):
+    """
+    Convert leaderboard data into proper player list format for API calls.
+    
+    Args:
+        leaderboard (DataFrame): Input leaderboard DataFrame containing summoner and region
+    
+    Returns:
+        DataFrame: Formatted player list with region and username columns
+    """
+    try:
+        
+        if leaderboard is None:
+            leaderboard_file = os.path.join("util", "data", "lb_filtered.csv")
+            leaderboard = pd.read_csv(leaderboard_file)
+            
+        # Rename summoner column to username
+        leaderboard = leaderboard.rename(columns={'summoner': 'username'})
+        
+        # Select only region and username columns in correct order
+        player_list = leaderboard[['region', 'username']]
+        
+        print(f"Successfully processed {len(player_list)} players")
+        return player_list
+        
+    except Exception as e:
+        print(f"Error processing leaderboard: {e}")
+        return None

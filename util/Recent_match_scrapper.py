@@ -8,7 +8,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
 from urllib.parse import unquote
 from webdriver_manager.chrome import ChromeDriverManager
-from helper import convert_to_minutes, convert_percentage_to_decimal, convert_tier_to_number, convert_result_to_binary
+from helper import convert_to_minutes, convert_percentage_to_decimal, convert_tier_to_number, convert_result_to_binary, format_summoner_name
 
 def setup_driver():
     options = Options()
@@ -174,39 +174,174 @@ def process_match_data(match_data, username, players):
         print(f"Error processing match: {e}")
         return None
 
-def get_matches_stats(region, username):
+def get_matches_stats(region, username, max_retries=2):
+    """
+    Get match stats for a single player with retry mechanism
+    """
     driver = None
-    try:
-        driver = setup_driver()
-        driver.get(f"https://www.op.gg/summoners/{region}/{username.replace(' ', '%20')}?queue_type=SOLORANKED")
-        
-        matches_container = WebDriverWait(driver, 20).until(
-            EC.presence_of_element_located((By.CSS_SELECTOR, "div.css-1jxewmm.ek41ybw0"))
-        )
-        
-        matches_data = []
-        match_elements = matches_container.find_elements(By.CSS_SELECTOR, "div.css-j7qwjs.ery81n90")
-        
-        for match in match_elements:
-            match_data = extract_match_data(match)
-            players = get_players_info(match)
-            match_data['match_date'] = get_tooltip_date(driver, match.find_element(By.CSS_SELECTOR, "div.time-stamp > div"))
+    retry_count = 0
+    
+    while retry_count <= max_retries:
+        try:
+            driver = setup_driver()
+            driver.set_page_load_timeout(20)  # Set page load timeout
             
-            processed_data = process_match_data(match_data, username, players)
-            if processed_data:
-                matches_data.append(processed_data)
-        
-        if matches_data:
-            df = pd.DataFrame(matches_data)
-            save_path = os.path.join("util", "data", "recent_matches.csv")
-            os.makedirs(os.path.dirname(save_path), exist_ok=True)
-            df.to_csv(save_path, index=False)
-            print(f"Saved recent matches stats to {save_path}")
-            return df
+            url = f"https://www.op.gg/summoners/{region}/{username}?queue_type=SOLORANKED"
+            print(f"Accessing URL: {url}")
+            driver.get(url)
             
-    except Exception as e:
-        print(f"Error: {e}")
-    finally:
-        if driver:
-            driver.quit()
+            matches_container = WebDriverWait(driver, 20).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "div.css-1jxewmm.ek41ybw0"))
+            )
+            
+            matches_data = []
+            match_elements = matches_container.find_elements(By.CSS_SELECTOR, "div.css-j7qwjs.ery81n90")
+            
+            #print(f"Found {len(match_elements)} matches")
+            
+            for i, match in enumerate(match_elements, 1):
+                try:
+                    match_data = extract_match_data(match)
+                    players = get_players_info(match)
+                    match_data['match_date'] = get_tooltip_date(
+                        driver, 
+                        match.find_element(By.CSS_SELECTOR, "div.time-stamp > div")
+                    )
+                    
+                    processed_data = process_match_data(match_data, username, players)
+                    if processed_data:
+                        matches_data.append(processed_data)
+                except Exception as e:
+                    print(f"Error processing match {i}: {e}")
+                    continue
+            
+            if matches_data:
+                return pd.DataFrame(matches_data)
+            else:
+                raise Exception("No valid matches found")
+                
+        except Exception as e:
+            retry_count += 1
+            print(f"Attempt {retry_count} failed: {e}")
+            if retry_count <= max_retries:
+                print(f"Retrying... ({retry_count}/{max_retries})")
+                time.sleep(5)  # Wait 5 seconds before retrying
+            else:
+                print(f"Max retries reached")
+                return pd.DataFrame()
+                
+        finally:
+            if driver:
+                driver.quit()
+    
     return pd.DataFrame()
+
+def get_multiple_matches_stats(players_df):
+    """
+    Get match stats for multiple players from a DataFrame
+    
+    Parameters:
+    players_df: DataFrame with columns 'region' and 'username'
+    """
+    save_dir = "util/data"
+    os.makedirs(save_dir, exist_ok=True)
+    checkpoint_file = os.path.join(save_dir, "recent_matches_checkpoint.csv")
+    all_matches_dfs = []
+    error_players = []
+    
+    # Load checkpoint if exists
+    start_idx = 0
+    if os.path.exists(checkpoint_file):
+        try:
+            checkpoint_df = pd.read_csv(checkpoint_file)
+            all_matches_dfs = [checkpoint_df]
+            # Get the number of players already processed
+            processed_players = set(checkpoint_df['player_id'])
+            # Filter out already processed players
+            players_df = players_df[~players_df['username'].isin(processed_players)]
+            print(f"Loaded checkpoint with {len(processed_players)} players already processed")
+        except Exception as e:
+            print(f"Error loading checkpoint: {e}")
+    
+    print(f"Processing matches for {len(players_df)} remaining players...")
+    
+    for idx, row in players_df.iterrows():
+        region = row['region'].lower()  # Ensure region is lowercase
+        username = row['username']
+        
+        try:
+            # Format the username
+            formatted_username = format_summoner_name(username)
+            print(f"\nProcessing matches for player {idx + 1}/{len(players_df)}: {username} ({region})")
+            #print(f"Formatted username: {formatted_username}")
+            
+            # Add delay between requests
+            if idx > 0:
+                time.sleep(2)
+                
+            matches_df = get_matches_stats(region, formatted_username)
+            
+            if matches_df is not None and not matches_df.empty:
+                # Add player identification columns
+                matches_df['player_id'] = username  # Original username
+                matches_df['region'] = region
+                all_matches_dfs.append(matches_df)
+                print(f"Successfully processed matches for {username}")
+                #print(f"Found {len(matches_df)} matches")
+
+                 # Save checkpoint every 10 players
+                if len(all_matches_dfs) % 10 == 0:
+                    checkpoint_save = pd.concat(all_matches_dfs, ignore_index=True)
+                    checkpoint_save.to_csv(checkpoint_file, index=False)
+                    print(f"Saved checkpoint after processing {len(all_matches_dfs)} players")
+
+            else:
+                print(f"No match data found for {username}")
+                error_players.append({
+                    'region': region,
+                    'username': username,
+                    'formatted_username': formatted_username,
+                    'error': 'No match data found'
+                })
+                
+        except Exception as e:
+            print(f"Error processing matches for {username}: {e}")
+            error_players.append({
+                'region': region,
+                'username': username,
+                'formatted_username': formatted_username if 'formatted_username' in locals() else 'Error in formatting',
+                'error': str(e)
+            })
+            continue
+
+    # Combine all match stats
+    if all_matches_dfs:
+        final_df = pd.concat(all_matches_dfs, ignore_index=True)
+                
+        filepath = os.path.join(save_dir, f"recent_matches.csv")
+        final_df.to_csv(filepath, index=False)
+        print(f"\nSaved combined match stats for {len(all_matches_dfs)} players to {filepath}")
+
+        # Clean up checkpoint file
+        if os.path.exists(checkpoint_file):
+            os.remove(checkpoint_file)
+            print("Removed checkpoint file after successful completion")
+        
+        # Save error log if any errors occurred
+        if error_players:
+            error_df = pd.DataFrame(error_players)
+            error_filepath = os.path.join(save_dir, f"recent_matches_error.csv")
+            error_df.to_csv(error_filepath, index=False)
+            print(f"Saved error log to {error_filepath}")
+        
+        # Print summary
+        print("\nSummary:")
+        print(f"Total players processed: {len(players_df)}")
+        print(f"Successful: {len(all_matches_dfs)}")
+        print(f"Failed: {len(error_players)}")
+        print(f"Total matches collected: {len(final_df)}")
+        
+        return final_df
+    else:
+        print("\nNo match data was collected")
+        return None
