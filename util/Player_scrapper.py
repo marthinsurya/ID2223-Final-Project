@@ -8,6 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
+from helper import format_summoner_name
 
 # Constants
 BASE_URL = "https://www.op.gg/summoners/{region}/{username}?queue_type=SOLORANKED"
@@ -92,23 +93,47 @@ def get_recent_champions(stats_box):
     }
 
     for i, champion in enumerate(champion_elements, 1):
-        # Extract champion name and image source
-        champ_name = champion.find_element(By.TAG_NAME, "img").get_attribute("alt")
-        
-        # Extract win/lose stats and KDA
-        win_lose = champion.find_element(By.CSS_SELECTOR, ".win-lose").text.strip()
-        win_rate = float(win_lose.split('%')[0]) / 100  # "75%" -> 0.75
-        wins = int(win_lose.split('(')[1].split('W')[0])  # "(3W 1L)" -> 3
-        losses = int(win_lose.split('W')[1].split('L')[0])  # "1L)" -> 1
-        kda_text = champion.find_element(By.CSS_SELECTOR, ".css-1mz60y0.e1t9nk8i2").text.strip() if champion.find_elements(By.CSS_SELECTOR, ".css-1mz60y0.e1t9nk8i2") else ""
-        kda = float(kda_text.split()[0]) if kda_text else 0.0  # "3.71 KDA" -> 3.71
+        try:
+            # Initialize kda for this iteration
+            kda = 0.0
+            
+            # Extract champion name and image source
+            champ_name = champion.find_element(By.TAG_NAME, "img").get_attribute("alt")
+            
+            # Extract win/lose stats and KDA
+            win_lose = champion.find_element(By.CSS_SELECTOR, ".win-lose").text.strip()
+            win_rate = float(win_lose.split('%')[0]) / 100  # "75%" -> 0.75
+            wins = int(win_lose.split('(')[1].split('W')[0])  # "(3W 1L)" -> 3
+            losses = int(win_lose.split('W')[1].split('L')[0])  # "1L)" -> 1
+           
+            # KDA processing with a more precise selector
+            try:
+                kda_element = champion.find_element(By.CSS_SELECTOR, "div[class*='e1t9nk8i2']")
+                if kda_element:
+                    kda_text = kda_element.text.strip()
+                    #print(f"Found KDA text for champion {i}: '{kda_text}'")  # Debug print
+                    if kda_text and "KDA" in kda_text:
+                        kda = float(kda_text.split("KDA")[0].strip())
+                        #print(f"Parsed KDA value: {kda}")  # Debug print
+                    else:
+                        print(f"Invalid KDA text format for champion {i}: '{kda_text}'")
+                else:
+                    print(f"No KDA element found for champion {i}")
+            except Exception as e:
+                print(f"Error processing KDA: {e}")
+                kda = 0.0
                 
-         # Update flat dictionary
-        recent_champ_stats[f"most_champ_{i}"] = champ_name
-        recent_champ_stats[f"WR_{i}"] = win_rate
-        recent_champ_stats[f"W_{i}"] = wins
-        recent_champ_stats[f"L_{i}"] = losses
-        recent_champ_stats[f"KDA_{i}"] = kda
+            # Update flat dictionary
+            recent_champ_stats[f"most_champ_{i}"] = champ_name
+            recent_champ_stats[f"WR_{i}"] = win_rate
+            recent_champ_stats[f"W_{i}"] = wins
+            recent_champ_stats[f"L_{i}"] = losses
+            recent_champ_stats[f"KDA_{i}"] = kda
+            
+        except Exception as e:
+            print(f"Error processing champion {i}: {e}")
+            # Dictionary already has default values for this champion
+            continue
     
     return recent_champ_stats
 
@@ -395,21 +420,14 @@ def get_player_stats(region, username):
             # Reorder columns with player_id and region first
             merged_df = merged_df[['player_id', 'region'] + other_cols]
 
-        # Save merged DataFrame
-        save_dir = "util/data"
-        os.makedirs(save_dir, exist_ok=True)
+        # # Save merged DataFrame
+        # save_dir = "util/data"
+        # os.makedirs(save_dir, exist_ok=True)
         
-        if merged_df is not None and not merged_df.empty:
-            filepath = os.path.join(save_dir, f"player_stats.csv")
-            merged_df.to_csv(filepath, index=False)
-            print(f"Saved merged player stats to {filepath}")
-
-            # Also save individual tables
-            # for name, df in dfs.items():
-            #     if not df.empty:
-            #         filepath = os.path.join(save_dir, f"{name}_{region}_{username}.csv")
-            #         df.to_csv(filepath, index=False)
-            #         #print(f"Saved {name} data to {filepath}")
+        # if merged_df is not None and not merged_df.empty:
+        #     filepath = os.path.join(save_dir, f"player_stats.csv")
+        #     merged_df.to_csv(filepath, index=False)
+        #     print(f"Saved player stats to {filepath}")
 
         return merged_df, dfs
 
@@ -420,3 +438,107 @@ def get_player_stats(region, username):
     finally:
         if driver:
             driver.quit()
+
+def get_multiple_player_stats(players_df):
+    """
+    Get stats for multiple players from a DataFrame
+    
+    Parameters:
+    players_df: DataFrame with columns 'region' and 'username'
+    """
+    all_merged_dfs = []
+    error_players = []
+    
+    save_dir = "util/data"
+    os.makedirs(save_dir, exist_ok=True)
+    checkpoint_file = os.path.join(save_dir, "player_stats_checkpoint.csv")
+    all_merged_dfs = []
+    error_players = []
+    
+    # Load checkpoint if exists
+    start_idx = 0
+    if os.path.exists(checkpoint_file):
+        try:
+            checkpoint_df = pd.read_csv(checkpoint_file)
+            all_merged_dfs = [checkpoint_df]
+            # Get the number of players already processed
+            processed_players = set(checkpoint_df['player_id'])
+            # Filter out already processed players
+            players_df = players_df[~players_df['username'].isin(processed_players)]
+            print(f"Loaded checkpoint with {len(processed_players)} players already processed")
+        except Exception as e:
+            print(f"Error loading checkpoint: {e}")
+
+    print(f"Processing {len(players_df)} remaining players...")
+    
+    for idx, row in players_df.iterrows():
+        region = row['region'].lower()  # Ensure region is lowercase
+        username = row['username']
+        
+        try:
+            # Format the username
+            formatted_username = format_summoner_name(username)
+            print(f"\nProcessing player {idx + 1}/{len(players_df)}: {username} ({region})")
+            print(f"Formatted username: {formatted_username}")
+            
+            # Add delay between requests
+            if idx > 0:
+                time.sleep(2)
+                
+            merged_df, _ = get_player_stats(region, formatted_username)
+            if merged_df is not None and not merged_df.empty:
+                # Store original username in the DataFrame
+                merged_df['player_id'] = username  # Store original username
+                all_merged_dfs.append(merged_df)
+                print(f"Successfully processed {username}")
+
+                # Save checkpoint every 10 players
+                if len(all_merged_dfs) % 10 == 0:
+                    checkpoint_save = pd.concat(all_merged_dfs, ignore_index=True)
+                    checkpoint_save.to_csv(checkpoint_file, index=False)
+                    print(f"Saved checkpoint after processing {len(all_merged_dfs)} players")
+
+            else:
+                print(f"No data found for {username}")
+                error_players.append({
+                    'region': region,
+                    'username': username,
+                    'formatted_username': formatted_username,
+                    'error': 'No data found'
+                })
+                
+        except Exception as e:
+            print(f"Error processing {username}: {e}")
+            error_players.append({
+                'region': region,
+                'username': username,
+                'formatted_username': formatted_username if 'formatted_username' in locals() else 'Error in formatting',
+                'error': str(e)
+            })
+            continue
+
+    # Combine and save final results
+    if all_merged_dfs:
+        final_df = pd.concat(all_merged_dfs, ignore_index=True)
+        
+        # Save final combined stats
+        filepath = os.path.join(save_dir, "player_stats.csv")
+        final_df.to_csv(filepath, index=False)
+        print(f"\nSaved combined stats for {len(all_merged_dfs)} players to {filepath}")
+        
+        # Clean up checkpoint file
+        if os.path.exists(checkpoint_file):
+            os.remove(checkpoint_file)
+            print("Removed checkpoint file after successful completion")
+        
+        # Save error log
+        if error_players:
+            error_df = pd.DataFrame(error_players)
+            error_filepath = os.path.join(save_dir, "player_stats_errors.csv")
+            error_df.to_csv(error_filepath, index=False)
+            print(f"Saved error log to {error_filepath}")
+        
+        return final_df
+    else:
+        print("\nNo player data was collected")
+        return None
