@@ -33,4 +33,4 @@ recent_stats = get_multiple_matches_stats(player_list)   #save to recent_stats.c
 merged_stats = merge_stats(recent_stats, player_stats)          #save to player_stats_merged.csv
 
 #feature engineering
-#training_features = create_champion_features(merged_stats, meta_stats, weekly_meta_stats, consider_team_comp=True)   #save to feature_eng_stats.csv
+training_features = create_champion_features(merged_stats, meta_stats, weekly_meta_stats, consider_team_comp=True)   #save to feature_eng_stats.csv
