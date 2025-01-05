@@ -25,10 +25,10 @@ import pandas as pd
 #    )
 
 #player_list = get_player_list(filtered_lb)             
-player_list = get_player_list()               # without arg, it will read from lb_filtered.csv
+#player_list = get_player_list()               # without arg, it will read from lb_filtered.csv
 
 #player_stats = get_multiple_player_stats(player_list)    #save to player_stats.csv
-recent_stats = get_multiple_matches_stats(player_list)   #save to recent_stats.csv
+#recent_stats = get_multiple_matches_stats(player_list)   #save to recent_stats.csv
 
 #recent_stats = pd.read_csv("util/data/recent_matches_checkpoint.csv")
 #player_stats = pd.read_csv("util/data/player_stats.csv")
@@ -36,5 +36,5 @@ recent_stats = get_multiple_matches_stats(player_list)   #save to recent_stats.c
 
 
 #feature engineering
-#merged_stats = pd.read_csv("util/data/player_stats_merged.csv")
-#training_features = create_champion_features(merged_stats=merged_stats, debug=none, consider_team_comp=True, test_mode=False)   #save to feature_eng_stats.csv
+merged_stats = pd.read_csv("util/data/player_stats_merged_2025-01-05.csv")
+training_features = create_champion_features(merged_player_stats=merged_stats, debug=None, consider_team_comp=True, test_mode=False)   #save to feature_eng_stats.csv
