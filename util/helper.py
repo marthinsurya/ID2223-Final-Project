@@ -318,3 +318,81 @@ def get_player_list(leaderboard=None):
     except Exception as e:
         print(f"Error processing leaderboard: {e}")
         return None
+
+def process_kda_perfect(df):
+    """
+    Process KDA values in the DataFrame, replacing 'Perfect' with appropriate values.
+    """
+    try:
+        # Create a copy to avoid modifying the original dataframe
+        df = df.copy()
+        
+        # Function to safely convert to numeric
+        def safe_convert(x):
+            if isinstance(x, (int, float)):
+                return x
+            if isinstance(x, str) and x.lower() == 'perfect':
+                return 6
+            try:
+                return float(x)
+            except:
+                return None
+
+        # 1. Process KDA_1, KDA_2, KDA_3
+        for col in ['KDA_1', 'KDA_2', 'KDA_3']:
+            if col in df.columns:
+                df[col] = df[col].apply(safe_convert)
+
+        # 2. Process kda_ssn_1 to kda_ssn_7
+        for i in range(1, 8):
+            col = f'kda_ssn_{i}'
+            if col in df.columns:
+                perfect_mask = df[col].astype(str).str.contains('perfect', case=False)
+                if perfect_mask.any():
+                    kills_col, assists_col = f'k_ssn_{i}', f'a_ssn_{i}'
+                    if kills_col in df.columns and assists_col in df.columns:
+                        df.loc[perfect_mask, col] = df.loc[perfect_mask].apply(
+                            lambda row: pd.to_numeric(row[kills_col], errors='coerce') + 
+                                      pd.to_numeric(row[assists_col], errors='coerce'), 
+                            axis=1
+                        )
+                    else:
+                        df.loc[perfect_mask, col] = 6
+                df[col] = pd.to_numeric(df[col], errors='coerce')
+
+        # 3. Process kda_ratio_profile
+        if 'kda_ratio_profile' in df.columns:
+            perfect_mask = df['kda_ratio_profile'].astype(str).str.contains('perfect', case=False)
+            if perfect_mask.any():
+                df.loc[perfect_mask, 'kda_ratio_profile'] = df.loc[perfect_mask].apply(
+                    lambda row: pd.to_numeric(row['avg_kills'], errors='coerce') + 
+                              pd.to_numeric(row['avg_assists'], errors='coerce'),
+                    axis=1
+                )
+            df['kda_ratio_profile'] = pd.to_numeric(df['kda_ratio_profile'], errors='coerce')
+
+        # 4. Process remaining kda_ratio columns
+        other_cols = [col for col in df.columns if 'kda_ratio' in col.lower() 
+                     and col != 'kda_ratio_profile' 
+                     and col not in [f'kda_ssn_{i}' for i in range(1, 8)]]
+        
+        for col in other_cols:
+            perfect_mask = df[col].astype(str).str.contains('perfect', case=False)
+            if perfect_mask.any():
+                prefix = col.split('kda_ratio')[0]
+                kills_col, assists_col = f"{prefix}kills", f"{prefix}assists"
+                if kills_col in df.columns and assists_col in df.columns:
+                    df.loc[perfect_mask, col] = df.loc[perfect_mask].apply(
+                        lambda row: pd.to_numeric(row[kills_col], errors='coerce') + 
+                                  pd.to_numeric(row[assists_col], errors='coerce'),
+                        axis=1
+                    )
+                else:
+                    df.loc[perfect_mask, col] = 6
+            df[col] = pd.to_numeric(df[col], errors='coerce')
+
+        return df
+
+    except Exception as e:
+        print(f"Error in process_kda_perfect: {str(e)}")
+        return df

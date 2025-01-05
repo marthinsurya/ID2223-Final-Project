@@ -24,17 +24,20 @@ import pandas as pd
 #        tiers=["CHALLENGER"]
 #    )
 
+#filtered_lb = pd.read_csv("util/data/lb_filtered_custom.csv")
 #player_list = get_player_list(filtered_lb)             
-player_list = get_player_list()               # without arg, it will read from lb_filtered.csv
+
+#player_list = get_player_list()               # without arg, it will read from lb_filtered.csv
+
 
 #player_stats = get_multiple_player_stats(player_list)    #save to player_stats.csv
-recent_stats = get_multiple_matches_stats(player_list)   #save to recent_stats.csv
+#recent_stats = get_multiple_matches_stats(player_list)   #save to recent_stats.csv
 
-#recent_stats = pd.read_csv("util/data/recent_matches_checkpoint.csv")
+#recent_stats = pd.read_csv("util/data/recent_matches.csv")
 #player_stats = pd.read_csv("util/data/player_stats.csv")
 #merged_stats = merge_stats(recent_stats, player_stats)          #save to player_stats_merged.csv
 
 
 #feature engineering
-#merged_stats = pd.read_csv("util/data/player_stats_merged_2025-01-05.csv")
-#training_features = create_champion_features(merged_player_stats=merged_stats, debug=None, consider_team_comp=True, test_mode=False)   #save to feature_eng_stats.csv
+merged_stats = pd.read_csv("util/data/player_stats_merged_2025-01-05.csv")
+training_features = create_champion_features(merged_player_stats=merged_stats, debug=None, consider_team_comp=True, test_mode=False)   #save to feature_eng_stats.csv

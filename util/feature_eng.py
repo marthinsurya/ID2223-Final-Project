@@ -1,57 +1,28 @@
 import os
 import pandas as pd
 import numpy as np
-from helper import ChampionConverter
+from helper import ChampionConverter, process_kda_perfect
 
 def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_meta=None, debug=None, consider_team_comp=True, test_mode=False):
     """
     Create features for champion prediction using player data.
     Champion names will be used as column headers.
     Uses pd.concat to avoid DataFrame fragmentation.
-    Parameters:
-    - merged_player_stats: DataFrame containing player stats. If None, it will be loaded from the input file.
-    - meta_stats: DataFrame containing meta stats. If None, it will be loaded from the input file.
-    - weekly_meta: DataFrame containing weekly champion stats. If None, it will be loaded from the input file.
-    - debug: Optional parameter for champion name to print debug information.
     """
     try:
-        # Setup checkpoint file path
-        save_dir = "util/data"
-        os.makedirs(save_dir, exist_ok=True)
-        checkpoint_file = os.path.join(save_dir, "feature_eng_stats_checkpoint.csv")
-
-        # Initialize variables
-        feature_dict = {}
-        processed_champions = set()
-        debug_data = []
-
-        # Check for existing checkpoint
-        processed_rows = 0
-        if os.path.exists(checkpoint_file):
-            try:
-                print("Found checkpoint, loading...")
-                checkpoint_df = pd.read_csv(checkpoint_file)
-                processed_rows = len(checkpoint_df)
-                # Get processed champions from checkpoint columns
-                feature_dict = checkpoint_df.to_dict(orient='list')
-                print(f"Loaded checkpoint with {processed_rows} rows processed")
-            except Exception as e:
-                print(f"Error loading checkpoint: {e}")
-                feature_dict = {}
-                processed_rows = 0
-        
         if merged_player_stats is None:
             print("Loading merged player stats...")
             input_file = os.path.join("util", "data", "player_stats_merged.csv")
             merged_player_stats = pd.read_csv(input_file, low_memory=False)
+            
+        #processing kda value
+        merged_player_stats = process_kda_perfect(merged_player_stats)
+   
 
         if test_mode:
             print("Test mode: Using only first 100 rows")
             merged_player_stats = merged_player_stats.head(100)
         
-        total_rows = len(merged_player_stats)
-        print(f"Total rows to process: {total_rows}")
-
         if meta_stats is None:
             print("Loading meta stats...")
             meta_file = os.path.join("util", "data", "meta_stats.csv")
@@ -61,19 +32,24 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
             print("Loading weekly meta stats...")
             weekly_file = os.path.join("util", "data", "weekly_meta_stats.csv")
             weekly_meta = pd.read_csv(weekly_file, low_memory=False)
+        
+        
+        # Initialize variables
+        debug_data = []
+        original_columns = merged_player_stats.columns.tolist()
+        feature_dict = {}
+
+        # Copy original columns
+        for col in merged_player_stats.columns:
+            feature_dict[col] = merged_player_stats[col].values.copy()
+
 
         # Initialize the champion converter
         converter = ChampionConverter()
         all_champions = converter.champions
-        total_champions = len(converter.champions)
-
-        # If starting fresh, initialize feature_dict with existing DataFrame columns
-        if not feature_dict:
-            feature_dict = {champion: np.zeros(len(merged_player_stats)) for champion in all_champions}
-            if 'champion' in merged_player_stats.columns:
-                feature_dict['champion'] = merged_player_stats['champion'].values
-
-
+        #total_champions = len(converter.champions)
+        
+            
 
         # Get low tier champions and counter information
         tier_penalties = {3: 0.9, 4: 0.85, 5: 0.8}
@@ -116,16 +92,16 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
             'mastery': 0.04   # All-time mastery
         }
 
-        # Process rows in batches first
+        # Process rows in batches
         batch_size = 100
         total_rows = len(merged_player_stats)
-        remaining_rows = total_rows - processed_rows
-        print(f"Remaining rows to process: {remaining_rows}")
-    
-        for start_idx in range(0, len(merged_player_stats), batch_size):
-            end_idx = min(start_idx + batch_size, len(merged_player_stats))
-            batch_rows = merged_player_stats.iloc[start_idx:end_idx]
-            print(f"\nProcessing rows {start_idx} to {end_idx} ({start_idx/total_rows*100:.2f}% complete)")
+        
+        print(f"Total rows: {total_rows}")
+
+        for batch_start in range(0, total_rows, batch_size):
+            batch_end = min(batch_start + batch_size, total_rows)
+            batch_rows = merged_player_stats.iloc[batch_start:batch_end]
+            print(f"\nProcessing rows {batch_start} to {batch_end} ({batch_start/total_rows*100:.2f}% complete)")
 
             # Initialize batch scores dictionary
             batch_scores = {champion: np.zeros(len(batch_rows)) for champion in all_champions}
@@ -321,12 +297,19 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
 
             # Update feature_dict with batch results
             for champion in batch_scores:
-                feature_dict[champion][start_idx:end_idx] = batch_scores[champion]
+                if champion not in feature_dict:
+                    feature_dict[champion] = np.zeros(total_rows)
+                feature_dict[champion][batch_start:batch_end] = batch_scores[champion]
 
-            # Save checkpoint after each batch
-            print(f"Saving checkpoint for rows {start_idx}-{end_idx}...")
-            temp_df = pd.DataFrame(feature_dict)
-            temp_df.to_csv(checkpoint_file, index=False)
+            # Save after each batch with timestamp
+            temp_df = pd.DataFrame({
+                **{col: feature_dict[col] for col in original_columns},  # Original columns first
+                **{champion: feature_dict[champion] for champion in all_champions}  # Then champion columns
+            })
+            
+            batch_save_file = os.path.join("util", "data", f"feature_eng_stats.csv")
+            temp_df.to_csv(batch_save_file, index=False)
+            print(f"Saved batch progress to {batch_save_file}")
 
             if debug:
                 print(f"{debug} is countered by: {counter_map[debug]}")
@@ -338,34 +321,31 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
             print(debug_df)
 
         # Create final DataFrame
-        features = pd.DataFrame(feature_dict)
+        champion_features = pd.DataFrame(feature_dict)
+
+        # Create the final DataFrame by combining original data with new features
+        features = pd.concat([
+            merged_player_stats[original_columns],  # Keep all original columns
+            champion_features[[col for col in champion_features.columns if col not in original_columns]]  # Only new champion columns
+        ], axis=1)
 
         # Move the champion column to be the first column
-        columns = ['champion'] + [col for col in features.columns if col != 'champion']
-        features = features[columns]
+        if 'champion' in features.columns:
+            columns = ['champion'] + [col for col in features.columns if col != 'champion']
+            features = features[columns]
         
         # Save to CSV with current date in filename
-        current_date = "2025-01-05"  # Using the provided date
-        output_file = os.path.join("util", "data", f"feature_eng_stats_{current_date}.csv")
+        output_file = os.path.join("util", "data", f"feature_eng_stats.csv")
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         features.to_csv(output_file, index=False)
         
         # Print confirmation message
         print(f"Saved features to {output_file}")
-        
-        # Clean up checkpoint file after successful completion
-        if os.path.exists(checkpoint_file):
-            os.remove(checkpoint_file)
-            print("Removed checkpoint file after successful completion")
             
         return features
 
-    except KeyboardInterrupt:
-        print("\nProcessing interrupted. Progress saved in checkpoint.")
-        return None
     except Exception as e:
         print(f"\nError occurred: {str(e)}")
-        print("Progress saved in checkpoint.")
         return None
 
 if __name__ == "__main__":
@@ -375,7 +355,7 @@ if __name__ == "__main__":
 
         features = create_champion_features(
             merged_player_stats=merged_stats,
-            debug=None,
+            debug='Viktor',
             consider_team_comp=True,
             test_mode=True
         )
