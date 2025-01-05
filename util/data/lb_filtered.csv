@@ -1,31 +1,531 @@
 summoner,region,rank,tier,lp,most_champion_1,most_champion_2,most_champion_3,level,win,loss,winrate
+Walid Georgey #EUW,euw,1,CHALLENGER,2043.0,Rell,Nautilus,Renata Glasc,928,253,169,0.6
+KC NEXT ADKING #EUW,euw,10,CHALLENGER,1610.0,Ezreal,Ashe,Corki,614,161,95,0.63
+Shourdy #EUW,euw,100,CHALLENGER,1158.0,K'Sante,Garen,Ambessa,1023,252,201,0.56
+113 改善 #113,euw,101,CHALLENGER,1155.0,Viego,Zyra,Lee Sin,622,220,167,0.57
+Koldo #1233,euw,102,CHALLENGER,1154.0,Viego,Graves,Elise,832,226,176,0.56
+avarice61 #EUW,euw,103,CHALLENGER,1152.0,Varus,Ezreal,Aphelios,840,151,107,0.59
+Duras Diurpaneus #rnk1,euw,104,CHALLENGER,1151.0,Draven,Kog'Maw,Samira,88,326,255,0.56
+ANKARAI0MESSI #EUW,euw,105,CHALLENGER,1148.0,Skarner,Elise,Graves,305,131,80,0.62
+Szygenda #EUW,euw,106,CHALLENGER,1147.0,Aurora,K'Sante,Gnar,519,134,86,0.61
+Frank Castle #2610,euw,107,CHALLENGER,1147.0,Nautilus,Leona,Rakan,72,166,119,0.58
+Patrick Jane #Tea,euw,108,CHALLENGER,1145.0,Vladimir,Ahri,Senna,432,151,101,0.6
+Subbex #EUW,euw,109,CHALLENGER,1145.0,Ashe,Yasuo,Corki,762,149,98,0.6
+HotGuy6Pack #MUTE,euw,11,CHALLENGER,1592.0,Skarner,Viego,Vi,200,285,214,0.57
+dastindynamite #EUW,euw,110,CHALLENGER,1138.0,Pantheon,Gnar,Poppy,89,239,180,0.57
+SALUTATOUSCPOLO #POLO,euw,111,CHALLENGER,1138.0,Yone,Gnar,Aurora,388,248,200,0.55
+BDSA Myrtus #HMMM,euw,112,CHALLENGER,1138.0,Poppy,Rell,Neeko,891,251,205,0.55
+Nomi #EUW,euw,113,CHALLENGER,1137.0,Swain,Caitlyn,Jinx,1261,381,338,0.53
+Kittxnly alt #Luna,euw,114,CHALLENGER,1135.0,Lulu,Soraka,Nami,95,220,165,0.57
+블루 마법사 #8090,euw,115,CHALLENGER,1135.0,Karthus,Corki,Seraphine,413,330,286,0.54
+Aim First #001,euw,116,CHALLENGER,1126.0,Rakan,Rell,Leona,1373,374,330,0.53
+Carnagε #EUW,euw,117,CHALLENGER,1126.0,Viego,Xin Zhao,Volibear,995,184,136,0.57
+Fade #GRIND,euw,118,CHALLENGER,1126.0,Sylas,Yone,Akali,190,392,336,0.54
+Spartacus #Sura,euw,119,CHALLENGER,1125.0,Yone,Yasuo,,57,165,90,0.65
+Bgurin #4000,euw,12,CHALLENGER,1583.0,Wukong,Elise,Jarvan IV,629,295,234,0.56
+æææ #12345,euw,120,CHALLENGER,1124.0,Viego,Lee Sin,Diana,157,273,224,0.55
+Wunderwear #GOAT,euw,121,CHALLENGER,1122.0,Ambessa,Gnar,Kennen,478,147,104,0.59
+KOI Spooder #1352,euw,122,CHALLENGER,1122.0,Gnar,Rumble,Renekton,661,270,219,0.55
+XXXXXXXXY1 #EUW,euw,123,CHALLENGER,1121.0,Sylas,Akali,Irelia,221,337,292,0.54
+G2 Bwipo #rview,euw,124,CHALLENGER,1118.0,Kog'Maw,Ashe,Caitlyn,813,166,122,0.58
+LNGPhotic #777,euw,125,CHALLENGER,1117.0,Ashe,Ezreal,Tristana,262,424,378,0.53
+TwTv Phantasm #101,euw,126,CHALLENGER,1116.0,Akshan,Hwei,Aurora,217,140,89,0.61
+TakeSet sama #EUW,euw,127,CHALLENGER,1115.0,Ashe,Ezreal,Kai'Sa,945,259,214,0.55
+Batuuu #1111,euw,128,CHALLENGER,1112.0,Rell,Bard,Karma,708,310,257,0.55
+Spoodersussi v3 #EUW,euw,129,CHALLENGER,1111.0,Ambessa,Gnar,Irelia,531,115,68,0.63
+ThePowerOfEvil #EUW,euw,13,CHALLENGER,1575.0,Orianna,Viktor,Syndra,584,196,134,0.59
+DesperateNasus #TWTV,euw,130,CHALLENGER,1111.0,Nasus,Kayle,Ezreal,147,221,171,0.56
+Nio #Nii,euw,131,CHALLENGER,1111.0,Nautilus,Rell,Poppy,1161,322,278,0.54
+TwitchTVxKenzuke #EUW,euw,132,CHALLENGER,1109.0,Sylas,Yone,Viktor,247,161,116,0.58
+tukaan #tukan,euw,133,CHALLENGER,1109.0,Ezreal,Ashe,Corki,1388,211,167,0.56
+Detain #0001,euw,134,CHALLENGER,1108.0,Sylas,Jarvan IV,Karthus,733,107,56,0.66
+Danilo123 #EUW,euw,135,CHALLENGER,1107.0,Fiora,K'Sante,Ornn,258,185,129,0.59
+Harbo #EUW,euw,136,CHALLENGER,1107.0,Syndra,Sylas,Ryze,925,239,195,0.55
+Goldenpenny #EUW,euw,137,CHALLENGER,1106.0,Ashe,Caitlyn,Ezreal,866,196,152,0.56
+The Bitter Truth #Julia,euw,138,CHALLENGER,1106.0,Janna,Viktor,Lulu,344,228,187,0.55
+TWITCHTV KAGAROO #kag,euw,139,CHALLENGER,1103.0,Trundle,Hecarim,Poppy,68,175,123,0.59
+KDF DuDu #KING1,euw,14,CHALLENGER,1525.0,K'Sante,Gnar,Gwen,334,380,315,0.55
+무료 유방 촬영 #KR69,euw,140,CHALLENGER,1102.0,Cho'Gath,Viego,Urgot,640,272,225,0.55
+Husum #EUW,euw,141,CHALLENGER,1102.0,Swain,Vladimir,Galio,597,97,43,0.69
+JeanJaqueDeRouen #jjdr,euw,142,CHALLENGER,1102.0,Akali,Lee Sin,Corki,78,205,160,0.56
+prince maudit #000,euw,143,CHALLENGER,1100.0,Viego,Skarner,Karthus,487,165,122,0.57
+Ignacarious #5232,euw,144,CHALLENGER,1095.0,Kai'Sa,Caitlyn,Ashe,742,166,120,0.58
+Sergeant Sona #KJP,euw,145,CHALLENGER,1095.0,Sona,Morgana,Janna,81,189,119,0.61
+Rebirth #AURI,euw,146,CHALLENGER,1092.0,Aurora,Shen,Jayce,586,297,250,0.54
+GCNVGFDGVK #EUW,euw,147,CHALLENGER,1091.0,Ashe,Kalista,Ezreal,47,107,36,0.75
+Fleshy #111,euw,148,CHALLENGER,1091.0,Pyke,Nautilus,Rell,692,154,110,0.58
+motus vetiti #EUW,euw,149,CHALLENGER,1088.0,Kog'Maw,Jinx,Ashe,894,276,231,0.54
+Urs Kalecinski #JNX,euw,15,CHALLENGER,1523.0,Aurora,Gnar,Jayce,189,227,165,0.58
+Killaki7 #0109,euw,150,CHALLENGER,1088.0,Ezreal,Corki,Ashe,121,104,37,0.74
+Donna Hamilton #EUW,euw,151,CHALLENGER,1084.0,Hwei,Jhin,Ahri,881,190,135,0.58
+Imma touch you #131,euw,152,CHALLENGER,1080.0,Taliyah,Ambessa,Akshan,305,101,46,0.69
+AXE Thomas #SUP,euw,153,CHALLENGER,1080.0,Rell,Poppy,Nautilus,600,185,133,0.58
+Engage #EUW,euw,154,CHALLENGER,1079.0,Zac,Kayn,,646,148,98,0.6
+Cripple #Gwen,euw,155,CHALLENGER,1077.0,Urgot,Gnar,Gwen,1649,482,438,0.52
+kerberos lsd acc #SHINE,euw,156,CHALLENGER,1073.0,Cho'Gath,Quinn,Dr. Mundo,1260,421,378,0.53
+MAT #SHARP,euw,157,CHALLENGER,1072.0,Renekton,Volibear,Aurora,199,158,103,0.61
+Skillshot Lander #EUW,euw,158,CHALLENGER,1072.0,Ezreal,Caitlyn,Corki,482,287,240,0.54
+Nillee #EUW,euw,159,CHALLENGER,1071.0,Aurora,Jax,K'Sante,1383,568,517,0.52
+Mishigu #0001,euw,16,CHALLENGER,1516.0,Corki,Brand,Swain,762,257,200,0.56
+FICHAJE DEL AÑO #SELE,euw,160,CHALLENGER,1071.0,Gnar,Aurora,Gragas,947,222,177,0.56
+QloTrGeSdV #EUW,euw,161,CHALLENGER,1071.0,Sylas,Yone,Ahri,334,210,164,0.56
+THE DON BARON #Omnos,euw,162,CHALLENGER,1069.0,Jax,Sion,Camille,853,200,156,0.56
+Soldier #Asu,euw,163,CHALLENGER,1065.0,Ezreal,Jhin,Ashe,168,214,168,0.56
+JisooSoPrettyy #EUW94,euw,164,CHALLENGER,1065.0,Camille,Anivia,Jax,72,283,219,0.56
+OLEG FULLCLEAR #CLEAR,euw,165,CHALLENGER,1064.0,Viego,Morgana,Elise,182,98,50,0.66
+farfetch #296,euw,166,CHALLENGER,1063.0,Rell,Pyke,Poppy,919,280,236,0.54
+gummyjuiceULTRA #11cmP,euw,167,CHALLENGER,1062.0,Nautilus,Rell,Rakan,991,265,220,0.55
+Duckzuru #EZEZ,euw,168,CHALLENGER,1061.0,Viego,Sylas,Kayn,164,615,569,0.52
+Dajor #0205,euw,169,CHALLENGER,1060.0,Sylas,Viktor,Aurora,909,208,160,0.57
+나프켈라 #BOAT,euw,17,CHALLENGER,1483.0,Sylas,Yone,Ahri,868,179,121,0.6
+KATEVO #EUW,euw,170,CHALLENGER,1060.0,Katarina,Akali,Viktor,186,200,147,0.58
+Nubobo #EUW,euw,171,CHALLENGER,1059.0,Bard,Pyke,Leona,242,141,81,0.64
+L Vasco O #EUW,euw,172,CHALLENGER,1057.0,Viktor,Orianna,Ezreal,754,177,126,0.58
+Fogzy #SWORD,euw,173,CHALLENGER,1056.0,Yone,Aurora,Sylas,895,343,300,0.53
+owlonsky #win,euw,174,CHALLENGER,1055.0,Viego,Lee Sin,Nidalee,303,237,194,0.55
+DellyDolu16 #1963,euw,175,CHALLENGER,1054.0,Ambessa,Aurora,K'Sante,619,374,334,0.53
+Prince Elijah #5786,euw,176,CHALLENGER,1054.0,K'Sante,Renekton,Rumble,862,225,175,0.56
+Sayn CHOKBAR 1 #EUW,euw,177,CHALLENGER,1053.0,Yone,Aurora,Ahri,548,374,332,0.53
+SeRiN1 #EUW,euw,178,CHALLENGER,1053.0,Syndra,LeBlanc,Yasuo,1404,233,180,0.56
+ΛNΛKIN #777,euw,179,CHALLENGER,1052.0,Bel'Veth,Viego,Graves,815,149,98,0.6
+Targamas #5555,euw,18,CHALLENGER,1470.0,Rakan,Rell,Pyke,1080,181,127,0.59
+Petoska #0000,euw,180,CHALLENGER,1050.0,Aurora,Fiora,Darius,548,499,450,0.53
+Sirinox #ftw,euw,181,CHALLENGER,1050.0,Corki,Ashe,Kai'Sa,725,187,138,0.58
+i will fight #next,euw,182,CHALLENGER,1050.0,K'Sante,Yone,Renekton,108,179,135,0.57
+Coach Kirei #Coach,euw,183,CHALLENGER,1049.0,Elise,Lillia,Kindred,766,265,217,0.55
+vovalaclasse #EUW,euw,184,CHALLENGER,1049.0,Ambessa,Aurora,Yone,293,155,117,0.57
+Seal #Nasib,euw,185,CHALLENGER,1048.0,Rakan,Neeko,Karma,716,178,116,0.61
+Marshall Mathers #KING,euw,186,CHALLENGER,1045.0,Rell,Nautilus,Thresh,108,225,178,0.56
+Untouchable #966,euw,187,CHALLENGER,1045.0,Talon,Zed,Viego,345,392,341,0.53
+Nico #coati,euw,188,CHALLENGER,1044.0,Zac,Heimerdinger,Jarvan IV,349,227,185,0.55
+PoEs tk #EUW,euw,189,CHALLENGER,1043.0,Riven,Malphite,Renekton,487,367,321,0.53
+niudefuwuqi2007 #8085,euw,19,CHALLENGER,1461.0,Rell,Pyke,Nautilus,348,267,198,0.57
+Splinter #TAFE,euw,190,CHALLENGER,1042.0,Nidalee,Gnar,Aurora,808,203,157,0.56
+DenSygeKamel69 #EUW,euw,191,CHALLENGER,1041.0,Udyr,Volibear,Skarner,1368,406,368,0.52
+S0LD13R37 B0Y #DJI,euw,192,CHALLENGER,1039.0,Leona,Nami,Braum,178,157,109,0.59
+Zubac #VIEGO,euw,193,CHALLENGER,1039.0,Viego,Skarner,Zyra,705,233,192,0.55
+twojstary2komary #win,euw,194,CHALLENGER,1037.0,Lulu,Karma,Nami,621,323,282,0.53
+NanahiraLover #Stoic,euw,195,CHALLENGER,1035.0,Riven,Kennen,Malphite,443,204,159,0.56
+D X D X D X #L AMI,euw,196,CHALLENGER,1034.0,Pyke,Nautilus,Rakan,1167,344,306,0.53
+Furuy #EUW,euw,197,CHALLENGER,1034.0,Aurora,Orianna,Yone,1018,218,172,0.56
+Kozi #B2TG,euw,198,CHALLENGER,1034.0,K'Sante,Gnar,Ambessa,776,138,97,0.59
+We Chilling Bot #Hook,euw,199,CHALLENGER,1033.0,Thresh,Rell,Tahm Kench,858,183,146,0.56
+Thors Snoresson #3327,euw,2,CHALLENGER,1983.0,Viego,Skarner,Vi,422,264,187,0.59
+stardewvalley67 #EUW,euw,20,CHALLENGER,1458.0,Ambessa,Volibear,Lee Sin,201,165,104,0.61
+star zall #twtv,euw,200,CHALLENGER,1032.0,Veigar,,,332,298,261,0.53
+taru #641最强,euw,201,CHALLENGER,1031.0,Udyr,Nidalee,Hecarim,98,175,121,0.59
+Cast #EUW,euw,202,CHALLENGER,1030.0,Kindred,Vi,Jhin,957,406,371,0.52
+Dr Orange #Caps,euw,203,CHALLENGER,1029.0,Aurora,Ambessa,Ahri,1038,113,72,0.61
+King Comeback #EUW,euw,204,CHALLENGER,1029.0,Kennen,Swain,Jax,368,327,265,0.55
+Don Vin Joso #RKO,euw,205,CHALLENGER,1028.0,Cho'Gath,Gangplank,Gragas,619,204,155,0.57
+xiao chao long #CHINA,euw,206,CHALLENGER,1028.0,Ambessa,Vladimir,Renekton,300,114,69,0.62
+Dusty #2026,euw,207,CHALLENGER,1028.0,Yone,Orianna,Ahri,223,254,217,0.54
+kahura #limon,euw,208,CHALLENGER,1028.0,Olaf,Jinx,Ashe,438,275,231,0.54
+Raydioactiveman #5002,euw,209,CHALLENGER,1027.0,Zac,Nunu & Willump,Skarner,154,295,252,0.54
+Maynter #EUW,euw,21,CHALLENGER,1412.0,Gnar,Renekton,Jax,584,228,173,0.57
+Cabex #EUW,euw,210,CHALLENGER,1027.0,Fiddlesticks,Aatrox,Illaoi,432,259,213,0.55
+Pôl #PCC,euw,211,CHALLENGER,1026.0,Garen,Nami,Fiora,475,225,167,0.57
+THE GREATEST #xanny,euw,212,CHALLENGER,1025.0,Ashe,Varus,Corki,750,351,312,0.53
+Coatpustmain #Coat,euw,213,CHALLENGER,1024.0,Ornn,K'Sante,Sion,759,278,230,0.55
+Jeyrus #Jey,euw,214,CHALLENGER,1024.0,Kai'Sa,Jhin,Jinx,550,161,112,0.59
+MetroArcher #EUW,euw,215,CHALLENGER,1021.0,Caitlyn,Cho'Gath,Ziggs,1065,197,158,0.55
+SOGEKING #EUW11,euw,216,CHALLENGER,1021.0,Ashe,Jhin,Jinx,575,346,309,0.53
+Łúcíƒër #G2H2K,euw,217,CHALLENGER,1021.0,Janna,Lulu,Ziggs,962,261,217,0.55
+KNEEL TO CHAKIB #DADDY,euw,218,CHALLENGER,1020.0,Viego,Elise,Nidalee,181,203,152,0.57
+Zanzarah #1996,euw,219,CHALLENGER,1020.0,Wukong,Skarner,Udyr,514,346,305,0.53
+Unkn0wn #EUW11,euw,22,CHALLENGER,1404.0,Corki,Ezreal,Ashe,330,243,185,0.57
+Shift #SUP,euw,220,CHALLENGER,1019.0,Bard,Senna,Karma,553,295,240,0.55
+alix de souza #1111,euw,221,CHALLENGER,1019.0,Yone,Akali,Sylas,678,254,211,0.55
+JONH DO #KISS,euw,222,CHALLENGER,1018.0,Samira,Varus,Ashe,71,155,109,0.59
+faker baIIsack #0000,euw,223,CHALLENGER,1016.0,Syndra,Yasuo,Hwei,984,291,248,0.54
+majd #999,euw,224,CHALLENGER,1016.0,Nidalee,Lee Sin,Graves,145,177,129,0.58
+Cribob #EUW0,euw,225,CHALLENGER,1016.0,Thresh,Seraphine,Janna,251,271,226,0.55
+Nyxes #2003,euw,226,CHALLENGER,1016.0,Seraphine,Janna,Jinx,954,148,104,0.59
+Biotic #123,euw,227,CHALLENGER,1016.0,Zilean,Zyra,Karma,497,283,236,0.55
+iwanan #7596,euw,228,CHALLENGER,1015.0,Jayce,Hwei,Azir,280,119,67,0.64
+Erithacus rubecu #69139,euw,229,CHALLENGER,1015.0,Viego,Graves,Skarner,199,131,81,0.62
+TheRoyalKanin #EUW,euw,23,CHALLENGER,1394.0,Ahri,Sylas,Orianna,1089,276,220,0.56
+Lightdown #EUGG,euw,230,CHALLENGER,1014.0,Xin Zhao,Anivia,Hwei,1045,148,105,0.58
+Dwh #00627,euw,231,CHALLENGER,1013.0,Vayne,K'Sante,Aatrox,460,289,223,0.56
+Odi11 BOMBA 원자KR #APHE,euw,232,CHALLENGER,1012.0,Corki,Tristana,Veigar,1155,236,192,0.55
+Shαwn Frost #EUW,euw,233,CHALLENGER,1011.0,Zyra,Skarner,Viego,416,126,80,0.61
+Dekap #EUW,euw,234,CHALLENGER,1011.0,Pyke,Rell,Senna,1138,216,174,0.55
+Attila #9038,euw,235,CHALLENGER,1011.0,Nami,Swain,Viktor,237,140,92,0.6
+tibor #zzz,euw,236,CHALLENGER,1010.0,Yone,Ahri,Sylas,656,138,93,0.6
+ttv ronaldoo #123,euw,237,CHALLENGER,1009.0,Orianna,Sylas,Smolder,167,324,278,0.54
+lpl dna #12103,euw,238,CHALLENGER,1009.0,Nautilus,Leona,Rakan,705,173,127,0.58
+Dont Try Mee #EUW,euw,239,CHALLENGER,1008.0,Viego,Diana,Xin Zhao,389,133,72,0.65
+SMRADOCH ZICSSI #EUW,euw,24,CHALLENGER,1388.0,Skarner,Viego,Rell,923,154,93,0.62
+Rhilech #15105,euw,240,CHALLENGER,1008.0,Viego,Skarner,Jarvan IV,919,333,292,0.53
+JL Potent #POT,euw,241,CHALLENGER,1007.0,K'Sante,Rumble,Fiora,205,212,174,0.55
+anchxo #puca,euw,242,CHALLENGER,1006.0,Irelia,Fiora,Akali,73,122,75,0.62
+chenzelot #LOT,euw,243,CHALLENGER,1006.0,Gnar,Irelia,Gwen,561,147,104,0.59
+无关风月丶 #6666,euw,244,CHALLENGER,1005.0,Fiora,Camille,Jax,275,354,313,0.53
+Nemesis #KCFAN,euw,245,CHALLENGER,1004.0,Yone,Jayce,Yasuo,212,184,133,0.58
+angel kitten #calm,euw,246,CHALLENGER,1004.0,Sona,Lux,Rell,724,144,95,0.6
+Marcinator #LFT16,euw,247,CHALLENGER,1004.0,Darius,Garen,K'Sante,101,200,150,0.57
+farm minions ok #1481,euw,248,CHALLENGER,1001.0,LeBlanc,Yone,Akali,305,343,299,0.53
+Douma #LOSE,euw,249,CHALLENGER,1001.0,Hwei,Syndra,Jayce,546,240,195,0.55
+Sunflower #2509,euw,25,CHALLENGER,1386.0,Viego,Vi,Lee Sin,632,339,289,0.54
+edge of night #999,euw,250,CHALLENGER,1000.0,Talon,Graves,Vi,787,223,177,0.56
+Myth #Ares,euw,251,CHALLENGER,1000.0,Corki,Aurora,Orianna,380,300,253,0.54
+Elijah Mikaelson #gigi,euw,252,CHALLENGER,1000.0,Bard,Janna,Lux,501,338,290,0.54
+lft Lekcyc #111,euw,253,CHALLENGER,999.0,Rell,Leona,Thresh,682,321,278,0.54
+Fallen #FLLN2,euw,254,CHALLENGER,999.0,Zac,Wukong,Vi,289,99,54,0.65
+mewing on betas #0aura,euw,255,CHALLENGER,999.0,Wukong,Viego,Lee Sin,114,187,143,0.57
+AFW ESCIK #AFW,euw,256,CHALLENGER,999.0,Syndra,Yone,Sylas,753,96,50,0.66
+lock in #ERA,euw,257,CHALLENGER,998.0,Ezreal,Corki,Ashe,746,247,209,0.54
+Kaymin #0104,euw,258,CHALLENGER,997.0,Galio,Yone,Orianna,605,183,138,0.57
+Marth #ADC,euw,259,CHALLENGER,997.0,Varus,Caitlyn,Ashe,742,185,138,0.57
+Phantasmasm #EUW,euw,26,CHALLENGER,1379.0,Akshan,Aurora,Hwei,79,124,64,0.66
+Deptrai #EUW,euw,260,CHALLENGER,993.0,Karma,Riven,Shen,94,253,189,0.57
+ΑrchΦiend #666,euw,261,CHALLENGER,993.0,K'Sante,Aatrox,Renekton,199,254,214,0.54
+Kite Machine #EUW,euw,262,CHALLENGER,992.0,Lux,Viktor,Corki,874,269,224,0.55
+tomhardy #ron,euw,263,CHALLENGER,992.0,Akali,Sylas,Yone,222,149,106,0.58
+Jan Oblak #69420,euw,264,CHALLENGER,990.0,Skarner,Graves,Viego,1087,259,221,0.54
+LëFacteur Chance #EUW,euw,265,CHALLENGER,990.0,Akali,Talon,Yone,475,106,60,0.64
+reo #peace,euw,266,CHALLENGER,990.0,Sona,Soraka,Nami,846,215,171,0.56
+modernillo #moder,euw,267,CHALLENGER,988.0,Gnar,Jax,Kennen,1083,232,192,0.55
+darkchri99 #EUW,euw,268,CHALLENGER,988.0,Lux,Lissandra,Nautilus,1505,358,313,0.53
+Odoamne #KEKW,euw,269,CHALLENGER,986.0,K'Sante,Ambessa,Gnar,665,181,140,0.56
+nafkelah5 #EUW,euw,27,CHALLENGER,1375.0,Sylas,Yone,Ahri,99,166,107,0.61
+love u dog #DOG,euw,270,CHALLENGER,986.0,Viego,Nocturne,Graves,105,160,111,0.59
+NAGSLAPCLAPGAP05 #DELUX,euw,271,CHALLENGER,986.0,Skarner,Nunu & Willump,Viego,232,256,207,0.55
+LoveTheWayItHurt #333,euw,272,CHALLENGER,983.0,Yone,Sylas,Akali,517,201,157,0.56
+TWTV DETDERT #12MAJ,euw,273,CHALLENGER,982.0,Graves,Kindred,Talon,313,389,356,0.52
+dehastee #ZMAJ,euw,274,CHALLENGER,981.0,Aurora,Syndra,Orianna,594,192,137,0.58
+Thayger #BAR,euw,275,CHALLENGER,980.0,Viego,Jarvan IV,Skarner,848,235,192,0.55
+toplane kid #EUW77,euw,276,CHALLENGER,977.0,Renekton,Darius,Malphite,50,149,89,0.63
+Gordinho #24805,euw,277,CHALLENGER,975.0,Poppy,Rell,Nautilus,164,188,141,0.57
+Glory #1301,euw,278,CHALLENGER,975.0,Karma,Lulu,Bard,115,284,241,0.54
+Top matters #ZXC,euw,279,CHALLENGER,975.0,K'Sante,Jayce,Aurora,272,187,140,0.57
+unforgiven #12321,euw,28,CHALLENGER,1374.0,Corki,Ashe,Jhin,1333,186,129,0.59
+Falling Flower #SVT13,euw,280,CHALLENGER,975.0,Graves,Gwen,Diana,1087,310,261,0.54
+Shikari #EUW,euw,281,CHALLENGER,974.0,Renekton,Aurora,Gnar,372,166,120,0.58
+Zoo port #LOL,euw,282,CHALLENGER,974.0,Zoe,Sylas,Neeko,769,182,136,0.57
+batubabaHOPPALA #HOPPA,euw,283,CHALLENGER,974.0,Jinx,Jhin,Caitlyn,210,370,325,0.53
+trymboner #2000,euw,284,CHALLENGER,973.0,Rell,Pyke,Rakan,795,138,102,0.57
+universive #EUW,euw,285,CHALLENGER,971.0,Pyke,Blitzcrank,Nautilus,161,194,145,0.57
+ArTurial #117,euw,286,CHALLENGER,971.0,Tryndamere,Akali,Bel'Veth,392,241,200,0.55
+remy the rodent #EUW,euw,287,CHALLENGER,970.0,Aurora,Viktor,Orianna,377,135,85,0.61
+Ronaldo Nazário #12345,euw,288,CHALLENGER,970.0,Ambessa,Jax,Gnar,613,352,313,0.53
+Shaun Murphy #1996,euw,289,CHALLENGER,969.0,Rakan,Alistar,Jhin,1857,206,163,0.56
+Foutriquet #EUW,euw,29,CHALLENGER,1361.0,Viego,Jarvan IV,Skarner,309,143,91,0.61
+Terry Davis #ciaN,euw,290,CHALLENGER,969.0,Draven,Tristana,Kai'Sa,96,173,122,0.59
+Sintemon #gumo,euw,291,CHALLENGER,968.0,Jinx,Ashe,Jhin,939,214,165,0.56
+Dawidsonek #2137,euw,292,CHALLENGER,967.0,Nasus,Kayle,Kog'Maw,1412,250,208,0.55
+noname #gromp,euw,293,CHALLENGER,967.0,Viego,Graves,Vi,1214,243,200,0.55
+Ava Max Genießer #666,euw,294,CHALLENGER,966.0,Seraphine,Blitzcrank,Bard,666,145,101,0.59
+KOXTROLL #CWL1,euw,295,CHALLENGER,966.0,Lee Sin,Nidalee,Wukong,429,168,130,0.56
+이주한 #2001,euw,296,CHALLENGER,966.0,Caitlyn,Ashe,Hwei,478,114,69,0.62
+ScoobaTroopah #10000,euw,297,CHALLENGER,958.0,Blitzcrank,Shaco,Ornn,1395,163,113,0.59
+Köinzell #000,euw,298,CHALLENGER,954.0,Sylas,Katarina,Hwei,669,179,128,0.58
+Jordæn #EUW,euw,299,CHALLENGER,933.0,Pantheon,Renekton,Aatrox,641,172,130,0.57
+Agurin #EUW,euw,3,CHALLENGER,1970.0,Wukong,Elise,Neeko,1089,359,280,0.56
+Joinze #EUW,euw,30,CHALLENGER,1356.0,Taliyah,Jarvan IV,Xin Zhao,680,281,224,0.56
+B Z #ZED,euw,300,CHALLENGER,889.0,Zed,Sylas,Taliyah,1337,294,258,0.53
+Mountain Wolf #EUW,euw,31,CHALLENGER,1349.0,Viego,Skarner,Bel'Veth,624,223,169,0.57
+Boat Crew 2 #David,euw,32,CHALLENGER,1348.0,Zac,Rell,Pyke,108,216,150,0.59
+NattyNatt #2005,euw,33,CHALLENGER,1348.0,Rengar,Dr. Mundo,Skarner,1029,371,315,0.54
+Greed #1031,euw,34,CHALLENGER,1346.0,Tristana,Ezreal,Smolder,68,155,94,0.62
+Dr Mango #Hans,euw,35,CHALLENGER,1344.0,Ezreal,Corki,Caitlyn,176,201,143,0.58
+chains #free,euw,36,CHALLENGER,1343.0,Sylas,Irelia,Lucian,324,263,205,0.56
+alvarooo #EUW,euw,37,CHALLENGER,1337.0,Rell,Nautilus,Rakan,1215,345,294,0.54
+Barkoon #bark,euw,38,CHALLENGER,1335.0,Viego,Vi,Nunu & Willump,1305,286,231,0.55
+Sinmivak #777,euw,39,CHALLENGER,1325.0,Gnar,Renekton,Aurora,935,272,217,0.56
+xKenzuke #1453,euw,4,CHALLENGER,1934.0,Syndra,Yone,Sylas,917,234,155,0.6
+JG top boy #lync1,euw,40,CHALLENGER,1323.0,Viego,Lee Sin,Vi,938,257,206,0.56
+SRTSS #EUW,euw,41,CHALLENGER,1319.0,Yone,LeBlanc,Akali,1158,298,244,0.55
+Dr Coconut #yiken,euw,42,CHALLENGER,1317.0,Lee Sin,Vi,Viego,751,215,162,0.57
+RKR #123,euw,43,CHALLENGER,1315.0,Gwen,Gnar,K'Sante,872,391,339,0.54
+Raider #1999,euw,44,CHALLENGER,1315.0,Darius,Jax,Camille,491,396,342,0.54
+ALBANIAN #iLevi,euw,45,CHALLENGER,1313.0,Pyke,Rell,Rakan,734,191,136,0.58
+Molnigt #EUW,euw,46,CHALLENGER,1313.0,Yasuo,Yone,,304,265,216,0.55
+Jamal Musiala #314,euw,47,CHALLENGER,1311.0,Viego,Lee Sin,Vi,284,223,166,0.57
+ismααα #EUW,euw,48,CHALLENGER,1309.0,Viego,Elise,Skarner,778,264,209,0.56
+conormcgregor #109,euw,49,CHALLENGER,1308.0,Viego,Graves,Skarner,305,589,551,0.52
+Miyamotô Musashî #EUW,euw,5,CHALLENGER,1815.0,Lee Sin,Vi,Viego,789,183,107,0.63
+twtv exofeng #IWNL,euw,50,CHALLENGER,1308.0,Draven,Kalista,Ezreal,203,317,255,0.55
+F E N Z 1 X #0507,euw,51,CHALLENGER,1305.0,Ahri,LeBlanc,Yone,672,198,146,0.58
+该发生的事情就会发生 #查斯1,euw,52,CHALLENGER,1304.0,Bel'Veth,Kindred,Viego,342,301,245,0.55
+c0cky movement #tukan,euw,53,CHALLENGER,1303.0,Sylas,Yone,Ahri,991,235,193,0.55
+Wesley Warren Jr #EUW,euw,54,CHALLENGER,1299.0,Sylas,Ahri,Ezreal,891,220,175,0.56
+yebit #haha,euw,55,CHALLENGER,1297.0,Yone,Ahri,Sylas,845,264,218,0.55
+Fool Night #Ivy,euw,56,CHALLENGER,1297.0,Ambessa,Sylas,Corki,72,265,192,0.58
+JEZUUU #0814,euw,57,CHALLENGER,1293.0,Kai'Sa,Ezreal,Vayne,711,275,229,0.55
+Bollito de Cacao #EUW,euw,58,CHALLENGER,1291.0,Yone,Ahri,Akali,840,271,216,0.56
+WORLDS2025 #AIS,euw,59,CHALLENGER,1291.0,Irelia,Akali,Sylas,279,227,169,0.57
+Odysseus #131,euw,6,CHALLENGER,1760.0,Taliyah,Hwei,Akshan,1274,290,217,0.57
+LR Nemesis #LRAT,euw,60,CHALLENGER,1287.0,Ahri,Hwei,Sylas,452,234,188,0.55
+Lathyrus #EUW,euw,61,CHALLENGER,1286.0,Bard,Maokai,Tahm Kench,595,277,221,0.56
+TheDisconnectTV #EUW,euw,62,CHALLENGER,1283.0,Zilean,Riven,Soraka,245,232,176,0.57
+Czekoladowski #BAR,euw,63,CHALLENGER,1281.0,Ahri,Syndra,Sylas,448,183,127,0.59
+Keduii #GOAT,euw,64,CHALLENGER,1275.0,Caitlyn,Corki,Ezreal,1452,367,308,0.54
+Six10 #euw2,euw,65,CHALLENGER,1273.0,Sylas,Yone,Orianna,924,225,170,0.57
+Toto The Totoro #Toffe,euw,66,CHALLENGER,1271.0,Yone,Syndra,Ezreal,495,270,220,0.55
+pt4 #0000,euw,67,CHALLENGER,1257.0,Jax,Renekton,Ambessa,813,173,124,0.58
+yuqi #golem,euw,68,CHALLENGER,1248.0,K'Sante,Aurora,Maokai,939,240,186,0.56
+Kicktv Sharon #Mirza,euw,69,CHALLENGER,1244.0,Akali,Talon,Ekko,66,213,139,0.61
+Acheron E4 #K405,euw,7,CHALLENGER,1735.0,Talon,Pantheon,Kha'Zix,227,185,99,0.65
+SIXTY5 #EUW,euw,70,CHALLENGER,1244.0,Jhin,Kai'Sa,Jinx,302,403,357,0.53
+Mazs #EUW,euw,71,CHALLENGER,1237.0,Aurora,Sylas,Hwei,797,274,229,0.54
+LiL TommyG #EUW,euw,72,CHALLENGER,1233.0,Bard,Nautilus,Alistar,1194,327,278,0.54
+SMRADOCH RANDOM #EUW,euw,73,CHALLENGER,1225.0,Ahri,Sylas,Aurora,334,198,150,0.57
+Kiki #COYG,euw,74,CHALLENGER,1220.0,Skarner,Viego,Volibear,1196,192,132,0.59
+blueskies777 #EUW,euw,75,CHALLENGER,1220.0,K'Sante,Gnar,Aurora,283,335,284,0.54
+Ł354 #EUW,euw,76,CHALLENGER,1220.0,Aurora,K'Sante,Renekton,268,119,66,0.64
+Flower #EUWWW,euw,77,CHALLENGER,1219.0,Jinx,Kai'Sa,Caitlyn,136,375,328,0.53
+Panda #32111,euw,78,CHALLENGER,1216.0,Yone,Sylas,Yasuo,515,250,198,0.56
+e7c3c0fd-cee3-4399-877b-baf89c9f6f46 #EUW,euw,79,CHALLENGER,1213.0,Gragas,Sion,Ambessa,65,212,134,0.61
+Kushala Daora #MHVV,euw,8,CHALLENGER,1691.0,Yasuo,Corki,Jhin,1159,339,276,0.55
+Sinerias #EUW,euw,80,CHALLENGER,1212.0,Master Yi,Jarvan IV,Viego,375,318,269,0.54
+Beanovich #bean,euw,81,CHALLENGER,1202.0,Corki,Jinx,Ashe,382,357,312,0.53
+washed úp #EUW,euw,82,CHALLENGER,1202.0,Aurora,Irelia,Jax,411,147,98,0.6
+erdt #EUW,euw,83,CHALLENGER,1194.0,Rell,Nautilus,Bard,384,211,160,0.57
+Boukada #EUW,euw,84,CHALLENGER,1194.0,Zyra,Viego,Skarner,868,156,106,0.6
+Ag0nyPain #Owned,euw,85,CHALLENGER,1189.0,Syndra,Vex,Viktor,793,402,350,0.53
+Vizícsacsi #EUW,euw,86,CHALLENGER,1187.0,Kennen,Poppy,Renekton,444,243,193,0.56
+Roulette #EUW,euw,87,CHALLENGER,1178.0,Ivern,Viego,Volibear,1493,326,282,0.54
+nοte #EUW,euw,88,CHALLENGER,1174.0,Sylas,Yone,Yasuo,121,182,131,0.58
+15 02 2022 #EUW,euw,89,CHALLENGER,1173.0,Orianna,Syndra,Yone,931,263,214,0.55
+J1HUIV #000,euw,9,CHALLENGER,1651.0,Aurora,Yone,Sylas,231,408,343,0.54
+ocsaV #EUW,euw,90,CHALLENGER,1171.0,Orianna,Yone,Viktor,586,356,310,0.53
+Zhuo Ding #ARC,euw,91,CHALLENGER,1170.0,Ryze,Sylas,Ahri,913,284,246,0.54
+Pyrka #EUW4,euw,92,CHALLENGER,1168.0,Rell,Nautilus,Leona,711,180,134,0.57
+Hannover #EUW,euw,93,CHALLENGER,1168.0,Pyke,Rell,Nautilus,678,256,211,0.55
+Loose Ends999 #EUW,euw,94,CHALLENGER,1165.0,Aatrox,Jayce,K'Sante,622,241,191,0.56
+Nash2 #EUW,euw,95,CHALLENGER,1163.0,Rakan,Rell,Alistar,456,136,81,0.63
+cherry blossom #777jp,euw,96,CHALLENGER,1162.0,Lee Sin,K'Sante,Viego,138,103,45,0.7
+Thumbs Down #4847,euw,97,CHALLENGER,1161.0,Pyke,Nautilus,Camille,774,116,60,0.66
+Macaquiño #GAP,euw,98,CHALLENGER,1161.0,Lux,Aurora,Ahri,1402,163,111,0.59
+222 #EUW3,euw,99,CHALLENGER,1159.0,Ekko,Orianna,Syndra,137,264,200,0.57
 민철이여친구함 #0415,kr,1,CHALLENGER,2284.0,Sylas,Hwei,Yone,625,310,195,0.61
 클래식좀들어라 #KR2,kr,10,CHALLENGER,1493.0,Nidalee,Lillia,Lee Sin,559,232,160,0.59
-조관우급 늪 설치 #KR1,kr,100,CHALLENGER,1079.0,Cassiopeia,Braum,Thresh,628,166,119,0.58
+다훈갓 #Bard,kr,100,CHALLENGER,1078.0,Bard,Nautilus,Brand,694,151,107,0.59
+DK Garden #jiman,kr,101,CHALLENGER,1076.0,Yone,Sylas,Aurora,345,260,211,0.55
+Zac #KR1,kr,102,CHALLENGER,1075.0,Zac,Ivern,Skarner,467,481,428,0.53
+투정꾼 #FA1,kr,103,CHALLENGER,1074.0,Orianna,Aurora,Yone,605,471,417,0.53
+fuxiaomei #33333,kr,104,CHALLENGER,1073.0,Corki,Yone,Jhin,307,248,202,0.55
+dice #33332,kr,105,CHALLENGER,1073.0,Yone,Sylas,Hwei,705,173,123,0.58
+zhang wen zi #KR1,kr,106,CHALLENGER,1070.0,Viego,Graves,Diana,388,281,229,0.55
+미 생 #未 生,kr,107,CHALLENGER,1069.0,Corki,Jhin,Ezreal,146,150,94,0.61
+Casting #KR11,kr,108,CHALLENGER,1069.0,Aurora,Jax,Gnar,731,279,219,0.56
+마이냥 #1210,kr,109,CHALLENGER,1068.0,Zyra,Viego,Lee Sin,629,180,132,0.58
 Ivory #1012,kr,11,CHALLENGER,1485.0,Yone,Aurora,Viego,294,447,394,0.53
+나는먼지 #KR11,kr,110,CHALLENGER,1068.0,Rell,Poppy,Rakan,758,230,182,0.56
+피파가더재밌어요 #KR1,kr,111,CHALLENGER,1066.0,Sylas,Ahri,Galio,166,123,64,0.66
+강하다 별 #사실약함,kr,112,CHALLENGER,1065.0,Rumble,Jax,Renekton,928,323,271,0.54
+기드온 #KR22,kr,113,CHALLENGER,1065.0,Xin Zhao,Graves,Lee Sin,832,261,218,0.54
+Banye Kami #1106,kr,114,CHALLENGER,1063.0,Kai'Sa,Jhin,Varus,233,272,224,0.55
+長幼有序 #進退兩難,kr,115,CHALLENGER,1063.0,Gragas,Viego,Graves,599,314,264,0.54
+qweracdsc1qs #KR2,kr,116,CHALLENGER,1061.0,Jhin,Kai'Sa,Ashe,618,246,205,0.55
+zijianqaq #捷特大王,kr,117,CHALLENGER,1060.0,Graves,Tristana,Zyra,215,137,94,0.59
+어q어 #8468,kr,118,CHALLENGER,1059.0,Caitlyn,Jhin,Jinx,415,272,218,0.56
+Naruto #Helix,kr,119,CHALLENGER,1058.0,Yasuo,Yone,Nautilus,329,175,130,0.57
 M G #2821,kr,12,CHALLENGER,1473.0,Sylas,Taliyah,Swain,872,351,292,0.55
-xiaofang #qaq,kr,13,CHALLENGER,1458.0,Viego,Zyra,Graves,83,292,230,0.56
-FATE #KR2,kr,14,CHALLENGER,1455.0,Yone,Sylas,Orianna,540,236,182,0.56
-fa ady #kr3,kr,15,CHALLENGER,1446.0,Pantheon,K'Sante,Ambessa,747,488,419,0.54
+막판스퍼트 #KR0,kr,120,CHALLENGER,1058.0,Lee Sin,Nidalee,Kindred,478,198,145,0.58
+1vsAll #KR1,kr,121,CHALLENGER,1057.0,Xin Zhao,Udyr,Gragas,389,208,166,0.56
+정루피 #LOOPY,kr,122,CHALLENGER,1054.0,Corki,Ashe,Varus,324,436,376,0.54
+Top PotFriend #1557,kr,123,CHALLENGER,1053.0,Maokai,Pantheon,Renekton,169,444,401,0.53
+zcxczxxzcxcz #KR0,kr,124,CHALLENGER,1051.0,Zoe,Akali,Yone,412,230,182,0.56
+HLE 팬서 #KR1,kr,125,CHALLENGER,1051.0,K'Sante,Renekton,Ambessa,661,315,260,0.55
+waitwaitwait #K R 1,kr,126,CHALLENGER,1050.0,Rell,Nautilus,Pyke,86,299,236,0.56
+Season of Leaves #1031,kr,127,CHALLENGER,1049.0,Aphelios,Varus,Caitlyn,970,207,155,0.57
+hwaljjak #활짝웃어,kr,128,CHALLENGER,1043.0,Poppy,Braum,Skarner,639,446,397,0.53
+DRX ucal #2025,kr,129,CHALLENGER,1040.0,Aurora,Neeko,Smolder,617,188,138,0.58
+fa ady #kr3,kr,13,CHALLENGER,1466.0,Pantheon,K'Sante,Ambessa,747,489,419,0.54
+haiyaoduojiu #1111,kr,130,CHALLENGER,1037.0,Nautilus,Rell,Renata Glasc,520,410,360,0.53
+是缘总会圆 #yue,kr,131,CHALLENGER,1034.0,Graves,Viego,Nidalee,208,241,184,0.57
+이 차가 식기전에 #KR1,kr,132,CHALLENGER,1034.0,Hecarim,Viego,Lillia,844,207,168,0.55
+Paker #mid,kr,133,CHALLENGER,1033.0,Yone,Azir,Syndra,143,263,213,0.55
+Epilogue for you #EP1,kr,134,CHALLENGER,1033.0,Viego,Lee Sin,Graves,975,430,382,0.53
+상욱Ryu #KR1,kr,135,CHALLENGER,1033.0,K'Sante,Ambessa,Jax,479,241,191,0.56
+Swamp #0916,kr,136,CHALLENGER,1033.0,Vi,Zyra,Sejuani,970,179,128,0.58
+오브크 #케이알원,kr,137,CHALLENGER,1029.0,Udyr,Ornn,Garen,235,157,109,0.59
+SOOP 핏빛계약 #신을저주해,kr,138,CHALLENGER,1028.0,Vladimir,Kennen,Braum,238,269,222,0.55
+니 아 #KR00,kr,139,CHALLENGER,1024.0,Rell,Nautilus,Alistar,795,278,232,0.55
+xiaofang #qaq,kr,14,CHALLENGER,1458.0,Viego,Zyra,Graves,83,292,230,0.56
+May #0411,kr,140,CHALLENGER,1022.0,Jhin,Ashe,Aphelios,159,229,180,0.56
+쭌 베 #KR1,kr,141,CHALLENGER,1021.0,Lissandra,Galio,Nautilus,734,136,88,0.61
+Re0 #2007,kr,142,CHALLENGER,1019.0,Skarner,Ivern,Viego,263,305,265,0.54
+炼铜术士 #8964,kr,143,CHALLENGER,1018.0,K'Sante,Maokai,Lee Sin,145,381,332,0.53
+239476 #000,kr,144,CHALLENGER,1018.0,Ashe,Jhin,Caitlyn,788,268,219,0.55
+여우비 #rxin,kr,145,CHALLENGER,1017.0,Qiyana,Yone,Ahri,728,170,116,0.59
+파랑새 #설한결,kr,146,CHALLENGER,1016.0,Braum,Rell,Seraphine,192,474,425,0.53
+Pink #KR333,kr,147,CHALLENGER,1016.0,Nidalee,Lee Sin,Graves,216,112,58,0.66
+채팅치면대충함 #123,kr,148,CHALLENGER,1015.0,Sylas,Yone,Azir,66,180,120,0.6
+뇌 녹 사 #KR1,kr,149,CHALLENGER,1015.0,Pantheon,Mordekaiser,Jhin,818,324,285,0.53
+FATE #KR2,kr,15,CHALLENGER,1455.0,Yone,Sylas,Orianna,540,236,182,0.56
+Chama #kr2,kr,150,CHALLENGER,1015.0,Yasuo,Yone,,398,111,61,0.65
+알파메일이태영 #0707,kr,151,CHALLENGER,1015.0,Rumble,Pyke,Rakan,840,164,108,0.6
+전민혁 #KR1,kr,152,CHALLENGER,1015.0,Warwick,Aatrox,Maokai,1114,344,298,0.54
+PCR #337,kr,153,CHALLENGER,1014.0,Jhin,Ashe,Jinx,367,213,164,0.56
+길가다가까까사달라고조르는이도윤 #KR1,kr,154,CHALLENGER,1013.0,Hwei,Corki,Ahri,261,250,200,0.56
+데이스타 #0923,kr,155,CHALLENGER,1012.0,Yone,Sylas,Aurora,238,332,281,0.54
+소년가장 원딜 #KR1,kr,156,CHALLENGER,1012.0,Ezreal,Caitlyn,Jhin,458,141,91,0.61
+Heru #KR821,kr,157,CHALLENGER,1010.0,Yone,Sylas,Ahri,944,440,394,0.53
+Michelin #KR2,kr,158,CHALLENGER,1009.0,Ezreal,Caitlyn,Jhin,491,261,212,0.55
+mikasa #KR11,kr,159,CHALLENGER,1008.0,Viego,Lee Sin,Graves,184,212,159,0.57
 FOX Career #0829,kr,16,CHALLENGER,1426.0,Poppy,Pyke,Lee Sin,247,374,314,0.54
+로키의 코 드리블 #2004,kr,160,CHALLENGER,1008.0,Aurora,Sylas,Yone,740,526,475,0.53
+alea iacta est #3516,kr,161,CHALLENGER,1008.0,Akali,Yone,Aurora,699,108,57,0.65
+0o0 #청풍명월,kr,162,CHALLENGER,1007.0,Rell,Poppy,Nautilus,234,195,152,0.56
+Zed99 #0310,kr,163,CHALLENGER,1006.0,Zed,Sylas,Renekton,609,123,69,0.64
+Xbear7 #777,kr,164,CHALLENGER,1005.0,Rell,Nautilus,Rakan,418,300,259,0.54
+dydwns7667 #7667,kr,165,CHALLENGER,1005.0,Aurora,Galio,Taliyah,615,164,121,0.58
+백 호 #9005,kr,166,CHALLENGER,1005.0,Lee Sin,Jhin,Ashe,802,249,204,0.55
+lamb #zzy,kr,167,CHALLENGER,1004.0,K'Sante,Gnar,Jax,247,332,293,0.53
+누가 최고야 #KR1,kr,168,CHALLENGER,1004.0,Jhin,Kai'Sa,Jinx,636,308,250,0.55
+라쿤99 #KR1,kr,169,CHALLENGER,1004.0,Zyra,Graves,Ziggs,611,224,175,0.56
 Happy #day12,kr,17,CHALLENGER,1401.0,Rell,Poppy,Bard,667,355,289,0.55
+Lovepanpan #KR1,kr,170,CHALLENGER,1003.0,Rell,Rakan,Nautilus,553,303,253,0.54
+Azhy #KR1,kr,171,CHALLENGER,1002.0,Riven,Kennen,Nautilus,1116,140,86,0.62
+BeryL #KR33,kr,172,CHALLENGER,1002.0,Rell,Bard,Alistar,703,197,144,0.58
+렛츠고 박석현 #123,kr,173,CHALLENGER,1001.0,Corki,Ashe,Lee Sin,232,260,213,0.55
+관 모 #KR2,kr,174,CHALLENGER,1001.0,Viego,Graves,Lee Sin,999,329,290,0.53
+Ghost #장드래곤준,kr,175,CHALLENGER,1001.0,Varus,Ashe,Kai'Sa,662,193,146,0.57
+딸기따르트으 #KR1,kr,176,CHALLENGER,1000.0,K'Sante,Yone,Renekton,618,393,353,0.53
+젠레스존제로우 #KR1,kr,177,CHALLENGER,999.0,Corki,Ashe,Rakan,364,160,110,0.59
+냐하하 #2698,kr,178,CHALLENGER,998.0,Orianna,Hwei,Aurora,522,235,179,0.57
+김도현 #토근이,kr,179,CHALLENGER,998.0,Irelia,K'Sante,Akali,964,243,210,0.54
 카 엘 #0211,kr,18,CHALLENGER,1387.0,Poppy,Jhin,Alistar,575,190,130,0.59
+카르마 룰루 #kr97,kr,180,CHALLENGER,997.0,Lulu,Karma,Nunu & Willump,64,78,47,0.62
+웨이러미닛 #511,kr,181,CHALLENGER,997.0,Aurora,Yone,Corki,227,116,72,0.62
+해 태 #T 1,kr,182,CHALLENGER,996.0,Ambessa,Gnar,Jax,715,460,408,0.53
+모든일은같이 #KR1,kr,183,CHALLENGER,996.0,Yone,Sylas,Aurora,363,236,176,0.57
+정글 가이 #jug,kr,184,CHALLENGER,995.0,Graves,Nunu & Willump,Lee Sin,51,161,98,0.62
+읽씹맨 #KR1,kr,185,CHALLENGER,995.0,Ashe,Caitlyn,Varus,744,233,187,0.55
+카무사리 #222,kr,186,CHALLENGER,994.0,Jhin,Pyke,Poppy,388,121,83,0.59
+마리골드 #AfTV,kr,187,CHALLENGER,994.0,Zac,Garen,Vladimir,270,142,93,0.6
+허거덩 #lulu,kr,188,CHALLENGER,989.0,Lulu,Katarina,Corki,198,259,216,0.55
+HLE 크래커 #안 메,kr,189,CHALLENGER,989.0,Poppy,Blitzcrank,Rell,372,311,264,0.54
 민 재 #555,kr,19,CHALLENGER,1355.0,Viego,Nidalee,Lee Sin,371,431,381,0.53
+바들바들동물콘 #4992,kr,190,CHALLENGER,988.0,Aurora,Hwei,Yone,422,184,131,0.58
+HWICHAN #T 1,kr,191,CHALLENGER,988.0,Sylas,Aurora,Yone,728,267,225,0.54
+Snow #hog,kr,192,CHALLENGER,987.0,Nidalee,Elise,Ziggs,66,257,192,0.57
+ADINAKIGN #7339,kr,193,CHALLENGER,985.0,Ashe,Corki,Caitlyn,175,138,87,0.61
+Shylie #KR1,kr,194,CHALLENGER,984.0,Zyra,Viego,Graves,421,265,221,0.55
+따봉 람머스 #KR1,kr,195,CHALLENGER,984.0,Ambessa,Aurora,Jax,746,354,303,0.54
+모나XahegaoX감우 #KR1,kr,196,CHALLENGER,982.0,Hecarim,Viego,Nocturne,387,108,58,0.65
+86921198del #KR1,kr,197,CHALLENGER,982.0,Xerath,Vex,Ziggs,115,344,303,0.53
+럭 스 #1 등,kr,198,CHALLENGER,982.0,Lux,Blitzcrank,Xerath,437,293,261,0.53
+传奇传奇 #KR999,kr,199,CHALLENGER,982.0,Lissandra,Zilean,Corki,640,268,224,0.54
 칼과 창 방패 #KR1,kr,2,CHALLENGER,1711.0,Warwick,Poppy,Renekton,819,209,133,0.61
 Sylvie #77777,kr,20,CHALLENGER,1349.0,Viego,Lee Sin,Graves,675,214,159,0.57
+스타 이렐 #9999,kr,200,CHALLENGER,980.0,Irelia,Akali,Pyke,224,155,108,0.59
+sunghyuk39 #KR1,kr,201,CHALLENGER,980.0,Viego,Lee Sin,Graves,466,163,116,0.58
+Peyz #KR11,kr,202,CHALLENGER,978.0,Ezreal,Ashe,Varus,781,124,72,0.63
+meitianfankun #1126,kr,203,CHALLENGER,978.0,Hwei,Galio,Orianna,707,186,138,0.57
+FA MID #2004,kr,204,CHALLENGER,977.0,Sylas,Yone,Hwei,440,362,319,0.53
+꽃잎은 지고 #1997,kr,205,CHALLENGER,977.0,Nidalee,Elise,Graves,536,144,102,0.59
+JZADfans #KR1,kr,206,CHALLENGER,976.0,Zyra,Skarner,Lee Sin,195,212,164,0.56
+양여명 #KR1,kr,207,CHALLENGER,975.0,Aurora,Corki,Azir,563,371,333,0.53
+抖音寻寻觅觅 #xm166,kr,208,CHALLENGER,974.0,Rek'Sai,Nidalee,Wukong,196,285,235,0.55
+피그차이나 #KR1,kr,209,CHALLENGER,974.0,Ezreal,Caitlyn,Kalista,352,162,107,0.6
 DK Lucid #KR1,kr,21,CHALLENGER,1343.0,Viego,Kindred,Skarner,640,169,105,0.62
+Berrrrrr #KR3,kr,210,CHALLENGER,974.0,Poppy,Rell,Pyke,877,430,382,0.53
+대광 #God,kr,211,CHALLENGER,974.0,Sylas,Yone,Aurora,616,271,226,0.55
+GEN Namgung #2025,kr,212,CHALLENGER,973.0,Rell,Poppy,Rakan,173,180,140,0.56
+Saint #KR0,kr,213,CHALLENGER,973.0,Aurora,Sylas,Graves,666,163,124,0.57
+롤스타팀 웅이 #KR321,kr,214,CHALLENGER,973.0,Rell,Pyke,Poppy,335,139,91,0.6
+하이프 #KR9,kr,215,CHALLENGER,972.0,Corki,Kai'Sa,Ashe,629,202,158,0.56
+DRX Andil #2025,kr,216,CHALLENGER,971.0,Rell,Blitzcrank,Leona,294,211,163,0.56
+헤 돈 #KR1,kr,217,CHALLENGER,971.0,Twisted Fate,Orianna,Gragas,712,156,110,0.59
+나는바람을부르고비를부르 #123,kr,218,CHALLENGER,970.0,Viego,Skarner,Graves,138,214,175,0.55
+i go to home #KR3,kr,219,CHALLENGER,970.0,Nidalee,Elise,Lee Sin,170,129,73,0.64
 lulu #yaha,kr,22,CHALLENGER,1331.0,Pyke,Varus,Jhin,65,187,101,0.65
+1010 #0208,kr,220,CHALLENGER,970.0,Ekko,Kennen,Rakan,561,93,45,0.67
+누구를위하여표창을날리나 #MSJU,kr,221,CHALLENGER,968.0,Kennen,Fiora,Camille,73,160,105,0.6
+Wet #KR3,kr,222,CHALLENGER,967.0,Graves,Viego,Nidalee,96,108,60,0.64
+DODARI #KR1,kr,223,CHALLENGER,967.0,Bard,Sion,,393,126,74,0.63
+핏빛 계약 #KR1,kr,224,CHALLENGER,967.0,Vladimir,Nautilus,Braum,1020,169,124,0.58
+승지부기 #KR1,kr,225,CHALLENGER,965.0,Bard,Lulu,Karma,262,123,71,0.63
+김민교 수제자 #KR1,kr,226,CHALLENGER,964.0,Cassiopeia,Viego,K'Sante,280,158,115,0.58
+DRX #kr11,kr,227,CHALLENGER,964.0,Poppy,Leona,Blitzcrank,1030,320,275,0.54
+Suiheisen #496,kr,228,CHALLENGER,964.0,Yone,Ahri,Tristana,571,205,166,0.55
+쑤셔쑤셔 #444,kr,229,CHALLENGER,963.0,Corki,Aphelios,Ashe,1059,286,246,0.54
 저승민 #이승민,kr,23,CHALLENGER,1330.0,Gnar,Jax,Gragas,634,196,135,0.59
+Hard boy #2002,kr,230,CHALLENGER,961.0,Yone,Galio,Hwei,143,204,162,0.56
+天下 第一 #CN1,kr,231,CHALLENGER,961.0,Jax,Maokai,Gnar,150,135,84,0.62
+어색했 #KR1,kr,232,CHALLENGER,961.0,Fiora,Renekton,Camille,580,295,245,0.55
+0l불 밖은 우l험ぁH #zzZ,kr,233,CHALLENGER,958.0,Lee Sin,Graves,Nidalee,362,351,312,0.53
+NS Carim #KR1,kr,234,CHALLENGER,958.0,Viego,Skarner,Graves,556,281,244,0.54
+FA JemDDing #0208,kr,235,CHALLENGER,958.0,Alistar,Rakan,Poppy,572,263,228,0.54
+LEGENO PANTS #KR0,kr,236,CHALLENGER,957.0,Corki,Ashe,Caitlyn,473,250,195,0.56
+공포의 매생이 #KR1,kr,237,CHALLENGER,957.0,Miss Fortune,Lucian,Gragas,258,171,124,0.58
+불청객2 #KR1,kr,238,CHALLENGER,956.0,Kindred,Lee Sin,Skarner,200,135,94,0.59
+따개비루 #Toye,kr,239,CHALLENGER,956.0,Skarner,Viego,Zyra,670,337,296,0.53
 heisemaoyi #meet,kr,24,CHALLENGER,1324.0,Zyra,Skarner,Graves,346,295,229,0.56
-Raptor #KR123,kr,25,CHALLENGER,1317.0,Lee Sin,Kindred,Skarner,762,252,189,0.57
-BIG3 #3333,kr,26,CHALLENGER,1311.0,Graves,Viego,Zyra,81,209,148,0.59
-KT Sonstar #KR111,kr,27,CHALLENGER,1303.0,Sylas,Aurora,Yone,712,204,139,0.59
-Swamp #KR3,kr,28,CHALLENGER,1300.0,Viego,Lillia,Elise,86,207,150,0.58
-xiaohuangren #2005,kr,29,CHALLENGER,1292.0,Graves,Pantheon,Skarner,199,195,129,0.6
+아이스팀 MID #팔로우,kr,240,CHALLENGER,955.0,Yasuo,Yone,Qiyana,231,306,264,0.54
+승늉승늉 #안뇽해,kr,241,CHALLENGER,953.0,Dr. Mundo,K'Sante,Blitzcrank,83,158,116,0.58
+変わらないもの #1003,kr,242,CHALLENGER,951.0,Corki,Ezreal,Jinx,99,126,74,0.63
+YONG2 #6666,kr,243,CHALLENGER,951.0,Skarner,Graves,Viego,290,141,92,0.61
+FA Midir #2006,kr,244,CHALLENGER,951.0,K'Sante,Aurora,Renekton,547,380,337,0.53
+성 훈 #1231,kr,245,CHALLENGER,951.0,Poppy,Pyke,Bard,338,137,87,0.61
+폐 허 #KR1,kr,246,CHALLENGER,950.0,Pyke,Leona,Alistar,453,255,213,0.54
+채팅치면원숭이 #KRmk,kr,247,CHALLENGER,948.0,Leona,Braum,Karma,911,238,189,0.56
+PdSmB1 #KR3,kr,248,CHALLENGER,945.0,Ashe,Kai'Sa,Jinx,168,213,170,0.56
+DK Sharvel #KR1,kr,249,CHALLENGER,945.0,Graves,Kindred,Viego,812,355,310,0.53
+BIG3 #3333,kr,25,CHALLENGER,1311.0,Graves,Viego,Zyra,81,209,148,0.59
+yangzhiganlu #666,kr,250,CHALLENGER,942.0,Kayn,Shen,Gragas,103,197,154,0.56
+청포도육포 #KR1,kr,251,CHALLENGER,942.0,Viego,Lee Sin,Zyra,319,133,87,0.6
+OMG Moham #OMG,kr,252,CHALLENGER,941.0,Pyke,Rell,Renata Glasc,371,157,106,0.6
+chengzhitop #4433,kr,253,CHALLENGER,940.0,Riven,Jax,Renekton,240,495,456,0.52
+붐칙칵칙 #KR1,kr,254,CHALLENGER,939.0,Sylas,Aurora,Hwei,1093,371,324,0.53
+2009 05 01 #0501,kr,255,CHALLENGER,938.0,Neeko,Orianna,Hwei,167,256,209,0.55
+jerry866 #xixi,kr,256,CHALLENGER,937.0,Fiddlesticks,Lulu,Yuumi,141,357,304,0.54
+Rainy day #0808,kr,257,CHALLENGER,937.0,Sylas,Azir,Yone,767,395,352,0.53
+NoRoo #T 1,kr,258,CHALLENGER,937.0,Ivern,Galio,Nocturne,281,141,94,0.6
+mistake #yaha,kr,259,CHALLENGER,936.0,Gwen,Ambessa,Rumble,86,365,297,0.55
+KT Sonstar #KR111,kr,26,CHALLENGER,1303.0,Sylas,Aurora,Yone,712,204,139,0.59
+Soft #KR1,kr,260,CHALLENGER,936.0,Viego,Vi,Kindred,264,212,162,0.57
+더 간절한 박민우 #FA08,kr,261,CHALLENGER,936.0,Dr. Mundo,Yone,Vladimir,440,499,460,0.52
+사고뭉치 #3004,kr,262,CHALLENGER,936.0,Poppy,Rell,Hwei,947,275,238,0.54
+what is freedom #free,kr,263,CHALLENGER,935.0,Yone,Sylas,Aurora,235,430,387,0.53
+Kujo Miki #KR1,kr,264,CHALLENGER,935.0,Yone,Sylas,Aurora,142,149,95,0.61
+BTS #4444,kr,265,CHALLENGER,935.0,Jhin,Ziggs,Brand,761,243,198,0.55
+No longer love #KR1,kr,266,CHALLENGER,935.0,Zyra,Kindred,Rengar,1161,320,274,0.54
+8956 #123,kr,267,CHALLENGER,934.0,Graves,Viego,Skarner,87,257,200,0.56
+約束の冬と心に秘めた好き #KR12,kr,268,CHALLENGER,933.0,Yone,Sylas,Akali,87,225,180,0.56
+닝닝왔다 #KR1,kr,269,CHALLENGER,933.0,Riven,Maokai,Rell,215,320,278,0.54
+Swamp #KR3,kr,27,CHALLENGER,1300.0,Viego,Lillia,Elise,86,207,150,0.58
+막강주니 #KR1,kr,270,CHALLENGER,933.0,Gnar,K'Sante,Renekton,698,411,366,0.53
+Alpha smoker #KR0,kr,271,CHALLENGER,932.0,Rell,Rakan,Bard,41,93,34,0.73
+플레인요거트스무디 #0403,kr,272,CHALLENGER,932.0,Viego,Nidalee,Graves,395,163,122,0.57
+CoBiT #KR06,kr,273,CHALLENGER,930.0,Neeko,Poppy,Bard,124,203,157,0.56
+进退两难 #2000,kr,274,CHALLENGER,929.0,LeBlanc,Akali,Sylas,130,140,102,0.58
+Kitten #爱的小猫,kr,275,CHALLENGER,929.0,Lee Sin,Nidalee,Viego,672,251,201,0.56
+용공주 #龙宫公主,kr,276,CHALLENGER,926.0,Aurelion Sol,Ornn,Vex,262,173,128,0.57
+ln8i #M1ss,kr,277,CHALLENGER,925.0,Rell,Pyke,Alistar,74,249,183,0.58
+밤이싫어 #kr9,kr,278,CHALLENGER,924.0,Kai'Sa,Jinx,Ashe,1271,335,291,0.54
+미안미안해요 #KR1,kr,279,CHALLENGER,922.0,Aurora,Tristana,Sylas,178,163,123,0.57
+Raptor #KR123,kr,28,CHALLENGER,1290.0,Lee Sin,Kindred,Skarner,762,252,190,0.57
+抖音鹏鹏426 #426,kr,280,CHALLENGER,922.0,Karthus,Zyra,Ezreal,130,253,212,0.54
+sur le bonheur #0112,kr,281,CHALLENGER,922.0,Corki,Jinx,Zeri,395,90,32,0.74
+vietanhdangvui #vanh,kr,282,CHALLENGER,921.0,Ambessa,Rumble,K'Sante,933,221,172,0.56
+Ra Eh #KR1,kr,283,CHALLENGER,921.0,Fiora,Karma,Yone,389,200,156,0.56
+Prever #프리버,kr,284,CHALLENGER,920.0,Skarner,Viego,Nidalee,240,241,202,0.54
+죽기장인 #KR1,kr,285,CHALLENGER,920.0,Kog'Maw,Jhin,Bard,192,139,96,0.59
+wanan theworld #xdbx1,kr,286,CHALLENGER,919.0,Corki,Ashe,Jhin,335,238,196,0.55
+Logos #Kiri,kr,287,CHALLENGER,918.0,Graves,Viego,Nidalee,97,230,185,0.55
+별초롬 #KR3,kr,288,CHALLENGER,918.0,Sylas,Jayce,Akali,205,173,117,0.6
+wumingzhizu #KR2,kr,289,CHALLENGER,918.0,Rell,Leona,Nautilus,195,358,316,0.53
+Bae Suzy #KR1,kr,29,CHALLENGER,1278.0,Pyke,Sylas,Yone,358,183,118,0.61
+너덜너덜 #NDND,kr,290,CHALLENGER,915.0,K'Sante,Gnar,Jax,269,236,199,0.54
+세 나 #기미닝,kr,291,CHALLENGER,905.0,Senna,Karma,Nautilus,394,155,113,0.58
+겨 울 #1250,kr,292,CHALLENGER,903.0,Aurora,Sylas,Yone,201,302,251,0.55
+123111 #2004,kr,293,CHALLENGER,899.0,Viego,Lee Sin,Graves,708,365,319,0.53
+대기만성 #KR3,kr,294,CHALLENGER,897.0,Viego,Lee Sin,Nidalee,539,162,119,0.58
+정복자 교장선생님 #12345,kr,295,CHALLENGER,886.0,Aurora,Yone,Corki,501,225,178,0.56
+탑원거리 #KR123,kr,296,CHALLENGER,882.0,Ambessa,Aurora,K'Sante,152,114,70,0.62
+Hard Rain1 #KR1,kr,297,CHALLENGER,878.0,Pyke,Alistar,Pantheon,957,187,144,0.56
+Chen #LChen,kr,298,CHALLENGER,865.0,Aurora,Gnar,Jax,274,529,482,0.52
+길은여기에 #123,kr,299,CHALLENGER,852.0,Corki,Yone,Sylas,581,330,292,0.53
 참새크면비둘기 #KR1,kr,3,CHALLENGER,1704.0,Poppy,Leona,Alistar,637,184,97,0.65
-Bae Suzy #KR1,kr,30,CHALLENGER,1278.0,Pyke,Sylas,Yone,358,183,118,0.61
-Duro #Gen,kr,31,CHALLENGER,1263.0,Rell,Blitzcrank,Pyke,397,227,175,0.56
-Vanana #0110,kr,32,CHALLENGER,1259.0,Gnar,K'Sante,Jax,186,411,352,0.54
+Vanana #0110,kr,30,CHALLENGER,1277.0,Gnar,K'Sante,Jax,186,412,352,0.54
+rosie #0711,kr,300,CHALLENGER,824.0,Neeko,Poppy,Rakan,191,212,169,0.56
+xiaohuangren #2005,kr,31,CHALLENGER,1265.0,Graves,Pantheon,Skarner,199,195,130,0.6
+Duro #Gen,kr,32,CHALLENGER,1263.0,Rell,Blitzcrank,Pyke,397,227,175,0.56
 DRX LazyFeel #rudnf,kr,33,CHALLENGER,1255.0,Corki,Varus,Ezreal,147,253,200,0.56
 Juhana #KRR1,kr,34,CHALLENGER,1254.0,Nidalee,Graves,Viego,1039,451,384,0.54
 편식당 #kr72,kr,35,CHALLENGER,1253.0,Ezreal,Corki,Ashe,814,418,361,0.54
@@ -38,101 +538,601 @@ sdsagfhjfdx #666,kr,40,CHALLENGER,1236.0,Kai'Sa,Caitlyn,Jhin,611,378,320,0.54
 Cuzz #KR1,kr,41,CHALLENGER,1232.0,Skarner,Vi,Viego,320,144,74,0.66
 soop 라쿤99 #치지직,kr,42,CHALLENGER,1230.0,Zyra,Graves,Ziggs,545,199,144,0.58
 Cloud #KR07,kr,43,CHALLENGER,1229.0,Rell,Poppy,Nautilus,448,324,270,0.55
-훌러덩 #KR4,kr,44,CHALLENGER,1229.0,Pyke,Poppy,Rell,313,307,244,0.56
-자신감을잃지말자 #KR1,kr,45,CHALLENGER,1225.0,K'Sante,Gnar,Jax,482,253,193,0.57
-T1 Smash #KR3,kr,46,CHALLENGER,1224.0,Kai'Sa,Jhin,Ezreal,455,271,220,0.55
-xiangshen1 #KR1,kr,47,CHALLENGER,1222.0,Sylas,Yone,Akali,159,261,201,0.56
-개 천 #KR1,kr,48,CHALLENGER,1221.0,Zac,Gnar,Mordekaiser,514,175,127,0.58
-숟가락전사 #KR1,kr,49,CHALLENGER,1211.0,Ambessa,Gnar,Jax,579,197,137,0.59
+자신감을잃지말자 #KR1,kr,44,CHALLENGER,1225.0,K'Sante,Gnar,Jax,482,253,193,0.57
+T1 Smash #KR3,kr,45,CHALLENGER,1224.0,Kai'Sa,Jhin,Ezreal,455,271,220,0.55
+xiangshen1 #KR1,kr,46,CHALLENGER,1222.0,Sylas,Yone,Akali,159,261,201,0.56
+개 천 #KR1,kr,47,CHALLENGER,1221.0,Zac,Gnar,Mordekaiser,514,175,127,0.58
+숟가락전사 #KR1,kr,48,CHALLENGER,1211.0,Ambessa,Gnar,Jax,579,197,137,0.59
+수원 남현준 #1111,kr,49,CHALLENGER,1211.0,Yone,Hwei,Sylas,751,406,350,0.54
 DANDAN心魅かれてく #solo,kr,5,CHALLENGER,1598.0,Ambessa,Jax,Rumble,65,211,120,0.64
-수원 남현준 #1111,kr,50,CHALLENGER,1211.0,Yone,Hwei,Sylas,751,406,350,0.54
+훌러덩 #KR4,kr,50,CHALLENGER,1207.0,Pyke,Poppy,Rell,313,307,245,0.56
 Ning #KR33,kr,51,CHALLENGER,1205.0,Varus,Lee Sin,Skarner,66,182,129,0.59
 Yeon7 #lol,kr,52,CHALLENGER,1204.0,Kalista,Ashe,Jhin,71,311,234,0.57
 livinli #KR1,kr,53,CHALLENGER,1199.0,Aurora,Corki,Viktor,241,128,60,0.68
 革命前夜 #eill,kr,54,CHALLENGER,1199.0,Zyra,Skarner,Dr. Mundo,680,278,228,0.55
 들개처럼 #KR1,kr,55,CHALLENGER,1198.0,Poppy,Rell,Pyke,149,176,121,0.59
-Guti #0409,kr,56,CHALLENGER,1192.0,Aurora,Yone,Sylas,808,336,279,0.55
-스컬지 #K T,kr,57,CHALLENGER,1192.0,Kalista,Ezreal,Jinx,452,181,123,0.6
+스컬지 #K T,kr,56,CHALLENGER,1192.0,Kalista,Ezreal,Jinx,452,181,123,0.6
+Guti #0409,kr,57,CHALLENGER,1190.0,Aurora,Yone,Sylas,808,337,280,0.55
 This game canwin #KR1,kr,58,CHALLENGER,1189.0,K'Sante,Jax,Gnar,323,166,110,0.6
 vital #0916,kr,59,CHALLENGER,1185.0,Rakan,Leona,Rell,507,283,224,0.56
 Yondaime #Luo,kr,6,CHALLENGER,1576.0,Tristana,Yone,Akali,377,273,198,0.58
 괴롭히지마 #살려주세요,kr,60,CHALLENGER,1185.0,Hwei,Aurora,Sylas,257,179,120,0.6
 felisa #KR1,kr,61,CHALLENGER,1181.0,Viego,Lee Sin,Graves,514,193,134,0.59
-美团外卖送餐员 #滴滴司机,kr,62,CHALLENGER,1175.0,Rakan,Leona,Karma,93,278,218,0.56
-쏘귀요미 #KR2,kr,63,CHALLENGER,1172.0,Taric,Jinx,Corki,191,147,85,0.63
-Vincenzo #kr40,kr,64,CHALLENGER,1169.0,Viego,Lee Sin,Graves,596,294,232,0.56
-asdjipadsjip #KR1,kr,65,CHALLENGER,1159.0,Viego,Graves,Zyra,588,205,153,0.57
+asdjipadsjip #KR1,kr,62,CHALLENGER,1178.0,Viego,Graves,Zyra,588,206,153,0.57
+美团外卖送餐员 #滴滴司机,kr,63,CHALLENGER,1175.0,Rakan,Leona,Karma,93,278,218,0.56
+쏘귀요미 #KR2,kr,64,CHALLENGER,1172.0,Taric,Jinx,Corki,191,147,85,0.63
+Vincenzo #kr40,kr,65,CHALLENGER,1169.0,Viego,Lee Sin,Graves,596,294,232,0.56
 어쩌라고맞짱뜰까 #HOYA,kr,66,CHALLENGER,1157.0,Poppy,Aurora,Rell,577,203,159,0.56
-봄방학기간 #KR1,kr,67,CHALLENGER,1151.0,Caitlyn,Jhin,Ashe,299,203,152,0.57
-Aileri #KR1,kr,68,CHALLENGER,1144.0,Irelia,Gnar,Aurora,352,146,85,0.63
-SSG CoreJJ #APA,kr,69,CHALLENGER,1129.0,Azir,Yone,Aurora,53,182,114,0.61
+차가운코끼리 #KR0,kr,67,CHALLENGER,1156.0,K'Sante,Ambessa,Aurora,754,678,620,0.52
+봄방학기간 #KR1,kr,68,CHALLENGER,1151.0,Caitlyn,Jhin,Ashe,299,203,152,0.57
+Aileri #KR1,kr,69,CHALLENGER,1144.0,Irelia,Gnar,Aurora,352,146,85,0.63
 DRX kyeahoo #0813,kr,7,CHALLENGER,1573.0,Yone,Sylas,Ezreal,671,390,317,0.55
-Hegzzz #2020,kr,70,CHALLENGER,1128.0,Graves,Zyra,Viego,276,343,281,0.55
-Daehu #KR1,kr,71,CHALLENGER,1126.0,Ambessa,Aatrox,K'Sante,657,173,124,0.58
+SSG CoreJJ #APA,kr,70,CHALLENGER,1129.0,Azir,Yone,Aurora,53,182,114,0.61
+Hegzzz #2020,kr,71,CHALLENGER,1128.0,Graves,Zyra,Viego,276,343,281,0.55
 이 드 #2DE,kr,72,CHALLENGER,1122.0,Yasuo,Diana,Rakan,448,234,190,0.55
 Samver #7777,kr,73,CHALLENGER,1122.0,Jhin,Corki,Kai'Sa,514,296,244,0.55
 C9 Berserker #KR1,kr,74,CHALLENGER,1117.0,Tristana,Jhin,Caitlyn,491,241,175,0.58
-차가운코끼리 #KR0,kr,75,CHALLENGER,1116.0,K'Sante,Ambessa,Aurora,754,675,619,0.52
-마법공학 상자 #KR1,kr,76,CHALLENGER,1116.0,Pyke,Braum,Poppy,263,238,191,0.55
-cubicolor #sleep,kr,77,CHALLENGER,1113.0,Ambessa,Aurora,Gnar,807,154,98,0.61
-도깨비왕 #KR2,kr,78,CHALLENGER,1109.0,Graves,Skarner,Xin Zhao,113,136,92,0.6
-Equinox #fa04,kr,79,CHALLENGER,1107.0,K'Sante,Aurora,Gnar,539,236,186,0.56
+마법공학 상자 #KR1,kr,75,CHALLENGER,1116.0,Pyke,Braum,Poppy,263,238,191,0.55
+cubicolor #sleep,kr,76,CHALLENGER,1113.0,Ambessa,Aurora,Gnar,807,154,98,0.61
+도깨비왕 #KR2,kr,77,CHALLENGER,1109.0,Graves,Skarner,Xin Zhao,113,136,92,0.6
+Equinox #fa04,kr,78,CHALLENGER,1107.0,K'Sante,Aurora,Gnar,539,236,186,0.56
+Bonnie #0314,kr,79,CHALLENGER,1107.0,Graves,Lee Sin,Leona,703,411,359,0.53
 Karis #KR4,kr,8,CHALLENGER,1528.0,Yone,Orianna,Tristana,754,197,137,0.59
-Bonnie #0314,kr,80,CHALLENGER,1107.0,Graves,Lee Sin,Leona,703,411,359,0.53
-Witt #123,kr,81,CHALLENGER,1106.0,Zoe,Ezreal,LeBlanc,447,131,81,0.62
-TT SeTab #2025,kr,82,CHALLENGER,1103.0,Aurora,Yone,LeBlanc,583,434,383,0.53
-사 용 수 #KR1,kr,83,CHALLENGER,1101.0,Kennen,Rumble,Jax,878,130,80,0.62
-Let me sup #KR1,kr,84,CHALLENGER,1101.0,Thresh,Rell,Bard,613,157,97,0.62
-Radiohead #KR1,kr,85,CHALLENGER,1098.0,Viego,Lee Sin,Kindred,1133,192,153,0.56
-触目惊心 #0120,kr,86,CHALLENGER,1094.0,Ashe,Jhin,Corki,146,331,282,0.54
-DRX Teddy #멍청이,kr,87,CHALLENGER,1092.0,Jhin,Ezreal,Kai'Sa,417,218,162,0.57
-가 리 몬 #가리봉봉,kr,88,CHALLENGER,1091.0,Rell,Nautilus,Braum,187,262,210,0.56
+Witt #123,kr,80,CHALLENGER,1106.0,Zoe,Ezreal,LeBlanc,447,131,81,0.62
+TT SeTab #2025,kr,81,CHALLENGER,1103.0,Aurora,Yone,LeBlanc,583,434,383,0.53
+사 용 수 #KR1,kr,82,CHALLENGER,1101.0,Kennen,Rumble,Jax,878,130,80,0.62
+Let me sup #KR1,kr,83,CHALLENGER,1101.0,Thresh,Rell,Bard,613,157,97,0.62
+Radiohead #KR1,kr,84,CHALLENGER,1098.0,Viego,Lee Sin,Kindred,1133,192,153,0.56
+触目惊心 #0120,kr,85,CHALLENGER,1094.0,Ashe,Jhin,Corki,146,331,282,0.54
+DRX Teddy #멍청이,kr,86,CHALLENGER,1092.0,Jhin,Ezreal,Kai'Sa,417,218,162,0.57
+가 리 몬 #가리봉봉,kr,87,CHALLENGER,1091.0,Rell,Nautilus,Braum,187,262,210,0.56
+의 주 #트리거,kr,89,CHALLENGER,1087.0,Ashe,Corki,Caitlyn,773,147,97,0.6
 Bloodborne #PRO,kr,9,CHALLENGER,1520.0,Jayce,Yone,Taliyah,88,278,219,0.56
-의 주 #트리거,kr,90,CHALLENGER,1087.0,Ashe,Corki,Caitlyn,773,147,97,0.6
-sdawxl #KR1,kr,91,CHALLENGER,1087.0,Twisted Fate,Orianna,,252,104,55,0.65
-도천지 #KR1,kr,92,CHALLENGER,1085.0,Orianna,Twisted Fate,Gragas,667,205,154,0.57
-일산전영찬 #KR1,kr,93,CHALLENGER,1083.0,Nidalee,Viego,Elise,390,188,118,0.61
-cikcik #KR1,kr,94,CHALLENGER,1082.0,Aurora,Sylas,Smolder,374,300,260,0.54
+sdawxl #KR1,kr,90,CHALLENGER,1087.0,Twisted Fate,Orianna,,252,104,55,0.65
+도천지 #KR1,kr,91,CHALLENGER,1085.0,Orianna,Twisted Fate,Gragas,667,205,154,0.57
+일산전영찬 #KR1,kr,92,CHALLENGER,1083.0,Nidalee,Viego,Elise,390,188,118,0.61
+cikcik #KR1,kr,93,CHALLENGER,1082.0,Aurora,Sylas,Smolder,375,300,260,0.54
+Daehu #KR1,kr,94,CHALLENGER,1082.0,Ambessa,Aatrox,K'Sante,657,173,126,0.58
 Attack Fight #0923,kr,95,CHALLENGER,1081.0,Viego,Graves,Vi,679,382,339,0.53
 HENA FAN #123,kr,96,CHALLENGER,1081.0,Ashe,Varus,Caitlyn,318,314,247,0.56
 해 린 #2025,kr,97,CHALLENGER,1080.0,Sylas,Aurora,Yone,1011,346,286,0.55
-막판스퍼트 #KR0,kr,98,CHALLENGER,1079.0,Lee Sin,Nidalee,Kindred,478,198,144,0.58
-알쿵이달쿵 #0106,kr,99,CHALLENGER,1079.0,Bard,Seraphine,Pyke,298,110,65,0.63
+알쿵이달쿵 #0106,kr,98,CHALLENGER,1079.0,Bard,Seraphine,Pyke,298,110,65,0.63
+조관우급 늪 설치 #KR1,kr,99,CHALLENGER,1079.0,Cassiopeia,Braum,Thresh,628,166,119,0.58
+yukino cat #cat,na,1,CHALLENGER,2089.0,Viego,Ekko,Qiyana,748,218,130,0.63
+Ctr1 V #NA1,na,10,CHALLENGER,1440.0,Skarner,Zac,Graves,62,121,44,0.73
+Trailblaze #Stars,na,100,CHALLENGER,873.0,Dr. Mundo,Poppy,Gragas,778,169,117,0.59
+xeirzo #gwen,na,101,CHALLENGER,869.0,Gwen,Corki,Vayne,255,317,271,0.54
+Sharpe #NA1,na,102,CHALLENGER,866.0,Lux,Seraphine,Senna,674,127,87,0.59
+TymMio #DaHoe,na,103,CHALLENGER,866.0,Rell,Seraphine,Senna,1215,253,216,0.54
+Jauny #2001,na,104,CHALLENGER,865.0,Jax,Gnar,Camille,719,192,157,0.55
+Nerfing #0001,na,105,CHALLENGER,862.0,Karma,Lulu,Seraphine,83,97,55,0.64
+lllllllllllll #God,na,106,CHALLENGER,860.0,Jax,Aurora,K'Sante,975,253,212,0.54
+Music #NA2,na,107,CHALLENGER,860.0,Graves,Viego,Skarner,192,93,51,0.65
+Hiccup1357 #duck,na,108,CHALLENGER,858.0,Lulu,Nami,Karma,863,247,208,0.54
+BOBtimer #tank,na,109,CHALLENGER,858.0,Poppy,Skarner,Sejuani,960,256,218,0.54
+Pentaless #NA1,na,11,CHALLENGER,1399.0,Nunu & Willump,Skarner,Sion,359,296,237,0.56
+Fishlord #Swain,na,110,CHALLENGER,856.0,Swain,Syndra,Cassiopeia,793,248,201,0.55
+strawberi #泡泡兔,na,111,CHALLENGER,855.0,Seraphine,Lux,Lulu,1162,265,224,0.54
+Good Boi #NA1,na,112,CHALLENGER,855.0,Caitlyn,Jhin,Corki,868,153,113,0.58
+LowKeySavagé #NA1,na,113,CHALLENGER,849.0,Syndra,Jayce,LeBlanc,307,161,116,0.58
+Harmony #NA2,na,114,CHALLENGER,849.0,Karma,Seraphine,Nami,70,105,64,0.62
+Shiku #2004,na,115,CHALLENGER,847.0,Rell,Senna,Nautilus,1501,217,180,0.55
+Besso #NA1,na,116,CHALLENGER,847.0,Kled,Gnar,Yorick,225,208,176,0.54
+Buffing #0001,na,117,CHALLENGER,845.0,Karma,Seraphine,Zyra,1221,110,71,0.61
+Dhokla #NA1,na,118,CHALLENGER,844.0,Ambessa,Jayce,Jax,807,337,306,0.52
+Eclipse #NA 1,na,119,CHALLENGER,839.0,Jax,Renekton,Riven,812,176,133,0.57
+Neøø #1012,na,12,CHALLENGER,1386.0,Corki,Kalista,Jinx,1127,143,78,0.65
+WX HERD VD #NA1,na,120,CHALLENGER,835.0,Morgana,Nocturne,Karthus,248,173,137,0.56
+Ahj #YONE,na,121,CHALLENGER,834.0,Yone,Ahri,Hwei,985,299,277,0.52
+곰돌이 푸 #0000,na,122,CHALLENGER,833.0,Jayce,Lee Sin,Kai'Sa,421,230,194,0.54
+quancutengokngek #204,na,123,CHALLENGER,833.0,Rammus,Fiddlesticks,Malphite,355,136,96,0.59
+Maxander #NA1,na,124,CHALLENGER,832.0,Viego,Bel'Veth,Graves,1278,239,213,0.53
+ANDOQS #4444,na,125,CHALLENGER,832.0,Jhin,Ahri,Caitlyn,617,164,129,0.56
+Haxorr TTV #HAXOR,na,126,CHALLENGER,831.0,Jax,Fiora,Aatrox,648,315,279,0.53
+Palco #ガレンOP,na,127,CHALLENGER,829.0,Garen,Darius,Tryndamere,608,223,180,0.55
+3in1warrior #NA1,na,128,CHALLENGER,828.0,Renekton,Camille,Ambessa,472,189,152,0.55
+M7 Ghost #lll,na,129,CHALLENGER,828.0,Ambessa,Gnar,Gragas,385,113,64,0.64
+Masquerade Asuna #Yuuki,na,13,CHALLENGER,1378.0,Kennen,Orianna,Corki,434,444,404,0.52
+Afflictive #藍月なくる,na,130,CHALLENGER,826.0,Soraka,Zilean,Rakan,475,255,218,0.54
+Dandadan #GOAT,na,131,CHALLENGER,826.0,Corki,Garen,Ashe,178,137,98,0.58
+Fudgecakey #5811,na,132,CHALLENGER,824.0,Yone,Ambessa,Jax,765,159,108,0.6
+Subaru Natsuki #Smile,na,133,CHALLENGER,824.0,Lissandra,Ahri,Ezreal,1009,238,211,0.53
+少年的剑 #vamks,na,134,CHALLENGER,824.0,LeBlanc,Ryze,Yone,462,259,227,0.53
+ARMAO #NA1,na,135,CHALLENGER,824.0,Elise,Viego,Lee Sin,381,126,85,0.6
+skypture #slump,na,136,CHALLENGER,823.0,Ashe,Lucian,Jinx,713,414,379,0.52
+Sophist Sage #0409,na,137,CHALLENGER,821.0,Jhin,Ashe,Caitlyn,736,186,152,0.55
+知 我 #0727,na,138,CHALLENGER,819.0,Graves,Viego,Nidalee,275,114,76,0.6
+Busio JNG #NA1,na,139,CHALLENGER,818.0,Vel'Koz,Sylas,Syndra,153,82,37,0.69
+blinker #lll,na,14,CHALLENGER,1374.0,Gnar,Ambessa,Camille,108,141,78,0.64
+chocolate rain #LFG,na,140,CHALLENGER,817.0,Udyr,Viego,Skarner,387,202,162,0.55
+UCI duong pro #NA1,na,141,CHALLENGER,817.0,Viego,Nidalee,Lee Sin,271,396,363,0.52
+Cendi #NA1,na,142,CHALLENGER,817.0,Lucian,Varus,Ezreal,745,178,137,0.57
+Devost #4571,na,143,CHALLENGER,817.0,Jayce,K'Sante,Fiora,228,354,322,0.52
+snarkyy #krule,na,144,CHALLENGER,817.0,Syndra,Orianna,Sylas,610,156,122,0.56
+Likable #NA1,na,145,CHALLENGER,816.0,Akshan,Katarina,Yone,1316,279,247,0.53
+qindie5 #0505,na,146,CHALLENGER,811.0,Lee Sin,Jarvan IV,Sylas,453,96,52,0.65
+Zequilla #NA1,na,147,CHALLENGER,811.0,Kha'Zix,Bard,Ivern,1069,110,74,0.6
+最后一页 #0814,na,148,CHALLENGER,811.0,Aphelios,Tristana,Jinx,68,136,82,0.62
+Hypeurs #Wopo,na,149,CHALLENGER,811.0,Ekko,Senna,Akali,170,145,110,0.57
+we can win #CN1,na,15,CHALLENGER,1368.0,Kha'Zix,Viego,Graves,143,144,90,0.62
+Tomo #0999,na,150,CHALLENGER,809.0,Ezreal,Zeri,Kalista,1162,251,223,0.53
+抖音薇信tonytoppwd #pwdd,na,151,CHALLENGER,808.0,Ambessa,Aurora,Jax,616,134,94,0.59
+philip #zeng,na,152,CHALLENGER,807.0,Gnar,Jax,Udyr,642,227,185,0.55
+CaptBear #NA1,na,153,CHALLENGER,807.0,Kled,,,745,162,127,0.56
+Mowgli #0712,na,154,CHALLENGER,807.0,Graves,Diana,Kindred,132,177,138,0.56
+zpy #zpy23,na,155,CHALLENGER,806.0,Talon,Skarner,Graves,864,87,39,0.69
+Komari #TTV,na,156,CHALLENGER,806.0,Yasuo,Yone,Akshan,883,298,272,0.52
+quante #urgot,na,157,CHALLENGER,806.0,Urgot,Garen,Gwen,171,271,237,0.53
+Maguyusi #NA1,na,158,CHALLENGER,804.0,Sylas,Aatrox,Irelia,996,252,215,0.54
+Steamed Scallops #na2,na,159,CHALLENGER,802.0,Bard,Syndra,Cassiopeia,1191,205,171,0.55
+asdafxcaswdfg #aswd,na,16,CHALLENGER,1321.0,Jinx,Caitlyn,Smolder,91,131,73,0.64
+My Eclipse #NA1,na,160,CHALLENGER,802.0,Sylas,Yone,Galio,615,143,106,0.57
+xiaodtroduongben #mango,na,161,CHALLENGER,802.0,Thresh,Nautilus,Rakan,118,174,136,0.56
+Virtuosa #arkni,na,162,CHALLENGER,802.0,Neeko,Rell,Senna,230,374,345,0.52
+Minazuki #0909,na,163,CHALLENGER,802.0,Corki,Tristana,Karthus,1260,162,130,0.55
+天賦第八究明者 #Sight,na,164,CHALLENGER,801.0,Kayle,Gwen,Aurora,523,283,255,0.53
+تريجر #420,na,165,CHALLENGER,801.0,Lucian,Corki,Jhin,338,123,88,0.58
+huhi #0246,na,166,CHALLENGER,800.0,Kai'Sa,Lucian,Ezreal,588,107,67,0.61
+antiheal #ILFSM,na,167,CHALLENGER,799.0,Ashe,Veigar,Tahm Kench,757,129,96,0.57
+TTV Muwasame #ACK,na,168,CHALLENGER,799.0,Jarvan IV,Elise,Shen,832,168,128,0.57
+Rascal500 #compy,na,169,CHALLENGER,798.0,Corki,Jhin,Ashe,908,187,157,0.54
+duoking1 #Talia,na,17,CHALLENGER,1277.0,Zyra,Alistar,Jhin,694,171,112,0.6
+Aaaaaari #NA1,na,170,CHALLENGER,798.0,Kai'Sa,Neeko,Jhin,781,236,202,0.54
+5tunt #NA1,na,171,CHALLENGER,797.0,Senna,Nami,Karma,626,132,96,0.58
+Cupic #Hwei,na,172,CHALLENGER,794.0,Zoe,Lux,Hwei,521,83,41,0.67
+Neymar Júnior #JogaB,na,173,CHALLENGER,794.0,Viego,Jhin,Caitlyn,308,240,204,0.54
+Tokibuny #ttv,na,174,CHALLENGER,794.0,Aurora,Akali,Lux,125,157,128,0.55
+The PlayMaker O #NA1,na,175,CHALLENGER,793.0,Yasuo,Akali,Yone,945,215,179,0.55
+RobbyBob #NA1,na,176,CHALLENGER,792.0,Viktor,Ahri,Aurora,888,69,30,0.7
+YNO BLITZ #CHESS,na,177,CHALLENGER,792.0,Blitzcrank,Gragas,Rumble,364,161,121,0.57
+Mango Fish #Stars,na,178,CHALLENGER,792.0,Fizz,Kai'Sa,Ezreal,271,190,143,0.57
+心痛无医 #26319,na,179,CHALLENGER,791.0,Qiyana,Ashe,Sivir,303,181,136,0.57
+TL Honda CoreJJ #1123,na,18,CHALLENGER,1272.0,Poppy,Pyke,Zyra,573,253,198,0.56
+jamican banana #NA1,na,180,CHALLENGER,791.0,Ivern,Shaco,Morgana,1341,378,358,0.51
+funny corgiヅ #corgi,na,181,CHALLENGER,790.0,Anivia,Galio,Smolder,654,217,183,0.54
+Numbers 11vs14 #Rïôt,na,182,CHALLENGER,790.0,Yasuo,Akshan,Soraka,50,117,75,0.61
+EricWei #1412,na,183,CHALLENGER,789.0,Gragas,Sylas,Ornn,816,113,70,0.62
+Yukimiya #2002,na,184,CHALLENGER,786.0,Rakan,Zilean,Nami,68,259,198,0.57
+perma ban ekko #ekko,na,185,CHALLENGER,786.0,Vex,Mordekaiser,Nasus,270,204,169,0.55
+superman #yone,na,186,CHALLENGER,784.0,Yone,Yasuo,Jax,194,133,97,0.58
+Crimsonating #NA1,na,187,CHALLENGER,782.0,Thresh,Leona,Nautilus,613,297,269,0.52
+LegitKorea #NA1,na,188,CHALLENGER,782.0,Ahri,Syndra,Aurora,614,189,147,0.56
+thomas #adc1,na,189,CHALLENGER,781.0,Jinx,Ezreal,Kai'Sa,426,160,122,0.57
+Doublelift #NA1,na,19,CHALLENGER,1264.0,Jinx,Caitlyn,Corki,602,247,199,0.55
+discount Yangus #Urgot,na,190,CHALLENGER,780.0,Urgot,Veigar,Kog'Maw,239,178,143,0.55
+세인트 스푼킹 #프레이,na,191,CHALLENGER,780.0,Miss Fortune,Ashe,Teemo,460,156,112,0.58
+rovex7 #NA1,na,192,CHALLENGER,780.0,Nautilus,Alistar,Rell,420,273,240,0.53
+Geiger #NA1,na,193,CHALLENGER,779.0,K'Sante,Gwen,Gnar,1771,205,174,0.54
+Nukez #Pixel,na,194,CHALLENGER,779.0,Rell,Nautilus,Leona,1033,236,203,0.54
+one last dance #nahz,na,195,CHALLENGER,779.0,Yasuo,Yone,Hwei,86,109,71,0.61
+Kzykendy #NA1,na,196,CHALLENGER,778.0,Azir,Garen,Ahri,762,172,142,0.55
+Blind Walker #zzzzz,na,197,CHALLENGER,777.0,Graves,Viego,Wukong,372,155,115,0.57
+Conchad #Luck,na,198,CHALLENGER,775.0,Yasuo,K'Sante,Maokai,680,161,118,0.58
+Bobby #PX7,na,199,CHALLENGER,775.0,Cassiopeia,Ashe,Sivir,548,68,60,0.53
+twtv kenvilol #SSS,na,2,CHALLENGER,1875.0,Jarvan IV,Graves,Lee Sin,152,206,139,0.6
+Cody Sun #Aura,na,20,CHALLENGER,1260.0,Tristana,Ashe,Corki,878,257,215,0.54
+Daption #Sandy,na,200,CHALLENGER,772.0,Jhin,Ashe,Jinx,930,318,291,0.52
+Wocaoo #NA1,na,201,CHALLENGER,770.0,Graves,Viego,Kindred,863,106,64,0.62
+eDATERSgg #6969,na,202,CHALLENGER,770.0,Graves,Hecarim,Karthus,70,212,160,0.57
+J4NNA #NA1,na,203,CHALLENGER,770.0,Senna,Karma,Janna,297,130,92,0.59
+digszn141q8gbi7u #9413,na,204,CHALLENGER,770.0,Camille,Irelia,Kennen,186,81,24,0.77
+WINTER #G0NE,na,205,CHALLENGER,768.0,Nautilus,Leona,Karma,523,46,27,0.63
+fairy girl #NA1,na,206,CHALLENGER,768.0,Swain,Lux,Syndra,820,139,96,0.59
+Ablazeolive #NA1,na,207,CHALLENGER,767.0,Smolder,Viktor,Yone,838,67,35,0.66
+Inconsiderate #I AM,na,208,CHALLENGER,766.0,Riven,Jayce,Ambessa,472,440,415,0.51
+Berik #fish,na,209,CHALLENGER,766.0,Viego,K'Sante,Gwen,808,154,122,0.56
+melke #0001,na,21,CHALLENGER,1230.0,Kai'Sa,Aphelios,Ezreal,679,264,218,0.55
+struggler #heed,na,210,CHALLENGER,765.0,Lissandra,Syndra,Hwei,306,176,131,0.57
+Willing555 #555,na,211,CHALLENGER,765.0,Kled,Swain,K'Sante,827,158,125,0.56
+Jaeger #1000,na,212,CHALLENGER,764.0,Corki,Hwei,Jhin,781,125,94,0.57
+Journey #TOP,na,213,CHALLENGER,764.0,Irelia,Ambessa,Cassiopeia,718,356,325,0.52
+OnionMP4 #XMAS,na,214,CHALLENGER,763.0,Zac,Amumu,Kayn,1184,181,144,0.56
+else #god,na,215,CHALLENGER,763.0,Ambessa,Aatrox,Jayce,319,116,83,0.58
+NUNU WINTRADE #NUNU3,na,216,CHALLENGER,761.0,Nunu & Willump,Darius,Amumu,416,143,116,0.55
+Amazingx #2494,na,217,CHALLENGER,761.0,Lee Sin,Jarvan IV,Sejuani,1007,155,123,0.56
+TC porsche #NA1,na,218,CHALLENGER,760.0,Gangplank,K'Sante,Udyr,744,127,89,0.59
+akn #dios,na,219,CHALLENGER,759.0,Lux,Seraphine,Morgana,1070,176,144,0.55
+Shogo #Shog,na,22,CHALLENGER,1224.0,Kog'Maw,Syndra,Corki,657,214,161,0.57
+Hatsune Neeko #NA1,na,220,CHALLENGER,759.0,Neeko,Vayne,Sett,339,258,223,0.54
+肥鯰魚其實一開始並不壞 #1031,na,221,CHALLENGER,758.0,K'Sante,Gwen,Aatrox,1284,98,58,0.63
+caomeieeer #NA1,na,222,CHALLENGER,757.0,Hwei,Akali,Yone,400,145,101,0.59
+gemi #swift,na,223,CHALLENGER,757.0,Poppy,Ornn,Renekton,877,233,194,0.55
+Fire Alarm #Anika,na,224,CHALLENGER,756.0,Akali,Yone,Sylas,91,211,160,0.57
+twtv bobjenkins #NA3,na,225,CHALLENGER,754.0,Kennen,Gnar,Rumble,106,85,39,0.69
+龙七对 #0313,na,226,CHALLENGER,754.0,K'Sante,Yone,Aatrox,590,102,64,0.61
+WeTriedToRun #jord,na,227,CHALLENGER,754.0,Riven,Irelia,Vayne,495,103,57,0.64
+Mechie #Mule,na,228,CHALLENGER,754.0,Aatrox,K'Sante,Volibear,1152,146,114,0.56
+Icy #0499,na,229,CHALLENGER,752.0,Yone,Viktor,Veigar,284,242,208,0.54
+InoriB #2005,na,23,CHALLENGER,1219.0,Ezreal,Corki,Aphelios,232,268,222,0.55
+Kral Only35 #03535,na,230,CHALLENGER,751.0,Nautilus,Rakan,Rell,385,251,228,0.52
+波士顿第一深情 #1117,na,231,CHALLENGER,751.0,Kai'Sa,Ziggs,Smolder,161,136,94,0.59
+xzh #0402,na,232,CHALLENGER,750.0,Sylas,Galio,Viktor,406,127,87,0.59
+Ozzler #Boss,na,233,CHALLENGER,750.0,Tahm Kench,Senna,Pyke,598,110,78,0.59
+Shockey #NA1,na,234,CHALLENGER,749.0,Aatrox,Camille,Sylas,923,124,87,0.59
+rege #dice,na,235,CHALLENGER,749.0,Viego,Jarvan IV,Rengar,934,231,198,0.54
+rogue # xd,na,236,CHALLENGER,748.0,Sett,Renekton,Dr. Mundo,722,198,167,0.54
+Ryu Jihak #Art,na,237,CHALLENGER,746.0,Neeko,Ziggs,Lux,262,110,75,0.59
+RoseThorn #Rose,na,238,CHALLENGER,746.0,Nidalee,Lee Sin,Viego,752,120,82,0.59
+supramalignance #na01,na,239,CHALLENGER,746.0,Riven,Jax,Camille,83,189,161,0.54
+Dusk to Dawn #god,na,24,CHALLENGER,1202.0,Kennen,Sylas,Yone,84,329,241,0.58
+Cryogen #Tay,na,240,CHALLENGER,746.0,Kai'Sa,Lucian,Jhin,795,187,156,0.55
+Tenacity #NA1,na,241,CHALLENGER,745.0,Yone,Renekton,K'Sante,459,140,111,0.56
+Yixixixihahahaha #8888,na,242,CHALLENGER,743.0,Yone,Katarina,Dr. Mundo,828,229,199,0.54
+DeepWhite #115,na,243,CHALLENGER,743.0,Karthus,Miss Fortune,Brand,787,115,74,0.61
+风城烟雨丶 #广州法王,na,244,CHALLENGER,743.0,Talon,Ekko,Aurora,208,107,71,0.6
+Yozu #Lux,na,245,CHALLENGER,743.0,Lux,Karma,Milio,850,97,63,0.61
+im risk #NA1,na,246,CHALLENGER,742.0,Viego,Elise,Vex,949,301,272,0.53
+Ember #RCU,na,247,CHALLENGER,741.0,Ambessa,K'Sante,Skarner,83,133,100,0.57
+sth2die4 #0127,na,248,CHALLENGER,741.0,Aurelion Sol,Yone,Sylas,588,215,178,0.55
+AD Sin #NA1,na,249,CHALLENGER,741.0,Sejuani,Ezreal,Ashe,96,150,105,0.59
+Icelandic Hero #ice,na,25,CHALLENGER,1199.0,Skarner,Viego,Brand,974,223,172,0.56
+Nightstar x Lia #CN1,na,250,CHALLENGER,740.0,Tristana,Kog'Maw,Jinx,1188,191,156,0.55
+ZEZE ZAZA XOOO #anna,na,251,CHALLENGER,740.0,Kai'Sa,Sivir,Jhin,1012,209,180,0.54
+Ego #1048,na,252,CHALLENGER,740.0,Gangplank,Gragas,Aurora,407,202,174,0.54
+Bitter #NA1,na,253,CHALLENGER,738.0,Sona,Seraphine,Nami,952,165,131,0.56
+포기하지마 #Ultio,na,254,CHALLENGER,737.0,Corki,Aphelios,Ezreal,566,142,104,0.58
+Protos #Colin,na,255,CHALLENGER,737.0,Senna,Bard,Poppy,1040,303,270,0.53
+I am Súnlight #NA1,na,256,CHALLENGER,737.0,Darius,Garen,Yorick,984,146,117,0.56
+pewpew #pigmé,na,257,CHALLENGER,736.0,Ashe,Corki,Ezreal,828,168,131,0.56
+prosecution #143,na,258,CHALLENGER,736.0,Kassadin,Sylas,Kai'Sa,181,277,241,0.53
+calamity of god #NA1,na,259,CHALLENGER,735.0,Sona,Zilean,Smolder,69,94,49,0.66
+asfdwrqe #CN1,na,26,CHALLENGER,1197.0,Viego,Jarvan IV,Kha'Zix,148,142,96,0.6
+blue612 #blue,na,260,CHALLENGER,733.0,Nautilus,Rell,Rakan,673,116,73,0.61
+lucky boy syndrm #kit,na,261,CHALLENGER,732.0,Lux,Hwei,Kog'Maw,659,141,106,0.57
+花有重开日人无在少年 #0525,na,262,CHALLENGER,731.0,Taliyah,Singed,Pantheon,112,203,156,0.57
+江多宝 #0409,na,263,CHALLENGER,730.0,Viego,Kai'Sa,Ekko,197,85,49,0.63
+Vincent ADgap #NA1,na,264,CHALLENGER,730.0,Shaco,Samira,Corki,229,162,126,0.56
+白天数星星 #1016,na,265,CHALLENGER,729.0,Xin Zhao,Malphite,Wukong,480,157,119,0.57
+043v908s #999,na,266,CHALLENGER,729.0,Draven,Twitch,Karthus,43,116,58,0.67
+astro #opium,na,267,CHALLENGER,729.0,Tristana,Jinx,Twitch,46,121,61,0.66
+trampa billone #high,na,268,CHALLENGER,729.0,Lulu,Draven,Nami,74,102,62,0.62
+Skyyylol #NA11,na,269,CHALLENGER,729.0,Sylas,Yone,Jayce,230,150,108,0.58
+qweasdzxc #NA2,na,27,CHALLENGER,1184.0,Viego,Lee Sin,Hecarim,154,145,98,0.6
+立身揚名 #NA0,na,270,CHALLENGER,728.0,Graves,Viego,Ekko,108,228,190,0.55
+Jim Newman #NA2,na,271,CHALLENGER,728.0,Kha'Zix,Wukong,Graves,239,533,495,0.52
+TinFoilSlayer #NA1,na,272,CHALLENGER,727.0,Syndra,Ahri,Gnar,918,159,125,0.56
+Evi #NA1,na,273,CHALLENGER,727.0,Taric,Lulu,Seraphine,996,245,214,0.53
+CompIain #NA1,na,274,CHALLENGER,727.0,Graves,Nidalee,Kha'Zix,684,354,334,0.51
+TTV Pomerzz 1 #Shaco,na,275,CHALLENGER,727.0,Shaco,Nautilus,Nunu & Willump,187,181,142,0.56
+LOVE3000 #nadog,na,276,CHALLENGER,725.0,Neeko,Kennen,Jarvan IV,111,167,134,0.55
+LolGunslinger #dong,na,277,CHALLENGER,724.0,Heimerdinger,Malzahar,,684,150,112,0.57
+vx sasikiran00 #ran,na,278,CHALLENGER,721.0,Nautilus,Kai'Sa,Alistar,1014,286,264,0.52
+火 影 #2Szd,na,279,CHALLENGER,721.0,Zed,Katarina,Shaco,448,112,84,0.57
+T0mio #NA1,na,28,CHALLENGER,1180.0,Jayce,Rengar,Smolder,606,164,118,0.58
+asfdfhrsfdrest4 #COL,na,280,CHALLENGER,720.0,Gnar,Renekton,K'Sante,446,395,370,0.52
+心千劫 #如此白,na,281,CHALLENGER,719.0,Zed,Qiyana,Talon,370,195,164,0.54
+Deku #NDHN,na,282,CHALLENGER,717.0,Garen,Jayce,Graves,697,125,87,0.59
+Gunslinger Sux #NA1,na,283,CHALLENGER,716.0,Heimerdinger,,,202,103,67,0.61
+2BoneMcCubone #JAGR,na,284,CHALLENGER,716.0,Lee Sin,Draven,Gragas,695,226,197,0.53
+Mini Mouse #Phy,na,285,CHALLENGER,715.0,Jayce,Smolder,Ahri,292,142,111,0.56
+3005 #00001,na,286,CHALLENGER,714.0,Viego,Zac,Kindred,347,196,159,0.55
+Andy #loool,na,287,CHALLENGER,714.0,Kennen,Rengar,Zac,425,96,56,0.63
+Verdict #9108,na,288,CHALLENGER,714.0,Udyr,Kha'Zix,Viego,838,187,158,0.54
+Miracle #MIKE,na,289,CHALLENGER,712.0,Nautilus,Rell,Senna,795,133,103,0.56
+Kurfyou #NA3,na,29,CHALLENGER,1173.0,Hwei,Zilean,Jinx,185,251,200,0.56
+Patient #NA1,na,290,CHALLENGER,712.0,Karma,Maokai,Leona,690,221,181,0.55
+Mario Sunshine #NA1,na,291,CHALLENGER,709.0,Nautilus,Rell,Janna,691,157,118,0.57
+big dacko #NA1,na,292,CHALLENGER,708.0,Ashe,Corki,Hwei,795,191,159,0.55
+Exothy #31BTG,na,293,CHALLENGER,708.0,Ashe,Karma,Ezreal,813,112,64,0.64
+オカレン #ddd,na,294,CHALLENGER,708.0,Jhin,Ezreal,Ekko,867,288,271,0.52
+Paklaiton #NA1,na,295,CHALLENGER,708.0,Brand,Amumu,Malphite,268,353,321,0.52
+Pascho #NA1,na,296,CHALLENGER,707.0,Swain,Pantheon,Sylas,573,118,85,0.58
+Isolde #NA1,na,297,CHALLENGER,707.0,Ambessa,Viego,K'Sante,743,105,70,0.6
+NàCI #NA1,na,298,CHALLENGER,706.0,Bel'Veth,Nami,Lulu,139,151,93,0.62
+Qingxi #夜下观星,na,299,CHALLENGER,704.0,Kindred,Vi,Graves,449,145,105,0.58
+Isles #000,na,3,CHALLENGER,1825.0,Nautilus,Rell,Poppy,215,373,298,0.56
+MySwordCrimson #2006,na,30,CHALLENGER,1168.0,Renekton,Yone,Jax,1010,298,255,0.54
+fiction #gap,na,300,CHALLENGER,702.0,Caitlyn,Jhin,Ashe,893,353,328,0.52
+Spica #001,na,31,CHALLENGER,1165.0,Sylas,Yone,Graves,424,134,85,0.61
+Sushee #NA1,na,32,CHALLENGER,1164.0,Kog'Maw,Ashe,Kai'Sa,1233,222,176,0.56
+Hub1012345 #NA1,na,33,CHALLENGER,1138.0,Anivia,Ezreal,Jinx,763,199,155,0.56
+kisno #NA1,na,34,CHALLENGER,1135.0,Viego,Kindred,Xin Zhao,632,142,76,0.65
+Businessman #003,na,35,CHALLENGER,1123.0,Pyke,Akshan,Ekko,70,111,60,0.65
+Will #NA12,na,36,CHALLENGER,1117.0,Graves,Nidalee,Jarvan IV,892,307,259,0.54
+Raveydemon #NA1,na,37,CHALLENGER,1115.0,Naafiri,Kled,Akali,903,378,335,0.53
+GOD #Fiora,na,38,CHALLENGER,1108.0,Fiora,Aurora,Camille,88,337,270,0.56
+I will trade #NA1,na,39,CHALLENGER,1104.0,Ambessa,Viktor,Jayce,492,148,102,0.59
+Spawn #NA3,na,4,CHALLENGER,1670.0,Corki,Ashe,Ezreal,673,231,166,0.58
+Ariendel #NA1,na,40,CHALLENGER,1089.0,Aurelion Sol,Skarner,Ryze,886,254,213,0.54
+Srtty #alynn,na,41,CHALLENGER,1086.0,Ambessa,Aurora,Kennen,192,242,203,0.54
+Davemon #NA1,na,42,CHALLENGER,1080.0,Pyke,Akshan,Lee Sin,358,158,105,0.6
+Grell #3010,na,43,CHALLENGER,1079.0,Viego,Skarner,Nidalee,386,142,93,0.6
+yangus Beef #NA1,na,44,CHALLENGER,1077.0,Urgot,Veigar,Kog'Maw,697,170,128,0.57
+Kelpo #NA2,na,45,CHALLENGER,1069.0,Akshan,Soraka,Yasuo,564,164,123,0.57
+Breezyyy #NA1,na,46,CHALLENGER,1060.0,Rell,Nautilus,Alistar,1199,166,119,0.58
+Lilredlol #annac,na,47,CHALLENGER,1048.0,Udyr,Hecarim,Karma,678,89,45,0.66
+Ty G #Teemo,na,48,CHALLENGER,1047.0,Teemo,Gnar,Kayle,1089,440,407,0.52
+123123412345 #NA1,na,49,CHALLENGER,1046.0,Skarner,Graves,Lillia,166,161,105,0.61
+Horder #Chris,na,5,CHALLENGER,1618.0,Jax,Gnar,Yone,268,227,162,0.58
+Zep LFT OQ CLOL #QC1,na,50,CHALLENGER,1039.0,Corki,Ashe,Smolder,97,147,108,0.58
+donb #2003,na,51,CHALLENGER,1037.0,Leona,Nautilus,Rakan,642,87,33,0.73
+Nikkone #NA1,na,52,CHALLENGER,1034.0,Fiddlesticks,Hecarim,Kha'Zix,776,152,104,0.59
+AoJune #3354,na,53,CHALLENGER,1028.0,Yone,Corki,Aurora,1142,235,193,0.55
+Samikin #uwu,na,54,CHALLENGER,1028.0,Zoe,Hwei,Aurora,812,109,69,0.61
+kele #1003,na,55,CHALLENGER,1022.0,Talon,Akali,Galio,957,242,200,0.55
+Min #클로버,na,56,CHALLENGER,1022.0,Aatrox,K'Sante,Riven,674,265,220,0.55
+Kai #Saens,na,57,CHALLENGER,1021.0,Wukong,Ashe,Aatrox,719,135,93,0.59
+떡볶이 #1026,na,58,CHALLENGER,1019.0,Nidalee,K'Sante,Gangplank,82,319,262,0.55
+Z Score #1500,na,59,CHALLENGER,1006.0,Karma,Bard,Braum,976,194,155,0.56
+ASTROBOY99 #NA1,na,6,CHALLENGER,1609.0,Graves,Nidalee,Jarvan IV,446,309,238,0.56
+Cozy #0122,na,60,CHALLENGER,1003.0,Akali,Camille,Gnar,378,140,97,0.59
+dusklol #000,na,61,CHALLENGER,1002.0,Kha'Zix,Qiyana,Riven,363,120,75,0.62
+任星远 #sky,na,62,CHALLENGER,1002.0,Rengar,Kha'Zix,Malphite,151,138,86,0.62
+AstridMomoko #NA1,na,63,CHALLENGER,1002.0,Jax,Camille,Ambessa,411,146,103,0.59
+ttv nyx1v9 #nyx,na,64,CHALLENGER,1002.0,Bel'Veth,Kindred,Rengar,61,166,95,0.64
+OmiBro #NA1,na,65,CHALLENGER,1000.0,Corki,Ezreal,Kai'Sa,458,175,134,0.57
+KDKD #9999,na,66,CHALLENGER,986.0,Nautilus,Thresh,Rakan,572,172,130,0.57
+PaIco #NA1,na,67,CHALLENGER,970.0,Garen,Darius,Tryndamere,354,165,126,0.57
+Pobelter #NA1,na,68,CHALLENGER,969.0,Aurora,Sylas,Yone,801,277,241,0.53
+its so hard #NA1,na,69,CHALLENGER,958.0,Orianna,Hwei,Yone,411,164,109,0.6
+never type #1998,na,7,CHALLENGER,1569.0,Riven,Vayne,Jayce,334,190,115,0.62
+eXyu #000,na,70,CHALLENGER,953.0,Jayce,Ahri,Sylas,928,275,238,0.54
+PhyMini #NA1,na,71,CHALLENGER,943.0,Yone,Corki,Hwei,371,221,183,0.55
+Mixtsure #LPL,na,72,CHALLENGER,942.0,Hwei,Leona,Yasuo,649,170,139,0.55
+Sheiden #0001,na,73,CHALLENGER,939.0,Graves,Viego,Lee Sin,340,206,167,0.55
+links #111,na,74,CHALLENGER,937.0,Zyra,Jhin,Caitlyn,605,88,38,0.7
+flocon #FRK,na,75,CHALLENGER,934.0,LeBlanc,Syndra,Hecarim,154,136,91,0.6
+A Frozen Titan #NA1,na,76,CHALLENGER,930.0,Sylas,Syndra,Yone,892,124,81,0.6
+Eliass #NA1,na,77,CHALLENGER,925.0,Veigar,Galio,Smolder,614,167,131,0.56
+young #0000,na,78,CHALLENGER,924.0,LeBlanc,Jayce,Orianna,617,214,178,0.55
+Principal #kat,na,79,CHALLENGER,917.0,Katarina,Hwei,Zeri,983,163,128,0.56
+Hide On SanGil #NA1,na,8,CHALLENGER,1533.0,Ambessa,Garen,Jax,294,172,92,0.65
+SirZepre #NA1,na,80,CHALLENGER,914.0,Ashe,Corki,Viktor,667,149,108,0.58
+NPC #150ms,na,81,CHALLENGER,914.0,Yasuo,Yone,Tryndamere,98,227,173,0.57
+ichigo daifuku #274,na,82,CHALLENGER,906.0,Viego,Nidalee,Kindred,208,121,84,0.59
+WorldConquer #天下無双,na,83,CHALLENGER,906.0,Yasuo,Akshan,Vladimir,490,178,139,0.56
+ck286 #pris,na,84,CHALLENGER,905.0,Sylas,Ahri,Veigar,1064,163,124,0.57
+LikeAMaws #NA1,na,85,CHALLENGER,904.0,Hwei,Taliyah,Yone,567,113,72,0.61
+YoojungHukiriLee #NA1,na,86,CHALLENGER,902.0,Nautilus,Senna,Karma,765,169,128,0.57
+BigBeagle #NA1,na,87,CHALLENGER,902.0,Alistar,Rakan,Thresh,870,183,142,0.56
+ToastyAlex #NA1,na,88,CHALLENGER,899.0,Syndra,Viktor,Ambessa,864,97,45,0.68
+AlphaWolffy #NA1,na,89,CHALLENGER,894.0,Syndra,Ivern,Azir,1156,187,151,0.55
+Kenvi #NA1,na,9,CHALLENGER,1510.0,Graves,Kindred,Lee Sin,396,282,222,0.56
+大爱仙尊 #T800,na,90,CHALLENGER,891.0,Ekko,Kha'Zix,Jarvan IV,414,94,50,0.65
+Xuuka #1711,na,91,CHALLENGER,891.0,Nautilus,Rakan,Karma,1281,290,263,0.52
+fullclearonly123 #CN1,na,92,CHALLENGER,891.0,Jarvan IV,Lee Sin,Kindred,223,127,86,0.6
+RainaisCrazy #Wifey,na,93,CHALLENGER,888.0,Azir,Garen,Teemo,253,145,101,0.59
+xonas #0000,na,94,CHALLENGER,887.0,Draven,Kog'Maw,Varus,224,256,216,0.54
+Panyyann #7777,na,95,CHALLENGER,886.0,Pyke,Jayce,Senna,64,180,133,0.58
+ItzYoru #help,na,96,CHALLENGER,885.0,Thresh,Rell,Leona,649,144,103,0.58
+KOIIIIIIIII #1234,na,97,CHALLENGER,880.0,Orianna,Aurora,Taliyah,169,68,22,0.76
+googlymoogly002 #606,na,98,CHALLENGER,880.0,Twitch,Sivir,Draven,122,211,179,0.54
+不帮就送 #0888,na,99,CHALLENGER,877.0,Graves,Aatrox,Fiddlesticks,124,168,130,0.56
 xxxigbdrgn #0307,vn,1,CHALLENGER,1829.0,Lee Sin,Viego,Skarner,1663,219,139,0.61
 hiền từ Tuấn Huy #2k3,vn,10,CHALLENGER,1366.0,Kennen,Renekton,Gnar,800,242,175,0.58
-Lächeln #Shaon,vn,100,CHALLENGER,787.0,Shaco,Sion,Thresh,396,206,166,0.55
+Gok Gymer #thien,vn,100,CHALLENGER,784.0,Graves,Lee Sin,Viego,887,267,226,0.54
+Juvyaaa #4evr,vn,101,CHALLENGER,783.0,Evelynn,Yone,Soraka,1168,493,458,0.52
+Jinwoo #7979,vn,102,CHALLENGER,782.0,Kai'Sa,Jinx,Xayah,1157,292,257,0.53
+K A I L K A L Y #hehe,vn,103,CHALLENGER,781.0,Karma,Janna,Thresh,719,331,284,0.54
+An Hà Kiều #7012,vn,104,CHALLENGER,780.0,Zyra,Amumu,Karthus,1025,234,194,0.55
+POWER #FCFG,vn,105,CHALLENGER,775.0,Graves,Irelia,Kai'Sa,90,263,210,0.56
+swy #110,vn,106,CHALLENGER,775.0,Lee Sin,Gwen,Yone,934,108,68,0.61
+Icy #Umee,vn,107,CHALLENGER,769.0,Soraka,Lulu,Janna,1510,169,123,0.58
+n22 #032,vn,108,CHALLENGER,768.0,Zoe,Aurora,Neeko,1038,227,175,0.56
+bbilowkey #nmn,vn,109,CHALLENGER,768.0,Lulu,Yuumi,Nami,767,229,184,0.55
 SUPER WARRIOR #2k5,vn,11,CHALLENGER,1344.0,Jax,K'Sante,Ambessa,487,253,192,0.57
+Its me ZEON #4846,vn,110,CHALLENGER,768.0,Nautilus,Alistar,Neeko,1476,419,379,0.53
+tiphat #7272,vn,111,CHALLENGER,767.0,Graves,Viego,Lee Sin,357,199,150,0.57
+loraine cat #2006,vn,112,CHALLENGER,767.0,Lee Sin,Graves,Viego,1011,558,527,0.51
+Kat Arina #Kat A,vn,113,CHALLENGER,766.0,Katarina,Cho'Gath,K'Sante,1796,190,141,0.57
+THE IMMORTAL #2003,vn,114,CHALLENGER,766.0,Graves,Volibear,Diana,667,233,189,0.55
+das os gnim #hehe,vn,115,CHALLENGER,762.0,Corki,Aphelios,Tahm Kench,720,200,158,0.56
+Ông Bầu Suneo #cxo,vn,116,CHALLENGER,762.0,Katarina,Lissandra,Evelynn,988,305,258,0.54
+3bygang #NHP,vn,117,CHALLENGER,760.0,Sylas,Yone,K'Sante,876,155,108,0.59
+abcdxyznmasad #4524,vn,118,CHALLENGER,758.0,Jinx,Ashe,Kai'Sa,1167,401,367,0.52
+Trương Quang Bảo #Pon,vn,119,CHALLENGER,758.0,Gwen,Aatrox,Maokai,718,402,358,0.53
 5 chợ lớn #2703,vn,12,CHALLENGER,1333.0,Annie,Aurelion Sol,Yone,460,247,182,0.58
+The Batman #1088,vn,120,CHALLENGER,757.0,Aphelios,Varus,Corki,852,229,180,0.56
+可爱 bé nampeo ạaa #2004,vn,121,CHALLENGER,755.0,Evelynn,Nami,Karma,932,155,112,0.58
+Bắp Dưỡng Thê #cute,vn,122,CHALLENGER,755.0,Kai'Sa,Elise,Graves,819,151,89,0.63
+sleeptight #VNN,vn,123,CHALLENGER,755.0,Lulu,Kai'Sa,Jinx,1039,179,132,0.58
+Arshy #2610,vn,124,CHALLENGER,755.0,Lee Sin,K'Sante,Thresh,1670,178,138,0.56
+Anjo Nala #0307,vn,125,CHALLENGER,752.0,Soraka,Lulu,Elise,1121,309,262,0.54
+Ng tinh mua dong #Phuc3,vn,126,CHALLENGER,751.0,Kai'Sa,Jinx,Zoe,1007,445,405,0.52
+chi yeu minh em #LNV,vn,127,CHALLENGER,750.0,Lulu,Viego,Taliyah,337,101,52,0.66
+C 7 L #08102,vn,128,CHALLENGER,749.0,Lee Sin,Yone,Master Yi,383,269,217,0.55
+Đức Ai Chơi #ĐAC66,vn,129,CHALLENGER,748.0,Shen,Skarner,Gragas,178,150,104,0.59
 breakdownzzz #L21,vn,13,CHALLENGER,1229.0,Ezreal,Varus,Kai'Sa,508,142,63,0.69
+Follow My Dreams #VIE,vn,130,CHALLENGER,745.0,Zoe,Kai'Sa,Aurora,693,276,200,0.58
+Linhhh #1702,vn,131,CHALLENGER,743.0,Graves,Lee Sin,Viego,365,183,145,0.56
+Zhou Zheng Dao #VN2,vn,132,CHALLENGER,743.0,Gwen,Viktor,Galio,522,106,58,0.65
+Kiyopon #NDTin,vn,133,CHALLENGER,741.0,Diana,Graves,Sylas,484,221,171,0.56
+千个伤心的理由 5 #99999,vn,134,CHALLENGER,740.0,Zeri,Jinx,Kai'Sa,946,289,249,0.54
+구마유시 2005 #ADC,vn,135,CHALLENGER,739.0,Rell,Kai'Sa,Ashe,803,164,116,0.59
+Beo #2O11,vn,136,CHALLENGER,739.0,Akshan,Sylas,Zoe,859,148,73,0.67
+Kara no bot răm #172,vn,137,CHALLENGER,738.0,Lulu,Karma,Yuumi,571,245,204,0.55
+say wazzup #1234,vn,138,CHALLENGER,738.0,Graves,Nautilus,Thresh,978,137,93,0.6
+Yêu Nhân Trần #2301,vn,139,CHALLENGER,736.0,Elise,Viego,Kai'Sa,436,116,71,0.62
 ZEN GiaQui #2103,vn,14,CHALLENGER,1215.0,Syndra,Viktor,Ahri,800,133,67,0.67
+PingPongPong #Faker,vn,140,CHALLENGER,732.0,Kai'Sa,Poppy,Rell,923,221,182,0.55
+cat goes meow #silly,vn,141,CHALLENGER,731.0,Nami,Lulu,Soraka,1329,226,190,0.54
+Lê Quang Anh #Votri,vn,142,CHALLENGER,731.0,Kennen,Gnar,Gwen,418,257,225,0.53
+L N M T #VN2,vn,143,CHALLENGER,730.0,Kai'Sa,Ashe,Ezreal,481,375,337,0.53
+Ben10 #203,vn,144,CHALLENGER,730.0,Katarina,Rell,Viego,711,189,139,0.58
+Xiee1 #0624,vn,145,CHALLENGER,730.0,Bel'Veth,Viego,LeBlanc,688,314,272,0.54
+Sup Hook 67 #3kéoo,vn,146,CHALLENGER,729.0,Thresh,Pyke,Karma,1092,670,644,0.51
+Forever #4fun,vn,147,CHALLENGER,728.0,Irelia,Kha'Zix,Zed,805,285,245,0.54
+m z #2211,vn,148,CHALLENGER,728.0,Yuumi,Lulu,Samira,153,347,305,0.53
+babu ahihi #babu,vn,149,CHALLENGER,726.0,Karma,Lulu,Milio,725,181,136,0.57
 Quang Phạm up #2611,vn,15,CHALLENGER,1213.0,Elise,Viego,Rell,949,152,92,0.62
+Nhân 203 #Jungk,vn,150,CHALLENGER,725.0,Shaco,Neeko,Pantheon,1311,345,310,0.53
+Diggory Artist #vn1,vn,151,CHALLENGER,724.0,Bel'Veth,Ahri,Renekton,369,153,102,0.6
+sweetie ezi #2206,vn,152,CHALLENGER,724.0,Yuumi,Lulu,Nidalee,1062,215,178,0.55
+c0ld world #0501,vn,153,CHALLENGER,724.0,Irelia,Camille,Nami,1338,167,123,0.58
+hongtrantinhca #2001,vn,154,CHALLENGER,723.0,Zac,Hecarim,Graves,226,193,150,0.56
+Phuc4321 #0307,vn,155,CHALLENGER,723.0,Zyra,Graves,Skarner,808,123,80,0.61
+Z4CK #VN2,vn,156,CHALLENGER,722.0,Jayce,Camille,Jax,1112,169,130,0.57
+YuK3R #2201,vn,157,CHALLENGER,722.0,Elise,Sylas,Corki,63,157,85,0.65
+Ženn #VN2,vn,158,CHALLENGER,721.0,Kai'Sa,Ezreal,Lucian,569,304,254,0.54
+did not regret #Z2005,vn,159,CHALLENGER,720.0,Ezreal,Jhin,Yone,1112,198,157,0.56
 千个伤心的理由 #9999,vn,16,CHALLENGER,1200.0,Rell,Poppy,Nautilus,569,361,302,0.54
+lcd #Helia,vn,160,CHALLENGER,720.0,Yone,Sylas,Tristana,602,243,199,0.55
+Diệu Nguyệt Lan #DNL,vn,161,CHALLENGER,718.0,Nami,Taliyah,Lulu,1542,172,127,0.58
+Thường Tài Chính #MONEY,vn,162,CHALLENGER,717.0,Aurora,Hecarim,Zoe,1195,82,41,0.67
+Hong Hae In #777,vn,163,CHALLENGER,717.0,Cho'Gath,Ambessa,Irelia,249,250,149,0.63
+Seraphine #Sora,vn,164,CHALLENGER,714.0,Seraphine,Nami,Yuumi,596,263,230,0.53
+Kiana #6277,vn,165,CHALLENGER,712.0,Talon,Aurelion Sol,Viktor,698,229,190,0.55
+Xiath #9999,vn,166,CHALLENGER,711.0,Riven,Smolder,Nasus,344,235,198,0.54
+28 01 20 #2801,vn,167,CHALLENGER,711.0,Shaco,Teemo,Maokai,309,291,248,0.54
+Thanh Luan Pham #3403,vn,168,CHALLENGER,710.0,Lee Sin,Graves,Viego,916,483,453,0.52
+Con Vợ Đập tao #20824,vn,169,CHALLENGER,710.0,Ambessa,Aurora,Pantheon,1005,351,305,0.54
 dumplings kid #2703,vn,17,CHALLENGER,1166.0,Poppy,Lee Sin,Rell,716,214,158,0.58
+Em Bé Vy #meow,vn,170,CHALLENGER,710.0,Nilah,Corki,Graves,763,264,225,0.54
+gia doi #KH99,vn,171,CHALLENGER,710.0,Corki,Tristana,Swain,462,81,40,0.67
+dzy丶Zé ní #kien,vn,172,CHALLENGER,710.0,Zoe,Thresh,Rell,358,186,141,0.57
+T D #14065,vn,173,CHALLENGER,709.0,Taliyah,Syndra,Kai'Sa,212,142,102,0.58
+Dopa Up #1996,vn,174,CHALLENGER,709.0,Twisted Fate,Nidalee,Graves,974,282,235,0.55
+Ngọc Chánh #2005,vn,175,CHALLENGER,705.0,Sylas,Ryze,K'Sante,870,118,83,0.59
+Ping con mẹ m #8888,vn,176,CHALLENGER,705.0,Maokai,Aatrox,Renekton,695,608,551,0.52
+Trần Tiểu Kỳ #997,vn,177,CHALLENGER,705.0,Kindred,Graves,Viego,209,131,87,0.6
+clear1 #0812,vn,178,CHALLENGER,705.0,Rell,Nautilus,Alistar,617,181,134,0.57
+FA Nagato #2005,vn,179,CHALLENGER,704.0,Jax,K'Sante,Jayce,420,259,217,0.54
 Tiểu Anh29 #TA2,vn,18,CHALLENGER,1141.0,Zeri,Ezreal,Ashe,1047,248,191,0.56
+Shilyx so sad #2007,vn,180,CHALLENGER,703.0,Graves,Lee Sin,Kindred,662,157,117,0.57
+today i did good #Fanta,vn,181,CHALLENGER,703.0,Ashe,Lee Sin,Jayce,365,230,203,0.53
+LCK ADC #2207,vn,182,CHALLENGER,703.0,Kai'Sa,Corki,Ezreal,783,211,173,0.55
+con cho ngu #vnnmc,vn,183,CHALLENGER,703.0,Sylas,Yone,Master Yi,112,139,89,0.61
+Tôi Mệt #007,vn,184,CHALLENGER,702.0,Swain,Viego,Lee Sin,673,115,53,0.68
+dai rat to #696,vn,185,CHALLENGER,702.0,Talon,Poppy,Gwen,698,270,224,0.55
+리오1 #KOR,vn,186,CHALLENGER,701.0,Jinx,Kai'Sa,Corki,634,89,47,0.65
+Xuống Bot Cân 3 #AdGap,vn,187,CHALLENGER,701.0,Graves,Hecarim,Lillia,474,576,546,0.51
+Salieri #112,vn,188,CHALLENGER,700.0,Gangplank,Alistar,Zac,783,244,205,0.54
+bad christmas #hqn,vn,189,CHALLENGER,700.0,Nidalee,Graves,Ryze,408,229,186,0.55
 knight #kk9,vn,19,CHALLENGER,1114.0,LeBlanc,Akali,Aurora,781,132,65,0.67
+Bánh Bao Piglet #bbb,vn,190,CHALLENGER,700.0,Elise,Viego,Yuumi,796,128,84,0.6
+Lady up #kaisa,vn,191,CHALLENGER,699.0,Kai'Sa,Jhin,Kha'Zix,916,255,201,0.56
+MC211 #VCK,vn,192,CHALLENGER,698.0,Graves,Lee Sin,Ryze,666,172,123,0.58
+Shawty #0910,vn,193,CHALLENGER,696.0,Kai'Sa,Jhin,Ashe,823,140,96,0.59
+Cá Bé Con #Pena1,vn,194,CHALLENGER,696.0,Pyke,Renekton,Yuumi,912,189,166,0.53
+N0BOD #LVMK,vn,195,CHALLENGER,695.0,Sylas,Graves,Lee Sin,223,131,83,0.61
+3138 #371,vn,196,CHALLENGER,695.0,Galio,Swain,Sylas,1692,262,216,0.55
+Yujiro Hanma #2112,vn,197,CHALLENGER,694.0,Graves,Jarvan IV,Elise,1228,226,177,0.56
+TopTalent #VN3,vn,198,CHALLENGER,694.0,Ambessa,K'Sante,Yone,362,212,175,0.55
+Pantheon #BePan,vn,199,CHALLENGER,693.0,Shaco,Graves,Pantheon,714,142,99,0.59
 千个伤心的理由 8 #8686,vn,2,CHALLENGER,1719.0,Graves,Viego,Lee Sin,1081,267,183,0.59
-ADCFeed #11111,vn,20,CHALLENGER,1104.0,Irelia,Viktor,Zoe,456,300,160,0.65
+千个伤心的理由 4 #9999,vn,20,CHALLENGER,1107.0,Heimerdinger,Corki,Shen,616,312,258,0.55
+Syrex #id7,vn,200,CHALLENGER,693.0,Lulu,Nami,Yuumi,996,171,133,0.56
+in another life #bemeo,vn,201,CHALLENGER,692.0,Soraka,Nami,Lulu,1060,120,81,0.6
+Hạ Thiên #9999,vn,202,CHALLENGER,692.0,Kai'Sa,Rek'Sai,Jinx,790,231,190,0.55
+国庆 JuieOuO #Black,vn,203,CHALLENGER,690.0,Kai'Sa,Viego,Graves,704,186,153,0.55
+Midas creation #1202,vn,204,CHALLENGER,690.0,Skarner,Rell,Jarvan IV,1089,185,141,0.57
+ゴバンヒエウ #2302,vn,205,CHALLENGER,690.0,Rengar,Wukong,Graves,221,193,150,0.56
+LĐTimeeee #vn3,vn,206,CHALLENGER,690.0,K'Sante,Camille,Gnar,224,301,248,0.55
+Rii #1208,vn,207,CHALLENGER,689.0,Thresh,Nami,Karma,442,142,97,0.59
+Xom #2k6,vn,208,CHALLENGER,689.0,Viego,Bel'Veth,Braum,637,255,218,0.54
+KapilGuptaMD #Truth,vn,209,CHALLENGER,688.0,Elise,Gragas,Viego,135,132,88,0.6
 Azul #1m88,vn,21,CHALLENGER,1083.0,Lulu,Karma,Renata Glasc,1045,181,129,0.58
+Walking #BMT,vn,210,CHALLENGER,687.0,Ezreal,Ashe,Kalista,981,109,64,0.63
+Zoe #Zoe1,vn,211,CHALLENGER,687.0,Zoe,Orianna,Syndra,1067,114,77,0.6
+Khan up #ndk,vn,212,CHALLENGER,687.0,Nidalee,Elise,Kai'Sa,1179,184,145,0.56
+hiino #1110,vn,213,CHALLENGER,686.0,Ashe,Xayah,Ezreal,818,194,149,0.57
+Meiinion #1403,vn,214,CHALLENGER,685.0,Ezreal,Seraphine,Yuumi,1243,181,148,0.55
+sad eyess #2508,vn,215,CHALLENGER,684.0,Graves,Taliyah,Kai'Sa,972,169,140,0.55
+幸福地微笑着 #77777,vn,216,CHALLENGER,684.0,Ezreal,Kai'Sa,Lee Sin,1107,384,348,0.52
+幸福1 #1234,vn,217,CHALLENGER,683.0,Kog'Maw,Graves,Viego,825,205,163,0.56
+cho anh chai c2 #atsh,vn,218,CHALLENGER,683.0,Gragas,Akali,Sylas,557,204,157,0.57
+Qi Kingggggggg #8130,vn,219,CHALLENGER,683.0,Qiyana,Galio,Akali,561,115,76,0.6
 ô bạn dương kìa #2008,vn,22,CHALLENGER,1082.0,K'Sante,Yone,Smolder,363,190,141,0.57
+SOS 최소 #202,vn,220,CHALLENGER,682.0,Graves,Viego,Lee Sin,338,98,55,0.64
+yongyuanyaoyao #2004,vn,221,CHALLENGER,682.0,Jax,Gwen,Skarner,681,339,295,0.53
+Hapces #2003,vn,222,CHALLENGER,682.0,Thresh,Hwei,LeBlanc,474,202,165,0.55
+63tiengiang #nam1,vn,223,CHALLENGER,682.0,Kai'Sa,Jinx,Ezreal,73,219,174,0.56
+Nghiện #2908,vn,224,CHALLENGER,682.0,Viego,Lee Sin,Kindred,742,266,222,0.55
+Nabee #0502,vn,225,CHALLENGER,682.0,Yuumi,Zac,Nami,965,223,201,0.53
+1k lp off game #1208,vn,226,CHALLENGER,681.0,Kai'Sa,Nilah,Ezreal,607,265,231,0.53
+JG KING #2002,vn,227,CHALLENGER,681.0,Graves,Bel'Veth,Viego,418,135,91,0.6
+Shark Hoàng Vũ #6868,vn,228,CHALLENGER,681.0,Volibear,Graves,Irelia,239,112,71,0.61
+thuylinhxinh #3103,vn,229,CHALLENGER,681.0,Lulu,Nami,Milio,946,299,259,0.54
 Phát Gà Cục Tác #HXP04,vn,23,CHALLENGER,1081.0,Caitlyn,Aurora,Jhin,732,324,277,0.54
+dành cho em º #23402,vn,230,CHALLENGER,680.0,Tryndamere,Fiora,Karma,382,298,260,0.53
+Kawinary #8612,vn,231,CHALLENGER,680.0,Rell,Zac,Alistar,388,117,77,0.6
+Vinh văn vở #VH11,vn,232,CHALLENGER,680.0,Qiyana,Fizz,Sylas,191,154,113,0.58
+ebisu1 #1062,vn,233,CHALLENGER,680.0,Kai'Sa,Jhin,Ahri,151,264,233,0.53
+thuc1 #2310,vn,234,CHALLENGER,679.0,Katarina,Renekton,Zoe,263,168,127,0.57
+ZEN Charlington #2304,vn,235,CHALLENGER,679.0,Ashe,Jhin,Aphelios,998,100,58,0.63
+E Z #999,vn,236,CHALLENGER,679.0,Zoe,Sylas,Jinx,2081,107,64,0.63
+Thú Săn Mồi #2000,vn,237,CHALLENGER,679.0,Pantheon,Ornn,Malphite,310,253,222,0.53
+19th4n98 #3242,vn,238,CHALLENGER,678.0,Volibear,Maokai,Tryndamere,644,222,185,0.55
+Flay up #SUP,vn,239,CHALLENGER,678.0,Rell,Pyke,Thresh,946,196,157,0.56
 Ultra Instinct #9688,vn,24,CHALLENGER,1066.0,Corki,Yone,Ryze,1236,165,111,0.6
-千个伤心的理由 4 #9999,vn,25,CHALLENGER,1050.0,Heimerdinger,Corki,Shen,616,309,258,0.54
+o0oHapio0o #Brot,vn,240,CHALLENGER,678.0,Nunu & Willump,Yorick,Warwick,862,296,247,0.55
+kobietyeu123 #0606,vn,241,CHALLENGER,678.0,Kai'Sa,Jinx,Ashe,1113,224,181,0.55
+피곤해요 #8888,vn,242,CHALLENGER,676.0,Viego,Lee Sin,Graves,884,286,245,0.54
+asdqwezz #tohan,vn,243,CHALLENGER,676.0,Varus,Aphelios,Kalista,345,200,156,0.56
+HST David Do #2809,vn,244,CHALLENGER,674.0,Rell,Thresh,Renata Glasc,919,227,182,0.56
+Em Mèo korea #9999,vn,245,CHALLENGER,674.0,Kai'Sa,Rell,Zeri,1079,150,101,0.6
+Trumxac #8655,vn,246,CHALLENGER,673.0,Xin Zhao,Rek'Sai,Viego,555,194,141,0.58
+Is love so hard1 #2708,vn,247,CHALLENGER,673.0,Nidalee,Gragas,Karma,270,94,45,0.68
+Lianmei Qiu #5030,vn,248,CHALLENGER,673.0,Kindred,Graves,Viego,50,98,31,0.76
+Meo Meoo Hay Dỗi #1810,vn,249,CHALLENGER,673.0,Nami,Jhin,Ashe,810,156,121,0.56
+ADCFeed #11111,vn,25,CHALLENGER,1064.0,Irelia,Viktor,Zoe,456,300,162,0.65
+sepulchral #1v9,vn,250,CHALLENGER,672.0,Kog'Maw,Zeri,Vayne,120,177,132,0.57
+dreamy heun #666,vn,251,CHALLENGER,671.0,Nami,Lulu,Karma,303,216,179,0.55
+지옥 엘로 #Naa,vn,252,CHALLENGER,671.0,Rell,Alistar,Neeko,193,207,168,0.55
+元素女皇 #公元976,vn,253,CHALLENGER,671.0,Qiyana,Nautilus,Alistar,1264,296,260,0.53
+Eca #Acesu,vn,254,CHALLENGER,671.0,Yone,Yasuo,Nautilus,986,184,146,0.56
+CR7 GOAT SIUUUUU #1985,vn,255,CHALLENGER,671.0,Miss Fortune,Ezreal,Lucian,1221,408,363,0.53
+Năm nay tui 23t #Suu,vn,256,CHALLENGER,670.0,Qiyana,Fizz,Nunu & Willump,263,100,54,0.65
+Tài Nhớt #2007,vn,257,CHALLENGER,670.0,Lee Sin,K'Sante,Viego,794,155,121,0.56
+려 준 우 #0504,vn,258,CHALLENGER,670.0,Ahri,LeBlanc,Galio,679,320,277,0.54
+ooooooookkkkkkkk #Okyu,vn,259,CHALLENGER,669.0,Graves,Kai'Sa,Aphelios,599,195,153,0.56
 winter 1ov3 #2703,vn,26,CHALLENGER,1046.0,Graves,Nidalee,Kindred,1304,271,211,0.56
+ARAM Zeus #2808,vn,260,CHALLENGER,668.0,Xayah,Kai'Sa,Lissandra,439,189,149,0.56
+Hannibal Lecter #71310,vn,261,CHALLENGER,668.0,Graves,Caitlyn,Zeri,973,84,45,0.65
+Shaza kari #XG07,vn,262,CHALLENGER,666.0,Kai'Sa,Swain,Ezreal,920,149,110,0.58
+Nhật Bủh #2k12,vn,263,CHALLENGER,666.0,Corki,Rell,Lulu,954,194,158,0.55
+Gut Nacht #2006,vn,264,CHALLENGER,666.0,Jax,Gnar,Camille,647,344,302,0.53
+ted3tz #1005,vn,265,CHALLENGER,666.0,Lulu,Corki,Ashe,990,154,112,0.58
+Autumn Snow #1711,vn,266,CHALLENGER,665.0,Ezreal,Yone,Jhin,329,77,33,0.7
+Huring #9804,vn,267,CHALLENGER,665.0,Gnar,Gwen,Rumble,324,151,109,0.58
+BrighT #VN2,vn,268,CHALLENGER,664.0,Renekton,Malphite,Galio,1075,238,206,0.54
+Già Lắm Rồi #1636,vn,269,CHALLENGER,663.0,Corki,Lulu,Viego,194,210,139,0.6
 DWG Nuguri #2006,vn,27,CHALLENGER,1023.0,Gwen,Aurora,Akali,762,244,184,0.57
+vikciss #ilyy,vn,270,CHALLENGER,663.0,Katarina,Kai'Sa,Akali,52,174,78,0.69
+EveKawa #Eve,vn,271,CHALLENGER,663.0,Evelynn,Ivern,Seraphine,639,273,228,0.54
+LazyMina #Chang,vn,272,CHALLENGER,662.0,Viego,Graves,Hecarim,1243,108,72,0.6
+system32 #3763,vn,273,CHALLENGER,661.0,Yasuo,Hecarim,Nasus,376,239,200,0.54
+Hiển #66666,vn,274,CHALLENGER,660.0,Veigar,Graves,Mordekaiser,483,114,62,0.65
+JG KHỦNG 15 GG #2407,vn,275,CHALLENGER,659.0,Lee Sin,Graves,Viego,513,84,45,0.65
+nuna #1mcbk,vn,276,CHALLENGER,658.0,Ashe,Kai'Sa,Aphelios,1133,174,133,0.57
+Lissanlentine #XANH,vn,277,CHALLENGER,657.0,Lissandra,Viktor,Vayne,534,112,74,0.6
+사랑 해요 Kazuha #1911,vn,278,CHALLENGER,656.0,Corki,Ezreal,Varus,1305,217,178,0.55
+Fluoxetine #8888,vn,279,CHALLENGER,656.0,Kai'Sa,Ezreal,Sylas,663,252,209,0.55
 Future Playcool #10608,vn,28,CHALLENGER,1021.0,Yone,Sylas,Caitlyn,1131,171,122,0.58
-BlackHole #2707,vn,29,CHALLENGER,1021.0,Pantheon,Jayce,K'Sante,728,243,188,0.56
+Kit Kat #michu,vn,280,CHALLENGER,656.0,Riven,Jinx,Ambessa,1159,88,48,0.65
+katarinabluu #9903,vn,281,CHALLENGER,655.0,Jinx,Aphelios,Varus,632,124,80,0.61
+sWindz #sWz,vn,282,CHALLENGER,653.0,Jhin,Ashe,Corki,1016,162,117,0.58
+千个伤心的理由 #369,vn,283,CHALLENGER,652.0,Lulu,Bard,Karma,654,135,93,0.59
+Tiểu Quế Tử #8888,vn,284,CHALLENGER,651.0,Thresh,Rakan,Pyke,462,276,186,0.6
+ELOBOOST Brownnn #MID,vn,285,CHALLENGER,650.0,Yone,Hwei,LeBlanc,596,210,169,0.55
+zMiracle #1995,vn,286,CHALLENGER,650.0,Caitlyn,Ashe,Ezreal,822,196,148,0.57
+Xiao KimBao #Kbao,vn,287,CHALLENGER,649.0,Urgot,Gnar,Pantheon,747,143,104,0.58
+dm7mndqr #123,vn,288,CHALLENGER,649.0,Viego,Lee Sin,Jarvan IV,866,171,131,0.57
+Đốn Thẳng VàLòng #TroiD,vn,289,CHALLENGER,648.0,Aatrox,Sylas,Aurelion Sol,892,138,102,0.57
+Shiki #0504,vn,29,CHALLENGER,1010.0,Ashe,Kai'Sa,Shen,1017,356,298,0.54
+無神論者 #Schwi,vn,290,CHALLENGER,647.0,Yasuo,Yone,Sylas,642,141,103,0.58
+15 12 27 03 03 #asqwe,vn,291,CHALLENGER,647.0,Rell,Poppy,Neeko,384,194,149,0.57
+Kiến Con Cắt Lá #9376,vn,292,CHALLENGER,646.0,Pyke,Rakan,Alistar,1265,223,192,0.54
+dur1ann #2004,vn,293,CHALLENGER,645.0,LeBlanc,Sylas,Katarina,1122,321,284,0.53
+jayyy1 #0211,vn,294,CHALLENGER,645.0,Diana,Lee Sin,Ahri,1192,82,45,0.65
+QT Lionel 10 #Goat,vn,295,CHALLENGER,644.0,Yasuo,Yone,Hecarim,670,111,68,0.62
+Thanh Hiếu #T1WIN,vn,296,CHALLENGER,643.0,Gangplank,Gragas,Ryze,162,109,66,0.62
+hphun2004 #phun,vn,297,CHALLENGER,631.0,Taliyah,Graves,Irelia,227,226,142,0.61
+Binem203 #1234,vn,298,CHALLENGER,629.0,Aatrox,Renekton,Gnar,423,197,161,0.55
+amo1maithucgiac #1905,vn,299,CHALLENGER,618.0,Graves,Kindred,Hwei,1349,382,351,0.52
 千个伤心的理由 2 #9999,vn,3,CHALLENGER,1676.0,Diana,Poppy,Xin Zhao,918,198,118,0.63
-Shiki #0504,vn,30,CHALLENGER,1010.0,Ashe,Kai'Sa,Shen,1017,356,298,0.54
+BlackHole #2707,vn,30,CHALLENGER,1000.0,Pantheon,Jayce,K'Sante,728,243,189,0.56
+Thần Tiên Tỉ Tỉ #cuniu,vn,300,CHALLENGER,498.0,Bel'Veth,Skarner,Viego,355,216,182,0.54
 Frozen Moon #Fatk3,vn,31,CHALLENGER,991.0,Irelia,Akali,Pyke,1040,416,377,0.52
 Bo1 #0101,vn,32,CHALLENGER,964.0,Rakan,Renekton,Camille,109,118,67,0.64
-babyzhengdao #48423,vn,33,CHALLENGER,948.0,Yasuo,Galio,Viktor,278,154,108,0.59
+babyzhengdao #48423,vn,33,CHALLENGER,939.0,Yasuo,Galio,Viktor,278,156,110,0.59
 estella #111,vn,34,CHALLENGER,935.0,Katarina,LeBlanc,Kai'Sa,353,403,336,0.55
 xa thu tien phog #1503,vn,35,CHALLENGER,931.0,Jhin,Jinx,Kai'Sa,818,147,96,0.6
 dau long #hjn1,vn,36,CHALLENGER,919.0,Ezreal,Jinx,Kai'Sa,990,328,276,0.54
 lovely lade #1mcbk,vn,37,CHALLENGER,913.0,Kai'Sa,Milio,Aphelios,735,138,89,0.61
 Một Mình Vui Lắm #HHL,vn,38,CHALLENGER,913.0,Lulu,Yone,Corki,524,142,92,0.61
 duck soo stupid #2105,vn,39,CHALLENGER,912.0,Graves,Lee Sin,Jarvan IV,821,221,175,0.56
-ZEN SCP #2005,vn,4,CHALLENGER,1586.0,Viego,Lee Sin,Zyra,1321,329,242,0.58
+ZEN SCP #2005,vn,4,CHALLENGER,1606.0,Viego,Lee Sin,Zyra,1321,330,242,0.58
 whatiscute #我想你,vn,40,CHALLENGER,911.0,Akali,Lee Sin,Sylas,1085,244,201,0.55
 Truong #VN3,vn,41,CHALLENGER,906.0,Kennen,Jax,Jayce,850,190,130,0.59
 고블린 #dt1,vn,42,CHALLENGER,905.0,Syndra,Graves,Zoe,208,183,100,0.65
@@ -143,7 +1143,7 @@ Emery #0101,vn,46,CHALLENGER,897.0,Twisted Fate,K'Sante,Sylas,956,390,341,0.53
 VVS RKT #369,vn,47,CHALLENGER,895.0,Graves,Nidalee,Lee Sin,768,391,342,0.53
 DGHEHE #Huy,vn,48,CHALLENGER,895.0,Sylas,Syndra,Lee Sin,818,178,133,0.57
 Blueberry #sad,vn,49,CHALLENGER,890.0,Lulu,Viego,Hecarim,153,121,68,0.64
-KNgo #2006,vn,5,CHALLENGER,1497.0,Aurora,Yone,Jax,422,525,448,0.54
+KNgo #2006,vn,5,CHALLENGER,1533.0,Aurora,Yone,Jax,422,527,448,0.54
 mârTiaMaủcgnồhC #1106,vn,50,CHALLENGER,888.0,Sylas,Syndra,Galio,664,134,84,0.61
 TiSaD #TiSaD,vn,51,CHALLENGER,884.0,Gwen,K'Sante,Yone,1154,252,206,0.55
 Lâm Triều Anh #1607,vn,52,CHALLENGER,881.0,Zoe,Syndra,Hwei,638,268,222,0.55
@@ -173,28 +1173,28 @@ Little DiDi #Dilzi,vn,72,CHALLENGER,837.0,Draven,Aphelios,Kai'Sa,693,269,232,0.5
 Quinnchana #MAD,vn,74,CHALLENGER,832.0,Quinn,Nidalee,Diana,633,166,110,0.6
 Yellow #ibey,vn,75,CHALLENGER,829.0,Jhin,Corki,Ezreal,1015,143,98,0.59
 babyK #1009,vn,76,CHALLENGER,828.0,Corki,Tristana,Varus,744,101,53,0.66
-saranghaeyo #quang,vn,77,CHALLENGER,823.0,Sylas,Yasuo,Varus,714,182,142,0.56
-khactinhgioitre #CHP,vn,78,CHALLENGER,822.0,Gangplank,Jayce,K'Sante,848,125,82,0.6
-narcolepsy #bed,vn,79,CHALLENGER,816.0,K'Sante,Ambessa,Aurora,696,75,31,0.71
+HưngCóVợĐẹp #Hung,vn,77,CHALLENGER,827.0,Jinx,Viktor,Ashe,792,343,297,0.54
+saranghaeyo #quang,vn,78,CHALLENGER,823.0,Sylas,Yasuo,Varus,714,182,142,0.56
+khactinhgioitre #CHP,vn,79,CHALLENGER,822.0,Gangplank,Jayce,K'Sante,848,125,82,0.6
 love winter #1912,vn,8,CHALLENGER,1440.0,Viego,Lee Sin,K'Sante,820,160,93,0.63
-千个伤心的理由 BOSS #8888,vn,80,CHALLENGER,814.0,Graves,Sylas,Corki,1302,327,285,0.53
-JUGKING #1710,vn,81,CHALLENGER,814.0,Olaf,Graves,Bel'Veth,805,163,117,0.58
-hoangquan2 #7wl,vn,82,CHALLENGER,813.0,Fiora,Camille,Jax,767,158,119,0.57
-Zero ZhinTian #99999,vn,83,CHALLENGER,813.0,Brand,Gragas,Varus,1205,310,275,0.53
-Heart #20005,vn,84,CHALLENGER,811.0,Lee Sin,Graves,Viego,635,116,72,0.62
-Eric Tanat #MU7,vn,85,CHALLENGER,809.0,Hecarim,Viego,Zoe,961,419,370,0.53
-tiphat #7272,vn,86,CHALLENGER,807.0,Graves,Viego,Lee Sin,357,199,148,0.57
+narcolepsy #bed,vn,80,CHALLENGER,816.0,K'Sante,Ambessa,Aurora,696,75,31,0.71
+千个伤心的理由 BOSS #8888,vn,81,CHALLENGER,814.0,Graves,Sylas,Corki,1302,327,285,0.53
+JUGKING #1710,vn,82,CHALLENGER,814.0,Olaf,Graves,Bel'Veth,805,163,117,0.58
+hoangquan2 #7wl,vn,83,CHALLENGER,813.0,Fiora,Camille,Jax,767,158,119,0.57
+Zero ZhinTian #99999,vn,84,CHALLENGER,813.0,Brand,Gragas,Varus,1205,310,275,0.53
+Heart #20005,vn,85,CHALLENGER,811.0,Lee Sin,Graves,Viego,635,116,72,0.62
+Eric Tanat #MU7,vn,86,CHALLENGER,809.0,Hecarim,Viego,Zoe,961,419,370,0.53
 Jay Trần #997,vn,87,CHALLENGER,807.0,Qiyana,Nunu & Willump,Pyke,835,132,83,0.61
-Gok Gymer #thien,vn,88,CHALLENGER,806.0,Graves,Lee Sin,Viego,887,267,225,0.54
-HiyoriShiina #F2005,vn,89,CHALLENGER,806.0,Lulu,Poppy,Rell,949,230,190,0.55
+HiyoriShiina #F2005,vn,88,CHALLENGER,806.0,Lulu,Poppy,Rell,949,230,190,0.55
+anhlong05 #VN2,vn,89,CHALLENGER,803.0,Yone,Sylas,Orianna,576,147,105,0.58
 千个伤心的理由 7 #8888,vn,9,CHALLENGER,1397.0,Kalista,Corki,Ashe,1228,658,598,0.52
-anhlong05 #VN2,vn,90,CHALLENGER,803.0,Yone,Sylas,Orianna,576,147,105,0.58
-Miraaa #1112,vn,91,CHALLENGER,803.0,Graves,Viego,Yuumi,958,99,56,0.64
-最美丽的花 #88888,vn,92,CHALLENGER,803.0,Hecarim,Gragas,Kha'Zix,934,266,224,0.54
-MUHEHEHEHEHEHEHE #0109,vn,93,CHALLENGER,803.0,Yone,Vladimir,Corki,878,209,169,0.55
-bae daau #1506,vn,94,CHALLENGER,802.0,Lee Sin,Viego,Zyra,1431,138,95,0.59
-sao hang a #hamoi,vn,95,CHALLENGER,801.0,Aatrox,Yone,Aurora,666,331,293,0.53
-Platonic Love #666,vn,96,CHALLENGER,801.0,Diana,Taliyah,Kai'Sa,993,339,258,0.57
-Palma #8888,vn,97,CHALLENGER,800.0,Cho'Gath,,,195,163,114,0.59
-千个伤心的理由 3 #88888,vn,98,CHALLENGER,800.0,Rell,Karma,Hecarim,641,419,370,0.53
-Mhung #12345,vn,99,CHALLENGER,795.0,Graves,Viego,Lee Sin,318,211,162,0.57
+Miraaa #1112,vn,90,CHALLENGER,803.0,Graves,Viego,Yuumi,958,99,56,0.64
+最美丽的花 #88888,vn,91,CHALLENGER,803.0,Hecarim,Gragas,Kha'Zix,934,266,224,0.54
+MUHEHEHEHEHEHEHE #0109,vn,92,CHALLENGER,803.0,Yone,Vladimir,Corki,878,209,169,0.55
+bae daau #1506,vn,93,CHALLENGER,802.0,Lee Sin,Viego,Zyra,1431,138,95,0.59
+sao hang a #hamoi,vn,94,CHALLENGER,801.0,Aatrox,Yone,Aurora,666,331,293,0.53
+Platonic Love #666,vn,95,CHALLENGER,801.0,Diana,Taliyah,Kai'Sa,993,339,258,0.57
+Palma #8888,vn,96,CHALLENGER,800.0,Cho'Gath,,,195,163,114,0.59
+千个伤心的理由 3 #88888,vn,97,CHALLENGER,800.0,Rell,Karma,Hecarim,641,419,370,0.53
+Mhung #12345,vn,98,CHALLENGER,795.0,Graves,Viego,Lee Sin,318,211,162,0.57
+Lächeln #Shaon,vn,99,CHALLENGER,787.0,Shaco,Sion,Thresh,396,206,166,0.55

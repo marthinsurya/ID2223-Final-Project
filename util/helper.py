@@ -1,6 +1,7 @@
 import pandas as pd
+from datetime import datetime
 import os
-from urllib.parse import quote
+from urllib.parse import quote, unquote
 
 class ChampionConverter:
     def __init__(self):
@@ -82,9 +83,10 @@ def convert_result_to_binary(result_str):
     """
     return 1 if result_str.lower().strip() == 'victory' else 0
 
-def merge_stats(recent_stats, player_stats):
+def merge_stats(recent_stats, player_stats, current_time =None):
     """
     Merge recent match stats with player profile stats and save to CSV.
+    Only keeps rows where matches exist in both DataFrames.
     
     Args:
         recent_stats (DataFrame/dict): Recent match statistics
@@ -94,6 +96,9 @@ def merge_stats(recent_stats, player_stats):
         DataFrame: Combined statistics
     """
     try:
+        if current_time is None:
+            current_time = datetime.utcnow().strftime("%Y-%m-%d")
+
         # Convert recent_stats to DataFrame if it's not already
         if not isinstance(recent_stats, pd.DataFrame):
             recent_df = pd.DataFrame(recent_stats)
@@ -113,14 +118,26 @@ def merge_stats(recent_stats, player_stats):
         if 'player_id' not in recent_df.columns:
             recent_df['player_id'] = player_df['player_id'].iloc[0]
 
-        # Merge DataFrames
+        # Print info before merge
+        print(f"\nBefore merge:")
+        print(f"Recent stats rows: {len(recent_df)}")
+        print(f"Player stats rows: {len(player_df)}")
+        print(f"Unique players in recent stats: {recent_df['player_id'].nunique()}")
+        print(f"Unique players in player stats: {player_df['player_id'].nunique()}")
+
+        # Merge DataFrames with inner join
         merged_df = pd.merge(
             recent_df,
             player_df,
             on='player_id',
-            how='left',
+            how='inner',  # Changed from 'left' to 'inner'
             suffixes=('', '_profile')
         )
+
+        # Print info after merge
+        print(f"\nAfter merge:")
+        print(f"Merged stats rows: {len(merged_df)}")
+        print(f"Unique players in merged stats: {merged_df['player_id'].nunique()}")
 
         # Reorder columns to ensure player_id and region are first
         cols = merged_df.columns.tolist()
@@ -135,9 +152,10 @@ def merge_stats(recent_stats, player_stats):
         os.makedirs(save_dir, exist_ok=True)
 
         # Save to CSV
-        filepath = os.path.join(save_dir, "player_stats_merged.csv")
+        filename = f"player_stats_merged_{current_time}.csv"
+        filepath = os.path.join(save_dir, filename)
         merged_df.to_csv(filepath, index=False)
-        print(f"Successfully saved merged stats to {filepath}")
+        print(f"\nSuccessfully saved merged stats to {filepath}")
 
         return merged_df
 
@@ -231,6 +249,45 @@ def format_summoner_name(summoner):
     formatted_summoner = quote(formatted_summoner)
     
     return formatted_summoner
+
+def convert_to_displayname(name):
+    """
+    Convert a summoner name to display format
+    Examples:
+    marthinsurya-NA -> marthinsurya #NA
+    toplane%20kid-EUW77 -> toplane kid #EUW77
+    Walid-Georgey-EUW -> Walid Georgey #EUW
+    Current%20User-KR -> Current User #KR
+    """
+    try:
+        if not name:
+            return ""
+            
+        # First decode URL encoding
+        decoded = unquote(name)
+        
+        # Remove any trailing hyphens
+        decoded = decoded.rstrip('-')
+        
+        # Split by last hyphen to separate name and region
+        if '-' in decoded:
+            parts = decoded.rsplit('-', 1)
+            base_name = parts[0]  # Everything before last hyphen
+            region = parts[1]
+            
+            # Replace remaining hyphens in base_name with spaces
+            base_name = base_name.replace('-', ' ')
+            
+            # Clean up any double spaces
+            base_name = ' '.join(filter(None, base_name.split()))
+            
+            return f"{base_name} #{region}"
+        
+        return decoded.replace('-', ' ')
+    except Exception as e:
+        print(f"Error converting name '{name}': {e}")
+        return name
+
 
 
 def get_player_list(leaderboard=None):

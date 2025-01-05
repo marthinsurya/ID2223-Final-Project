@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 from helper import ChampionConverter
 
-def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_meta=None, debug=None, consider_team_comp=True):
+def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_meta=None, debug=None, consider_team_comp=True, test_mode=True):
     """
     Create features for champion prediction using player data.
     Champion names will be used as column headers.
@@ -11,23 +11,37 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
     Parameters:
     - merged_player_stats: DataFrame containing player stats. If None, it will be loaded from the input file.
     - meta_stats: DataFrame containing meta stats. If None, it will be loaded from the input file.
-    - weekly_stats: DataFrame containing weekly champion stats. If None, it will be loaded from the input file.
+    - weekly_meta: DataFrame containing weekly champion stats. If None, it will be loaded from the input file.
     - debug: Optional parameter for champion name to print debug information.
     """
-    if merged_player_stats is None:
-        input_file = os.path.join("util", "data", "player_stats_merged.csv")
-        merged_player_stats = pd.read_csv(input_file)
     
+    if merged_player_stats is None:
+        print("Loading merged player stats...")
+        input_file = os.path.join("util", "data", "player_stats_merged.csv")
+        merged_player_stats = pd.read_csv(input_file, low_memory=False)
+        if test_mode:
+            print("Test mode: Using only first 100 rows")
+            merged_player_stats = merged_player_stats.head(100)  # Take only first 100 rows for testing
+        print(f"Loaded {len(merged_player_stats)} rows of player stats")
+    
+    total_rows = len(merged_player_stats)
+    print(f"Total rows to process: {total_rows}")
+
     if meta_stats is None:
+        print("Loading meta stats...")
         meta_file = os.path.join("util", "data", "meta_stats.csv")
-        meta_stats = pd.read_csv(meta_file)
+        meta_stats = pd.read_csv(meta_file, low_memory=False)
+        print(f"Loaded {len(meta_stats)} rows of meta stats")
 
     if weekly_meta is None:
+        print("Loading weekly meta stats...")
         weekly_file = os.path.join("util", "data", "weekly_meta_stats.csv")
-        weekly_stats = pd.read_csv(weekly_file)
+        weekly_meta = pd.read_csv(weekly_file, low_memory=False)
+        print(f"Loaded {len(weekly_meta)} rows of weekly meta stats")
 
     # Initialize the champion converter
     converter = ChampionConverter()
+    total_champions = len(converter.champions)
 
     # Get low tier champions and counter information
     tier_penalties = {3: 0.9, 4: 0.85, 5: 0.8}
@@ -60,8 +74,8 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
 
     # Define importance weights
     weights = {
-        'recent': 0.2,    # Last 20 games
-        'weekly': 0.5,    # Last 7 days
+        'recent': 0.3,    # Last 20 games
+        'weekly': 0.4,    # Last 7 days
         'meta': 0.2,      # Only from weekly_stats
         'season': 0.06,   # Current season
         'mastery': 0.04   # All-time mastery
@@ -170,8 +184,8 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
                         )
 
             # Add weekly stats weighting (meta score)
-            if champion in weekly_stats['champion'].values:
-                weekly_row = weekly_stats[weekly_stats['champion'] == champion].iloc[0]
+            if champion in weekly_meta['champion'].values:
+                weekly_row = weekly_meta [weekly_meta['champion'] == champion].iloc[0]
                 rank = weekly_row['rank']
                 games = weekly_row['games']
                 pick_rate = weekly_row['pick']
@@ -269,6 +283,9 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
                 'champion': row['champion'],
                 'recent_score': champion_scores['recent_score'][idx],
                 'weekly_score': champion_scores['weekly_score'][idx],
+                #'season_score': champion_scores['season_score'][idx],
+                #'mastery_score': champion_scores['mastery_score'][idx],
+                'meta_score': champion_scores['meta_score'][idx],  
                 'base_score': base_score_before_penalty,
                 'final_score': base_score[idx],
                 'counter_penalty': counter_penalty if consider_team_comp else 0,
@@ -307,4 +324,4 @@ def create_champion_features(merged_player_stats=None, meta_stats=None, weekly_m
 
 if __name__ == "__main__":
     # Create features
-    features = create_champion_features(debug='Viktor', consider_team_comp=True)
+    features = create_champion_features(debug='Nautilus', consider_team_comp=True, test_mode=False)
