@@ -627,6 +627,40 @@ def convert_id_columns(df):
     
     return df
 
+def remove_match_stats(df):
+    """
+    Remove match-specific statistics to prevent future data leakage.
+    
+    Parameters:
+    df (pandas.DataFrame): Input DataFrame
+    
+    Returns:
+    pandas.DataFrame: DataFrame with match-specific columns removed
+    """
+    # List of columns that contain match-specific information
+    match_stat_columns = [
+        'level',            # Champion level
+        'result',           # Match outcome (target variable)
+        'match_length_mins',# Match duration
+        'kill',            # Kills in the match
+        'death',           # Deaths in the match
+        'assist',          # Assists in the match
+        'kda_ratio',       # KDA ratio for the match
+        'kill_participation',# Kill participation in the match
+        'laning',          # Laning phase performance
+        'cs',              # Creep score in the match
+        'cs_per_min'       # CS per minute in the match
+    ]
+    
+    # Create a copy of the dataframe
+    df_clean = df.copy()
+    
+    # Remove match-specific columns
+    columns_to_drop = [col for col in match_stat_columns if col in df_clean.columns]
+    df_clean = df_clean.drop(columns=columns_to_drop)
+    
+    return df_clean
+
 def convert_training_df(df):
     """
     Master function to handle all conversions for training DataFrame
@@ -654,7 +688,8 @@ def convert_training_df(df):
         convert_champion_columns, # Convert champion names to numbers
         convert_date_column,     # Convert dates to timestamps
         convert_role_columns,    # Convert roles to 1-5
-        convert_id_columns       # Drop ID-related columns
+        convert_id_columns,       # Drop ID-related columns
+        remove_match_stats        # Remove match-specific columns
     ]
     
     # Apply each conversion function in sequence
@@ -662,3 +697,30 @@ def convert_training_df(df):
         df = convert_func(df)
     
     return df
+
+
+def get_top_champion_scores(row, n=20):
+    converter = ChampionConverter()
+    # Get all champion columns (from Aatrox to Zyra)
+    champion_start = row.index.get_loc('Aatrox')
+    champion_end = row.index.get_loc('Zyra') + 1
+    champion_cols = row[champion_start:champion_end]
+    
+    # Create a Series with champion names as index and scores as values
+    champion_series = pd.Series(champion_cols, index=row.index[champion_start:champion_end])
+    
+    # Sort by values in descending order and get top n
+    top_n = champion_series.nlargest(n)
+    
+    # Create result dictionary with scores and champion names
+    result = {}
+    for i, (champion, score) in enumerate(top_n.items(), 1):
+        result[f'{i}_champ_score'] = score
+        result[f'{i}_champ_name'] = converter.champion_to_num(champion)
+    
+    # Fill remaining positions with zeros and 'None' if less than n champions
+    for i in range(len(top_n) + 1, n + 1):
+        result[f'{i}_champ_score'] = 0
+        result[f'{i}_champ_name'] = 'None'
+    
+    return pd.Series(result)

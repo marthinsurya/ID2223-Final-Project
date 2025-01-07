@@ -24,7 +24,7 @@ import pandas as pd
 #        tiers=["CHALLENGER"]
 #    )
 
-#filtered_lb = pd.read_csv("util/data/lb_filtered_custom.csv")
+#filtered_lb = pd.read_csv("util/data/lb_filtered_custom_2.csv")
 #player_list = get_player_list(filtered_lb)             
 
 #player_list = get_player_list()               # without arg, it will read from lb_filtered.csv
@@ -33,9 +33,9 @@ import pandas as pd
 #player_stats = get_multiple_player_stats(player_list)    #save to player_stats.csv
 #recent_stats = get_multiple_matches_stats(player_list)   #save to recent_stats.csv
 
-#recent_stats = pd.read_csv("util/data/recent_matches.csv")
-#player_stats = pd.read_csv("util/data/player_stats.csv")
-#merged_stats = merge_stats(recent_stats, player_stats)          #save to player_stats_merged.csv
+# recent_stats = pd.read_csv("util/data/recent_matches.csv")
+# player_stats = pd.read_csv("util/data/player_stats.csv")
+# merged_stats = merge_stats(recent_stats, player_stats)          #save to player_stats_merged.csv
 
 
 #feature engineering
