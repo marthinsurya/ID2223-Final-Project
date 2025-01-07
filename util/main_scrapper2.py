@@ -3,7 +3,7 @@ from Meta_scrapper import get_meta_stats
 from Leaderboard_scrapper import scrape_leaderboards
 from connection_check import check_connection
 from helper import merge_stats, filter_leaderboard, get_player_list
-from Player_scrapper import get_multiple_player_stats
+from Player_scrapper import get_multiple_player_stats, get_player_stats
 from feature_eng import create_champion_features
 from Weekly_meta_scrapper import get_weekly_meta
 import pandas as pd
@@ -38,6 +38,8 @@ import pandas as pd
 # merged_stats = merge_stats(recent_stats, player_stats)          #save to player_stats_merged.csv
 
 
+get_player_stats(region='na', username='jamican banana #NA1')
+
 #feature engineering
-merged_stats = pd.read_csv("util/data/player_stats_merged_2025-01-05.csv")
-training_features = create_champion_features(merged_player_stats=merged_stats, debug=None, consider_team_comp=True, test_mode=False)   #save to feature_eng_stats.csv
+#merged_stats = pd.read_csv("util/data/player_stats_merged_2025-01-05.csv")
+#training_features = create_champion_features(merged_player_stats=merged_stats, debug=None, consider_team_comp=True, test_mode=False)   #save to feature_eng_stats.csv

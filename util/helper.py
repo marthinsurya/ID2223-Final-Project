@@ -1,6 +1,7 @@
 import pandas as pd
 from datetime import datetime
 import os
+import numpy as np
 from urllib.parse import quote, unquote
 
 class ChampionConverter:
@@ -699,28 +700,141 @@ def convert_training_df(df):
     return df
 
 
-def get_top_champion_scores(row, n=20):
-    converter = ChampionConverter()
-    # Get all champion columns (from Aatrox to Zyra)
-    champion_start = row.index.get_loc('Aatrox')
-    champion_end = row.index.get_loc('Zyra') + 1
-    champion_cols = row[champion_start:champion_end]
+def get_top_champion_scores(row, n=5):
+    """
+    Get top n champion scores from a row of data
     
-    # Create a Series with champion names as index and scores as values
-    champion_series = pd.Series(champion_cols, index=row.index[champion_start:champion_end])
+    Parameters:
+    row: pandas Series containing champion scores
+    n: number of top champions to return (default 5)
     
-    # Sort by values in descending order and get top n
-    top_n = champion_series.nlargest(n)
+    Returns:
+    pandas Series with top n champion scores and their names
+    """
+    try:
+        converter = ChampionConverter()
+        
+        # Get all champion columns (from Aatrox to Zyra)
+        champion_start = row.index.get_loc('Aatrox')
+        champion_end = row.index.get_loc('Zyra') + 1
+        champion_cols = row[champion_start:champion_end]
+        
+        # Create a Series with champion names as index and scores as values
+        # Convert scores to numeric, replacing non-numeric values with 0
+        champion_series = pd.Series(champion_cols, index=row.index[champion_start:champion_end]).apply(
+            lambda x: float(x) if pd.notnull(x) and str(x).replace('.', '').isdigit() else 0
+        )
+        
+        # Sort by values in descending order and get top n
+        top_n = champion_series.nlargest(n)
+        
+        # Create result dictionary with scores and champion names
+        result = {}
+        for i, (champion, score) in enumerate(top_n.items(), 1):
+            result[f'{i}_champ_score'] = float(score)
+            champ_num = converter.champion_to_num(champion)
+            result[f'{i}_champ_name'] = int(champ_num) if pd.notnull(champ_num) else -1
+        
+        # Fill remaining positions if less than n champions
+        for i in range(len(top_n) + 1, n + 1):
+            result[f'{i}_champ_score'] = 0.0
+            result[f'{i}_champ_name'] = -1
+        
+        return pd.Series(result)
     
-    # Create result dictionary with scores and champion names
-    result = {}
-    for i, (champion, score) in enumerate(top_n.items(), 1):
-        result[f'{i}_champ_score'] = score
-        result[f'{i}_champ_name'] = converter.champion_to_num(champion)
+    except Exception as e:
+        print(f"Error in get_top_champion_scores: {str(e)}")
+        # Return default values in case of error
+        result = {}
+        for i in range(1, n + 1):
+            result[f'{i}_champ_score'] = 0.0
+            result[f'{i}_champ_name'] = -1
+        return pd.Series(result)
     
-    # Fill remaining positions with zeros and 'None' if less than n champions
-    for i in range(len(top_n) + 1, n + 1):
-        result[f'{i}_champ_score'] = 0
-        result[f'{i}_champ_name'] = 'None'
+def check_datatypes(df):
+    datatype= pd.DataFrame({
+        'dtype': df.dtypes,
+        'unique_values': df.nunique()
+    })
+
+    print(datatype)
+    return datatype
+
+def calculate_champ_variety_score(df):
+    df = df.copy()  # Create a copy to avoid warnings
     
-    return pd.Series(result)
+    # Create a list of champion columns we want to check
+    champ_columns = [
+        'most_champ_1', 'most_champ_2', 'most_champ_3',
+        '7d_champ_1', '7d_champ_2', '7d_champ_3'
+    ]
+    
+    # Filter to only include columns that exist in the DataFrame
+    existing_columns = [col for col in champ_columns if col in df.columns]
+    
+    # Function to count unique non-NaN values
+    def count_unique_champions(row):
+        # Get all values that are not NaN
+        valid_champions = row[existing_columns].dropna()
+        # Count unique values
+        return len(set(valid_champions))
+    
+    # Calculate the score for each row
+    df['champ_variety_score'] = df.apply(count_unique_champions, axis=1)
+    
+    return df
+
+def calculate_playstyle(df):
+    df = df.copy()
+    
+    # Playstyle categorization (0-5)
+    conditions = [
+        # 0: Assassin/Carry (high kills, high KDA, high kill participation)
+        (df['avg_kills'] > df['avg_assists']) & 
+        (df['kda_ratio_profile'] > 3) & 
+        (df['kill_participation_profile'] > 0.6),
+        
+        # 1: Support/Utility (high assists, good KDA, high kill participation)
+        (df['avg_assists'] > df['avg_kills']) & 
+        (df['kda_ratio_profile'] > 2.5) & 
+        (df['kill_participation_profile'] > 0.55),
+        
+        # 2: Tank/Initiator (moderate deaths, high assists, high kill participation)
+        (df['avg_deaths'] > 3) & 
+        (df['avg_assists'] > df['avg_kills']) & 
+        (df['kill_participation_profile'] > 0.5),
+        
+        # 3: Split-pusher (lower kill participation, good KDA)
+        (df['kill_participation_profile'] < 0.5) & 
+        (df['kda_ratio_profile'] > 2),
+        
+        # 4: Aggressive/Fighter (high kills and deaths, high kill participation)
+        (df['avg_kills'] > 3) & 
+        (df['avg_deaths'] > 4) & 
+        (df['kill_participation_profile'] > 0.55)
+    ]
+    
+    values = [0, 1, 2, 3, 4]  # Numeric values for each playstyle
+    df['playstyle'] = np.select(conditions, values, default=5)
+    
+    return df
+
+def further_feature_engineering(df):
+    """
+    Performs additional feature engineering by:
+    1. Calculating champion variety score
+    2. Calculating playstyle
+    
+    Args:
+        df (pd.DataFrame): Input DataFrame
+        
+    Returns:
+        pd.DataFrame: DataFrame with new features
+    """
+    df = df.copy()  # Create a copy to avoid warnings
+    
+    # 1. Run existing functions
+    df = calculate_champ_variety_score(df)
+    df = calculate_playstyle(df)
+    
+    return df
