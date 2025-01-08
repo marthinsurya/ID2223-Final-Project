@@ -40,8 +40,6 @@ recent_stats = pd.read_csv("util/data/recent_matches.csv")
 player_stats = pd.read_csv("util/data/player_stats.csv")
 merged_stats = merge_stats(recent_stats, player_stats)          #save to player_stats_merged.csv
 
-
-
 #feature engineering
 merged_stats = pd.read_csv("util/data/player_stats_merged_2025-01-07.csv")
 training_features = create_champion_features(merged_player_stats=merged_stats, debug=None, consider_team_comp=True, test_mode=False)   #save to feature_eng_stats.csv
