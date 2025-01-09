@@ -71,19 +71,19 @@ A web application was created using Gradio and deployed on Hugging Face Spaces. 
 - **Top-5 Prediction:** ~68% accuracy.
 This performance pattern is reflected in the class-wise accuracy distribution (Figure 1), which shows a bimodal pattern with peaks at 0.0 and 1.0, indicating varied prediction success across different champions.
 
-![Fig 1: Distribution of Class-wise Accuracy](images/accuracy_distribution.png)
+![Fig 1: Distribution of Class-wise Accuracy](images/distribution_of_class_wise_accuracy.jpg)
 
 ### Challenges:
 - Imbalanced dataset due to players’ tendency to follow meta trends, clearly visible in the long-tail distribution pattern of champion selections (Figure 2).
 - Some champions had fewer than five samples, but this did not significantly affect the accuracy, as evidenced by the low correlation (0.046) between sample size and accuracy (Figure 3).
 
-![Fig. 2: Class Distribution](images/class_distribution.png)
+![Fig. 2: Class Distribution](images/class_distribution.jpg)
 
-![Fig. 3: Accuracy vs Training Samples](images/accuracy_vs_samples.png)
+![Fig. 3: Accuracy vs Training Samples](accuracy_vs_training_samples.jpg)
 
 ### Feature Importance:
 Analysis revealed that features such as champion scores and playstyles were among the most impactful (Figure 4). Specifically, "most_role_1", "most_role_3", and "most_champ_1" showed the highest importance scores, suggesting that player behavior and role preferences drive champion selection more than individual champion statistics.
-![Fig 4: Top Feature Importance](images/feature_importance.png)
+![Fig 4: Top Feature Importance](images/top_feature_importance.jpg)
 
 ### Practical Use:
 Despite its limitations, the system can serve as a powerful guidance tool when paired with an eports analysts’ expertise.
