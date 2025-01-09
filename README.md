@@ -6,31 +6,25 @@
 ---
 
 ## Introduction
-In this project, we developed a web scraper specifically for the website OP.GG, a popular database and analytics platform for the game League of Legends. OP.GG provides detailed statistics and information about players, champions, and matches, making it a go-to resource for the game's community. While Riot Games offers an official API for retrieving data, its limitation of daily refresh intervals poses challenges for real-time machine learning systems. By leveraging a web scraper, we ensured timely and continuous access to the most recent match data, enabling our model to function effectively.
+In this project, we developed a web scraper specifically for the website OP.GG, a popular database and analytics platform for the game League of Legends. OP.GG provides detailed statistics and information about players, champions, and matches, making it a go-to resource for the game's community. While Riot Games offers an official API for retrieving data, its limitation of daily refresh intervals poses challenges for real-time machine learning systems. If the API data is not consistently retrieved and updated, the system becomes unreliable. By leveraging a web scraper, we ensured timely and continuous access to the most recent match data, enabling our model to function effectively.
 
 The core of this project is an XGBoost model that predicts the champion pick of the final player in a match. The model uses a variety of input parameters, which are represented in a tabular format, to make its predictions. These inputs include match-specific details such as player statistics, team compositions, and champion selection trends.
 
-One practical application of this machine learning system is in the context of the League of Legends competitive scene. Drafting strategy has been a critical aspect of LoL professional matches, as it provides a competitive edge. Teams have been adding coaches and analysts to enhance match preparation. By accurately forecasting champion selections, this system can be a valuable assistant in aiding match preparation through predicting various champion draft variables and compositions.
+One practical application of this machine learning system is in the context of League of Legends competitive scene. Drafting strategy has been a critical aspect of in LoL professional scenes, as it provides competitive edge in professional matches. Teams have been adding coach and analyst in order to enhance their match preparation. By accurately forecasting champion selections, this system can be a valuable assistant in aiding match preparation through predicting various champions draft variable and composition.
 
 ---
 
 ## Dataset
 ### Data Collection:
-- Dataset was taken from 857 high-profile/ranked players from the leaderboard of four key competitive regions (Korea, Western Europe, North America, and Vietnam).
-- This data includes approximately 17,000 rows of individual and match statistics.
-- Champion stats and meta trends were also collected to provide better context and additional features for engineering.
+Dataset was taken from 857 high profile/ranked players from the leaderboard from 4 most relevant regions in competitive scene (Korea, Western Europe, North America and Veitnam). Each player provides individual and matches statistics which amount to approximately 17000 rows. Champions stats and meta trend were also collected to provide better context and additional features to engineer. Due to the nature of the data which is refreshed periodically, and the high processing demand of scrapping data, it can be challenging to provide matching up-to-date data for feature engineering. This might create unintended shift which may influence the training outcome.
 
-### Challenges:
-- The nature of the data refresh cycle and the high processing demand of scraping introduced challenges.
-- Dataset shifts caused by periodic refreshes could influence training outcomes.
+Features engineering was applied to the dataset after collection. The biggest part is individual champion score to aid label prediction. This score is an aggregation of various player's individual performance profile and occurring trend. Further features engineering was applied to provide more meaningful feature to the model, such as playstyle derived from player's average performance, player's loyalty to certain champion and role distribution. All of these feature engineering are intended to minimize noise in dataset and improve model performance through better dataset interpretability. The dataset started with more than 350 columns, and was featured engineered to less than 40 columns.
 
 ### Feature Engineering:
 1. **Champion Score:** Aggregated metrics from player performance and trends.
 2. **Player Playstyle:** Derived from average performance metrics.
 3. **Champion Loyalty:** Player preferences for specific champions.
 4. **Role Distribution:** Statistical role preferences.
-
-The dataset initially contained over 350 columns, which were reduced to fewer than 40 columns through feature selection and engineering. This optimization improved interpretability and performance.
 
 ---
 
@@ -42,18 +36,15 @@ The proposed system predicts the champion pick of the final player in a League o
 A custom web scraper was developed to extract match data directly from OP.GG. This scraper retrieves raw match details, including player statistics, team compositions, and champion selection trends. The data is then preprocessed to ensure consistency, handle missing values, and convert it into a format suitable for machine learning.
 
 ### 2. Model Training
-- An **XGBoost Classifier** was selected due to its capability to handle categorical data effectively.
-- Data was split into training, validation, and testing datasets.
-- Training features included player statistics, champion selections, and team compositions.
-- Categorical features were optimized using XGBoost’s category handling.
-- Training utilized parameter tuning and feature refinement to optimize performance.
-- `objective='multi:softprob'` was used to provide better insights into prediction probabilities.
+XGBoost Classifier model was selected for its suitability to handle champion categorical nature. The data collected from OP.GG was split into training, validation and testing datasets. The model was trained using features such as player statistics, previous champion selections, and team composition as described in dataset section. Dataset with low unique values is converted to categorical type to utilize XGBoost Classifier category features. The training process involved parameter tuning and gradual low impact features removal to optimize model performance, ensuring gardual improvement in model performance to provide high prediction accuracy. 
+
+Some other XGBoost Classifier features that were utilized in the training process is objective='multi:softprob' , which provides better insights of the prediction capabilities (or potential) of the model.
 
 ### 3. Model Deployment
 The trained XGBoost model was uploaded to Hugging Face, leveraging its repository and hosting infrastructure for easy deployment. This ensured public accessibility and seamless integration into a web application.
 
 ### 4. User Interaction via Gradio
-A web application was created using Gradio and deployed on Hugging Face Spaces. This application provides a user-friendly interface where users can input match-specific details and receive predictions for the final champion pick. The app ensures accessibility to non-technical users.
+A web application was created using Gradio and deployed on Hugging Face Spaces. This application provides a user-friendly interface where users can input match-specific details and receive predictions for the final champion pick. The app ensures that even users without technical expertise can benefit from the system's predictions.
 
 ### Workflow Summary
 1. **Data Collection:** OP.GG data is scraped and preprocessed.
