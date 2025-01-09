@@ -79,7 +79,7 @@ This performance pattern is reflected in the class-wise accuracy distribution (F
 
 ![Fig. 2: Class Distribution](images/class_distribution.jpg)
 
-![Fig. 3: Accuracy vs Training Samples](accuracy_vs_training_samples.jpg)
+![Fig. 3: Accuracy vs Training Samples](images/accuracy_vs_training_samples.jpg)
 
 ### Feature Importance:
 Analysis revealed that features such as champion scores and playstyles were among the most impactful (Figure 4). Specifically, "most_role_1", "most_role_3", and "most_champ_1" showed the highest importance scores, suggesting that player behavior and role preferences drive champion selection more than individual champion statistics.
