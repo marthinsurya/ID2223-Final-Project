@@ -8,13 +8,13 @@ from feature_eng import create_champion_features
 from Weekly_meta_scrapper import get_weekly_meta
 import pandas as pd
 
-meta_stats = get_meta_stats()                       #save to meta_stats.csv
-weekly_meta_stats = get_weekly_meta()               #save to weekly_meta_stats.csv
+#meta_stats = get_meta_stats()                       #save to meta_stats.csv
+#weekly_meta_stats = get_weekly_meta()               #save to weekly_meta_stats.csv
 
 # Sample data
 data = {
-    'username': ['cat goes meow #silly'],
-    'region': ['vn']
+    'username': ['Agurin #EUW', 'Afflictive #藍月なくる', 'washed úp #EUW', 'NS Jiwoo #KR1', 'Ben10 #203'],
+    'region': ['euw', 'na', 'euw', 'kr', 'vn']
 }
 
 # Create DataFrame
