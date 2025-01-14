@@ -95,6 +95,8 @@ Despite its limitations, the system can serve as a powerful guidance tool when p
 
 ---
 
+#### Note! Presentation slide is included in the root folder of this git.
+
 ## Link to GUI
 [Champion Pick Predictor Web App](https://huggingface.co/spaces/ivwhy/lol_champion_pick_predictor)
 ![Fig 5: GUI example](images/example_of_GUI.png)
