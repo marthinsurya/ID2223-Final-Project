@@ -97,6 +97,10 @@ Despite its limitations, the system can serve as a powerful guidance tool when p
 
 #### Note! Presentation slide is included in the root folder of this git.
 
-## Link to GUI
+## GUI using Gradio on Huggingface Space
 [Champion Pick Predictor Web App](https://huggingface.co/spaces/ivwhy/lol_champion_pick_predictor)
+
+The Gradio web app retrieves data on demand, which can slow down predictions as our web scraper processes the player’s OP.GG pages in real-time. This approach was chosen due to the limitations of our current tools and infrastructure, making it impractical to pre-fetch all player data. To improve scalability, implementing a daily data-fetching process could keep player data up to date, though this solution would be resource-intensive.
+
+
 ![Fig 5: GUI example](images/example_of_GUI.png)
