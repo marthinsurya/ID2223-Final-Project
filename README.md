@@ -1,8 +1,5 @@
 # ID2223 Final Project: League of Legends Champion Predictor ML System
 
-## Link to GUI
-[Champion Pick Predictor Web App](https://huggingface.co/spaces/ivwhy/lol_champion_pick_predictor)
-
 ---
 
 ## Introduction
@@ -96,3 +93,8 @@ Despite its limitations, the system can serve as a powerful guidance tool when p
 3. Experiment with alternative machine learning models.
 4. Enhance the web app’s interface for better user experience.
 
+---
+
+## Link to GUI
+[Champion Pick Predictor Web App](https://huggingface.co/spaces/ivwhy/lol_champion_pick_predictor)
+![Fig 5: GUI example](images/example_of_GUI.png)
